@@ -44,7 +44,6 @@
 	NSString *rules;
 	NSString *urlID;
 	NSString *cardImageName;
-	NSString *rulings;
 	NSString *seriesType;
 	NSString *allyFaction;
 	NSString *talentRestrictions;
