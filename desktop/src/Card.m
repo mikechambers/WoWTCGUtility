@@ -41,7 +41,6 @@
 @synthesize attack;
 @synthesize defense;
 @synthesize health;
-@synthesize quantity;
 @synthesize rules;
 @synthesize urlID;
 @synthesize cardImageName;
@@ -105,7 +104,6 @@
 	self.damageType = [coder decodeObjectForKey:@"damageType"];
 	self.defense = [coder decodeIntForKey:@"defense"];
 	self.health = [coder decodeIntForKey:@"health"];
-	self.quantity = [coder decodeIntForKey:@"quantity"];
 	self.rules = [coder decodeObjectForKey:@"rules"];
 	self.urlID = [coder decodeObjectForKey:@"urlID"];
 	self.cardImageName = [coder decodeObjectForKey:@"cardImageName"];
@@ -141,7 +139,6 @@
 	[coder encodeObject: damageType forKey:@"damageType"];
 	[coder encodeInt: defense forKey:@"defense"];
 	[coder encodeInt: health forKey:@"health"];
-	[coder encodeInt: quantity forKey:@"quantity"];
 	[coder encodeObject: rules forKey:@"rules"];
 	[coder encodeObject: urlID forKey:@"urlID"];
 	[coder encodeObject: cardImageName forKey:@"cardImageName"];

@@ -111,7 +111,6 @@
 
 /* Health, if any, of card */
 @property (assign) int health;
-@property (assign) int quantity;
 
 /* Rules / text field of card */
 @property (retain) NSString *rules;
