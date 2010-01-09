@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */; };
+		470899AF10F7C0B6003A572F /* TopAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 470899AE10F7C0B6003A572F /* TopAnchorView.m */; };
+		47089B0310F7DDA0003A572F /* CardURLScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 47089B0210F7DDA0003A572F /* CardURLScheme.m */; };
+		47411C1310EC6652001183F2 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 47411C1210EC6652001183F2 /* Credits.html */; };
+		4746362510EA8D63006AAB60 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4746362410EA8D63006AAB60 /* icon.icns */; };
+		474D44E310F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */; };
+		475383DB10E3C81C00EE2083 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
+		475383DE10E3C85700EE2083 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
+		4753840110E3CD6600EE2083 /* Rarity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753840010E3CD6600EE2083 /* Rarity.m */; };
+		4753A0F610E53FC300EE2083 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753A0F510E53FC300EE2083 /* CardView.m */; };
+		4753F34A10E54CFC00EE2083 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 4753E7A110E54CFB00EE2083 /* assets */; };
+		475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */; };
+		475AEF7A10EB30F500F2C8A4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */; };
+		478CB13110F070D6004AD24D /* config_tool_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB13010F070D6004AD24D /* config_tool_center.png */; };
+		478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB14A10F07417004AD24D /* config_tool_grab.png */; };
+		478CB15710F0755A004AD24D /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478CB15610F0755A004AD24D /* SplitViewDelegate.m */; };
+		478CB1B610F07E81004AD24D /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB1B510F07E81004AD24D /* divider.png */; };
+		478CB1CD10F08212004AD24D /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */; };
+		478CB20C10F0825E004AD24D /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */; };
+		47A1CF3210EFDD0B0063D2A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */; };
+		47A1CF3F10F011740063D2A6 /* dataparser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CF3D10F011620063D2A6 /* dataparser.m */; };
+		47A1CFC010F0206B0063D2A6 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
+		47A1CFC110F0206B0063D2A6 /* WoWTCGDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CFA310F0196E0063D2A6 /* WoWTCGDataParser.m */; };
+		47A1CFC210F0206B0063D2A6 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
+		47A1CFC310F0206B0063D2A6 /* Rarity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753840010E3CD6600EE2083 /* Rarity.m */; };
+		47A1CFE010F022A00063D2A6 /* NSString+CSVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47539ECF10E45E3900EE2083 /* NSString+CSVCategory.m */; };
+		47A1CFF910F0230E0063D2A6 /* WoWTCGDataStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */; };
+		47A1CFFA10F0230E0063D2A6 /* WoWTCGDataParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CFA210F0196E0063D2A6 /* WoWTCGDataParser.h */; };
+		47A1CFFB10F0230E0063D2A6 /* Card.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383DC10E3C85700EE2083 /* Card.h */; };
+		47A1CFFC10F0230E0063D2A6 /* Rarity.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383FF10E3CD6600EE2083 /* Rarity.h */; };
+		47A1CFFD10F0230E0063D2A6 /* NSString+CSVCategory.h in Sources */ = {isa = PBXBuildFile; fileRef = 47539ECE10E45E3900EE2083 /* NSString+CSVCategory.h */; };
+		47A1D05A10F024060063D2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A1D05910F024060063D2A6 /* Foundation.framework */; };
+		47BE55F310F44FB60098716A /* HyperlinkNSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE55F210F44FB60098716A /* HyperlinkNSTextField.m */; };
+		47CCB09210E842E600B2F018 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CCB09110E842E600B2F018 /* Node.m */; };
+		47CCB22210E86B7600B2F018 /* SearchSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CCB22110E86B7600B2F018 /* SearchSheet.xib */; };
+		47CCB22510E86B8700B2F018 /* SearchSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CCB22410E86B8700B2F018 /* SearchSheetController.m */; };
+		47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1991910E925A000F0F708 /* DataOutlineView.m */; };
+		47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */; };
+		47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		478CB1D510F08248004AD24D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				478CB20C10F0825E004AD24D /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGUtilityAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoWTCGUtilityAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* WoWTCGUtility_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGUtility_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		470899AD10F7C0B6003A572F /* TopAnchorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAnchorView.h; sourceTree = "<group>"; };
+		470899AE10F7C0B6003A572F /* TopAnchorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAnchorView.m; sourceTree = "<group>"; };
+		47089B0110F7DDA0003A572F /* CardURLScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardURLScheme.h; sourceTree = "<group>"; };
+		47089B0210F7DDA0003A572F /* CardURLScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardURLScheme.m; sourceTree = "<group>"; };
+		47411BA710EC58B1001183F2 /* DeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteKeyDelegate.h; sourceTree = "<group>"; };
+		47411C1210EC6652001183F2 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		474635F010EA8478006AAB60 /* MenuTagConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTagConstants.h; sourceTree = "<group>"; };
+		4746362410EA8D63006AAB60 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = graphics/icon.icns; sourceTree = "<group>"; };
+		474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageTypePredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DamageTypePredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataStore.h; sourceTree = "<group>"; };
+		475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoWTCGDataStore.m; sourceTree = "<group>"; };
+		475383DC10E3C85700EE2083 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		475383DD10E3C85700EE2083 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		475383FF10E3CD6600EE2083 /* Rarity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rarity.h; sourceTree = "<group>"; };
+		4753840010E3CD6600EE2083 /* Rarity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rarity.m; sourceTree = "<group>"; };
+		47539ECE10E45E3900EE2083 /* NSString+CSVCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSVCategory.h"; sourceTree = "<group>"; };
+		47539ECF10E45E3900EE2083 /* NSString+CSVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CSVCategory.m"; sourceTree = "<group>"; };
+		4753A0F410E53FC300EE2083 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		4753A0F510E53FC300EE2083 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		4753E7A110E54CFB00EE2083 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		475AF8BE10EB3B7E00F2C8A4 /* UserDefaultsConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsConstants.h; sourceTree = "<group>"; };
+		475AF93C10EBD16100F2C8A4 /* NSOutlineView+DeleteKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+DeleteKey.h"; sourceTree = "<group>"; };
+		478CB13010F070D6004AD24D /* config_tool_center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config_tool_center.png; sourceTree = "<group>"; };
+		478CB14A10F07417004AD24D /* config_tool_grab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config_tool_grab.png; sourceTree = "<group>"; };
+		478CB15510F0755A004AD24D /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
+		478CB15610F0755A004AD24D /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
+		478CB1B510F07E81004AD24D /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
+		478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/mesh/src/WoWTCGUtility/lib/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
+		47A1CF2D10EFDCF40063D2A6 /* dataparser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataparser; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		47A1CF3D10F011620063D2A6 /* dataparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataparser.m; sourceTree = "<group>"; };
+		47A1CFA210F0196E0063D2A6 /* WoWTCGDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataParser.h; sourceTree = "<group>"; };
+		47A1CFA310F0196E0063D2A6 /* WoWTCGDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoWTCGDataParser.m; sourceTree = "<group>"; };
+		47A1D05910F024060063D2A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47BE55F110F44FB60098716A /* HyperlinkNSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkNSTextField.h; sourceTree = "<group>"; };
+		47BE55F210F44FB60098716A /* HyperlinkNSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkNSTextField.m; sourceTree = "<group>"; };
+		47CCB09010E842E600B2F018 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		47CCB09110E842E600B2F018 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		47CCB22110E86B7600B2F018 /* SearchSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSheet.xib; sourceTree = "<group>"; };
+		47CCB22310E86B8700B2F018 /* SearchSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSheetController.h; sourceTree = "<group>"; };
+		47CCB22410E86B8700B2F018 /* SearchSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSheetController.m; sourceTree = "<group>"; };
+		47E1991810E925A000F0F708 /* DataOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataOutlineView.h; sourceTree = "<group>"; };
+		47E1991910E925A000F0F708 /* DataOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOutlineView.m; sourceTree = "<group>"; };
+		47E19CCE10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		47E19D0310E97C9900F0F708 /* RarityPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WoWTCGUtility-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* WoWTCG Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoWTCG Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47A1CF2B10EFDCF40063D2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47A1CF3210EFDD0B0063D2A6 /* Cocoa.framework in Frameworks */,
+				47A1D05A10F024060063D2A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				478CB1CD10F08212004AD24D /* BWToolkitFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				474D450C10F1A3C800E96225 /* EditorRowTemplates */,
+				256AC3D80F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */,
+				475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */,
+				475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */,
+				47A1CFA210F0196E0063D2A6 /* WoWTCGDataParser.h */,
+				47A1CFA310F0196E0063D2A6 /* WoWTCGDataParser.m */,
+				475383DC10E3C85700EE2083 /* Card.h */,
+				475383DD10E3C85700EE2083 /* Card.m */,
+				475383FF10E3CD6600EE2083 /* Rarity.h */,
+				4753840010E3CD6600EE2083 /* Rarity.m */,
+				47539ECE10E45E3900EE2083 /* NSString+CSVCategory.h */,
+				47539ECF10E45E3900EE2083 /* NSString+CSVCategory.m */,
+				4753A0F410E53FC300EE2083 /* CardView.h */,
+				4753A0F510E53FC300EE2083 /* CardView.m */,
+				47CCB09010E842E600B2F018 /* Node.h */,
+				47CCB09110E842E600B2F018 /* Node.m */,
+				47CCB22310E86B8700B2F018 /* SearchSheetController.h */,
+				47CCB22410E86B8700B2F018 /* SearchSheetController.m */,
+				47E1991810E925A000F0F708 /* DataOutlineView.h */,
+				47E1991910E925A000F0F708 /* DataOutlineView.m */,
+				47A1CF3D10F011620063D2A6 /* dataparser.m */,
+				474635F010EA8478006AAB60 /* MenuTagConstants.h */,
+				475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */,
+				475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */,
+				475AF8BE10EB3B7E00F2C8A4 /* UserDefaultsConstants.h */,
+				470899AD10F7C0B6003A572F /* TopAnchorView.h */,
+				470899AE10F7C0B6003A572F /* TopAnchorView.m */,
+				475AF93C10EBD16100F2C8A4 /* NSOutlineView+DeleteKey.h */,
+				47411BA710EC58B1001183F2 /* DeleteKeyDelegate.h */,
+				478CB15510F0755A004AD24D /* SplitViewDelegate.h */,
+				478CB15610F0755A004AD24D /* SplitViewDelegate.m */,
+				47BE55F110F44FB60098716A /* HyperlinkNSTextField.h */,
+				47BE55F210F44FB60098716A /* HyperlinkNSTextField.m */,
+				47089B0110F7DDA0003A572F /* CardURLScheme.h */,
+				47089B0210F7DDA0003A572F /* CardURLScheme.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* WoWTCG Utility.app */,
+				47A1CF2D10EFDCF40063D2A6 /* dataparser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* WoWTCGUtility */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */,
+				47A1D05910F024060063D2A6 /* Foundation.framework */,
+			);
+			name = WoWTCGUtility;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* WoWTCGUtility_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				478CB1B510F07E81004AD24D /* divider.png */,
+				478CB14A10F07417004AD24D /* config_tool_grab.png */,
+				478CB13010F070D6004AD24D /* config_tool_center.png */,
+				4746362410EA8D63006AAB60 /* icon.icns */,
+				4753E7A110E54CFB00EE2083 /* assets */,
+				8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				47CCB22110E86B7600B2F018 /* SearchSheet.xib */,
+				475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */,
+				47411C1210EC6652001183F2 /* Credits.html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		474D450C10F1A3C800E96225 /* EditorRowTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				47E19CCE10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.h */,
+				47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */,
+				47E19D0310E97C9900F0F708 /* RarityPredicateEditorRowTemplate.h */,
+				47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */,
+				474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */,
+				474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */,
+			);
+			name = EditorRowTemplates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47A1CF2C10EFDCF40063D2A6 /* dataparser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47A1CF3510EFDD0C0063D2A6 /* Build configuration list for PBXNativeTarget "dataparser" */;
+			buildPhases = (
+				47A1CF2A10EFDCF40063D2A6 /* Sources */,
+				47A1CF2B10EFDCF40063D2A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dataparser;
+			productName = dataparser;
+			productReference = 47A1CF2D10EFDCF40063D2A6 /* dataparser */;
+			productType = "com.apple.product-type.tool";
+		};
+		8D1107260486CEB800E47090 /* WoWTCG Utility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "WoWTCG Utility" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				478CB1D510F08248004AD24D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WoWTCG Utility";
+			productInstallPath = "$(HOME)/Applications";
+			productName = WoWTCGUtility;
+			productReference = 8D1107320486CEB800E47090 /* WoWTCG Utility.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WoWTCGUtility" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* WoWTCGUtility */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* WoWTCG Utility */,
+				47A1CF2C10EFDCF40063D2A6 /* dataparser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				4753F34A10E54CFC00EE2083 /* assets in Resources */,
+				47CCB22210E86B7600B2F018 /* SearchSheet.xib in Resources */,
+				4746362510EA8D63006AAB60 /* icon.icns in Resources */,
+				475AEF7A10EB30F500F2C8A4 /* PreferencesWindow.xib in Resources */,
+				47411C1310EC6652001183F2 /* Credits.html in Resources */,
+				478CB13110F070D6004AD24D /* config_tool_center.png in Resources */,
+				478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */,
+				478CB1B610F07E81004AD24D /* divider.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47A1CF2A10EFDCF40063D2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47A1CFF910F0230E0063D2A6 /* WoWTCGDataStore.h in Sources */,
+				47A1CFC010F0206B0063D2A6 /* WoWTCGDataStore.m in Sources */,
+				47A1CFFA10F0230E0063D2A6 /* WoWTCGDataParser.h in Sources */,
+				47A1CFC110F0206B0063D2A6 /* WoWTCGDataParser.m in Sources */,
+				47A1CFFB10F0230E0063D2A6 /* Card.h in Sources */,
+				47A1CFC210F0206B0063D2A6 /* Card.m in Sources */,
+				47A1CFFC10F0230E0063D2A6 /* Rarity.h in Sources */,
+				47A1CFC310F0206B0063D2A6 /* Rarity.m in Sources */,
+				47A1CFFD10F0230E0063D2A6 /* NSString+CSVCategory.h in Sources */,
+				47A1CFE010F022A00063D2A6 /* NSString+CSVCategory.m in Sources */,
+				47A1CF3F10F011740063D2A6 /* dataparser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m in Sources */,
+				475383DB10E3C81C00EE2083 /* WoWTCGDataStore.m in Sources */,
+				475383DE10E3C85700EE2083 /* Card.m in Sources */,
+				4753840110E3CD6600EE2083 /* Rarity.m in Sources */,
+				4753A0F610E53FC300EE2083 /* CardView.m in Sources */,
+				47CCB09210E842E600B2F018 /* Node.m in Sources */,
+				47CCB22510E86B8700B2F018 /* SearchSheetController.m in Sources */,
+				47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */,
+				47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */,
+				47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */,
+				475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */,
+				478CB15710F0755A004AD24D /* SplitViewDelegate.m in Sources */,
+				474D44E310F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m in Sources */,
+				47BE55F310F44FB60098716A /* HyperlinkNSTextField.m in Sources */,
+				470899AF10F7C0B6003A572F /* TopAnchorView.m in Sources */,
+				47089B0310F7DDA0003A572F /* CardURLScheme.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47A1CF2F10EFDCF40063D2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = dataparser;
+			};
+			name = Debug;
+		};
+		47A1CF3010EFDCF40063D2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = dataparser;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../WoWTCGUtility/lib/BWToolkit\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WoWTCGUtility_Prefix.pch;
+				INFOPLIST_FILE = "WoWTCGUtility-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-fnested-functions";
+				PRODUCT_NAME = "WoWTCG Utility";
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../WoWTCGUtility/lib/BWToolkit\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WoWTCGUtility_Prefix.pch;
+				INFOPLIST_FILE = "WoWTCGUtility-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-fnested-functions";
+				PRODUCT_NAME = "WoWTCG Utility";
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47A1CF3510EFDD0C0063D2A6 /* Build configuration list for PBXNativeTarget "dataparser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A1CF2F10EFDCF40063D2A6 /* Debug */,
+				47A1CF3010EFDCF40063D2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "WoWTCG Utility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "WoWTCGUtility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
