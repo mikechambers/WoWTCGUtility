@@ -55,33 +55,90 @@
 	NSString *costModifier;
 }
 
+/* Card Name*/
 @property (retain) NSString *cardName;
+
+/* The series / set that the card is included in */
 @property (retain) NSString *series;
+
+/* Card Number within the series*/
 @property (assign) int cardNumber;
+
+/* DEPRECATED : An abbreviation for the card series */
 @property (retain) NSString *seriesAbbreviation;
-@property (retain) NSString *type;		
+
+/* The Card type, such as Item, Hero, Ally, etc... */
+@property (retain) NSString *type;
+
+/* The Class type, if any of the card */
 @property (retain) NSString *className;
+
+/* The race, if any of the card */
 @property (retain) NSString *race;
+
+/* Card profession type, if any */
 @property (retain) NSString *professions;
+
+/* Card talents, if any */
 @property (retain) NSString *talent;
+
+/* Card faction, such as Horde, Allies, Neutral */
 @property (retain) NSString *faction;
+
+/* Data from the tags field (under the image) on the card */
 @property (retain) NSString *keywords;
+
+/* Rarity of the card */
 @property (assign) int rarity;
+
+/* Cost to play the card */
 @property (assign) int cost;
+
+/* Any cost modifiers, applies to the cost, such as +x */
+@property (retain) NSString *costModifier;
+
+/* Cost of striking with weapon */
+@property (assign) int strikeCost;
+
+/* Attack value, if any, of card */
 @property (assign) int attack;
+
+/* Type of attack (Melee, Fire, etc...), if any, the card does.*/
+@property (retain) NSString *damageType;
+
+/* Defense value, if any, of card */
 @property (assign) int defense;
+
+/* Health, if any, of card */
 @property (assign) int health;
 @property (assign) int quantity;
+
+/* Rules / text field of card */
 @property (retain) NSString *rules;
+
+/* ID That reference the card in the online wowtcgdb.com database */
 @property (retain) NSString *urlID;
+
+/* Name of image associated with the card */
 @property (retain) NSString *cardImageName;
+
+/* Type of series that the card belongs to, such as Core, Raid, etc... */
 @property (retain) NSString *seriesType;
+
+/* The ally faction, if any, of the card */
 @property (retain) NSString *allyFaction;
+
+/* Talent restrictions required by the card, if any */
 @property (retain) NSString *talentRestrictions;
+
+/* Race restrictions required by the card, if any */
 @property (retain) NSString *raceRestrictions;
+
+/* Professiona restrictions required by the card, if any */
 @property (retain) NSString *professionRestrictions;
-@property (retain) NSString *damageType;
+
+/* Reputation restrictions required by the card, if any */
 @property (retain) NSString *reputationRestrictions;
-@property (assign) int strikeCost;
-@property (retain) NSString *costModifier;
+
+
 @end
