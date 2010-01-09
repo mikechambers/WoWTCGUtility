@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */; };
+		470530BF10F917C900BD10D7 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470530BE10F917C900BD10D7 /* BWToolkitFramework.framework */; };
 		470899AF10F7C0B6003A572F /* TopAnchorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 470899AE10F7C0B6003A572F /* TopAnchorView.m */; };
 		47089B0310F7DDA0003A572F /* CardURLScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 47089B0210F7DDA0003A572F /* CardURLScheme.m */; };
 		47411C1310EC6652001183F2 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 47411C1210EC6652001183F2 /* Credits.html */; };
@@ -25,8 +26,6 @@
 		478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB14A10F07417004AD24D /* config_tool_grab.png */; };
 		478CB15710F0755A004AD24D /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478CB15610F0755A004AD24D /* SplitViewDelegate.m */; };
 		478CB1B610F07E81004AD24D /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB1B510F07E81004AD24D /* divider.png */; };
-		478CB1CD10F08212004AD24D /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */; };
-		478CB20C10F0825E004AD24D /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */; };
 		47A1CF3210EFDD0B0063D2A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */; };
 		47A1CF3F10F011740063D2A6 /* dataparser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CF3D10F011620063D2A6 /* dataparser.m */; };
 		47A1CFC010F0206B0063D2A6 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
@@ -59,7 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				478CB20C10F0825E004AD24D /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +74,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		470530BE10F917C900BD10D7 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/mesh/src/WoWTCGUtility/desktop/lib/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		470899AD10F7C0B6003A572F /* TopAnchorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopAnchorView.h; sourceTree = "<group>"; };
 		470899AE10F7C0B6003A572F /* TopAnchorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAnchorView.m; sourceTree = "<group>"; };
 		47089B0110F7DDA0003A572F /* CardURLScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardURLScheme.h; sourceTree = "<group>"; };
@@ -83,7 +82,7 @@
 		47411BA710EC58B1001183F2 /* DeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteKeyDelegate.h; sourceTree = "<group>"; };
 		47411C1210EC6652001183F2 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		474635F010EA8478006AAB60 /* MenuTagConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTagConstants.h; sourceTree = "<group>"; };
-		4746362410EA8D63006AAB60 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = graphics/icon.icns; sourceTree = "<group>"; };
+		4746362410EA8D63006AAB60 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageTypePredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DamageTypePredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataStore.h; sourceTree = "<group>"; };
@@ -107,7 +106,6 @@
 		478CB15510F0755A004AD24D /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
 		478CB15610F0755A004AD24D /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
 		478CB1B510F07E81004AD24D /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
-		478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/mesh/src/WoWTCGUtility/lib/BWToolkit/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
 		47A1CF2D10EFDCF40063D2A6 /* dataparser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataparser; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		47A1CF3D10F011620063D2A6 /* dataparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataparser.m; sourceTree = "<group>"; };
@@ -146,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				478CB1CD10F08212004AD24D /* BWToolkitFramework.framework in Frameworks */,
+				470530BF10F917C900BD10D7 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +197,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				478CB1CC10F08212004AD24D /* BWToolkitFramework.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				470530BE10F917C900BD10D7 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -482,6 +480,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../WoWTCGUtility/lib/BWToolkit\"",
+					"\"$(SRCROOT)/../lib/BWToolkit\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -505,6 +504,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../WoWTCGUtility/lib/BWToolkit\"",
+					"\"$(SRCROOT)/../lib/BWToolkit\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

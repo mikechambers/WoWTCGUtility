@@ -5786,10 +5786,10 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="296.editorWindowContentRectSynchronizationRect">{{475, 832}, {234, 43}}</string>
 				<string key="297.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="298.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBEditorWindowLastContentRect">{{377, 284}, {1089, 688}}</string>
+				<string key="371.IBEditorWindowLastContentRect">{{305, 284}, {1089, 688}}</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="371.IBViewEditorWindowController.showingLayoutRectangles"/>
-				<string key="371.IBWindowTemplateEditedContentRect">{{377, 284}, {1089, 688}}</string>
+				<string key="371.IBWindowTemplateEditedContentRect">{{305, 284}, {1089, 688}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="371.editorWindowContentRectSynchronizationRect">{{33, 99}, {480, 360}}</string>
 				<string key="371.windowTemplate.maxSize">{3.40282e+38, 3.40282e+38}</string>
