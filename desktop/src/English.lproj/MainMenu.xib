@@ -12,7 +12,7 @@
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<integer value="81"/>
-			<integer value="533"/>
+			<integer value="988"/>
 			<integer value="915"/>
 			<integer value="624"/>
 		</array>
@@ -2457,7 +2457,7 @@
 								<object class="NSSegmentedControl" id="212966187">
 									<reference key="NSNextResponder" ref="582776424"/>
 									<int key="NSvFlags">266</int>
-									<string key="NSFrame">{{-2, 324}, {259, 25}}</string>
+									<string key="NSFrame">{{8, 324}, {239, 25}}</string>
 									<reference key="NSSuperview" ref="582776424"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSegmentedCell" key="NSCell" id="448014524">
@@ -2473,8 +2473,7 @@
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
 											<object class="NSSegmentItem">
-												<double key="NSSegmentItemWidth">85</double>
-												<string key="NSSegmentItemLabel">Rules</string>
+												<string key="NSSegmentItemLabel">Powers</string>
 												<int key="NSSegmentItemTag">1</int>
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
