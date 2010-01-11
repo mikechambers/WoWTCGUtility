@@ -91,7 +91,8 @@
 	
 	[self initData];
 		
-	self.filteredCards = [dataStore.cards mutableCopy];
+	//self.filteredCards = [dataStore.cards mutableCopy];
+	[self resetCardData];
 	
 	self.deckNode = [[Node alloc] initWithLabel:@"DECKS"];
 	deckNode.children = [NSMutableArray arrayWithCapacity:0];
@@ -158,8 +159,49 @@
 		return;
 	}
 	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %i", [value intValue]];
-	[self filterCardsWithPredicate:predicate];
+	//refreshTableViewDataWithSelectedIndex
+	
+	if(filteredCards != dataStore.cards)
+	{
+		//refresh data view
+		
+		//reset card data to all cards
+		[self resetCardData];
+		
+		//reload the data in the card table
+		[cardTable reloadData];
+		
+		//tell the cardtable to redraw itself
+		[self redrawCardTable];
+	}
+	
+	//need to loop to find since 10.5 doesnt support blocks and [NSArray indexOfObjectPassingTest];
+	NSInteger index = NSNotFound;
+	int searchIndex = [value intValue];
+	NSArray *cards = dataStore.cards;
+	int len = [cards count];
+	
+	Card *c;
+	for(int i = 0; i < len; i++)
+	{
+		c = (Card *)[cards objectAtIndex:i];
+		
+		if(c.cardId == searchIndex)
+		{
+			index  = i;
+			break;
+		}
+	}
+	
+	if(index == NSNotFound)
+	{
+		return;
+	}
+
+	[self selectCardTableRow:index];
+	[cardTable scrollRowToVisible:index];
+	
+	[window makeFirstResponder:cardTable];
 }
 
 
@@ -232,28 +274,40 @@
 
 /********************* general Card TableView APIs *******************/
 
--(void)updateTableViewRowSelection
+//-(void)updateTableViewRowSelection:(int)index
+-(void)selectCardTableRow:(int)index
 {
-	NSIndexSet *row = [NSIndexSet indexSetWithIndex:0];
+	
+	NSIndexSet *row = [NSIndexSet indexSetWithIndex:index];	
 	[cardTable selectRowIndexes:row byExtendingSelection:FALSE];
+	cardView.card = [filteredCards objectAtIndex:index];
 }
 
--(void)refreshTableViewData
+
+-(void)resetCardData
+{
+	self.filteredCards = [dataStore.cards mutableCopy];
+}
+
+-(void)refreshCardTableData
 {
 	[cardTable reloadData];
-	
-	//need to do this or somethings the grid is drawn wrong
-	[cardTable setNeedsDisplay:TRUE];
-	[cardTable noteNumberOfRowsChanged];
-	[self updateTitle];
+	[self redrawCardTable];
 	
 	if(filteredCards.count == 0)
 	{
 		return;
 	}
 	
-	cardView.card = [filteredCards objectAtIndex:0];
-	[self updateTableViewRowSelection];
+	[self selectCardTableRow:0];
+}
+
+-(void)redrawCardTable
+{
+	//need to do this or somethings the grid is drawn wrong
+	[cardTable setNeedsDisplay:TRUE];
+	[cardTable noteNumberOfRowsChanged];
+	[self updateTitle];
 }
 
 -(void)updateTitle
@@ -354,7 +408,7 @@
 	
 	[filteredCards sortUsingDescriptors:newDescriptors];
 	
-	[self refreshTableViewData];
+	[self refreshCardTableData];
 }
 
 /************* NSOutlineView Delegate APIs *****************/
@@ -373,8 +427,9 @@
 	
 	if(n == cardsNode)
 	{
-		self.filteredCards = [dataStore.cards mutableCopy];
-		[self refreshTableViewData];
+		//self.filteredCards = [dataStore.cards mutableCopy];
+		[self resetCardData];
+		[self refreshCardTableData];
 	}
 	else if([outlineView parentForItem:n] == searchNode)
 	{
@@ -419,8 +474,9 @@
 	
 	if([searchString length] == 0)
 	{
-		self.filteredCards = [dataStore.cards mutableCopy];
-		[self refreshTableViewData];
+		//self.filteredCards = [dataStore.cards mutableCopy];
+		[self resetCardData];
+		[self refreshCardTableData];
 		return;
 	}
 	
@@ -437,11 +493,11 @@
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate
 {
 	
-	self.filteredCards = [dataStore.cards mutableCopy];
+	//self.filteredCards = [dataStore.cards mutableCopy];
 	
+	[self resetCardData];
 	[filteredCards filterUsingPredicate:predicate];
-	
-	[self refreshTableViewData];
+	[self refreshCardTableData];
 }
 
 

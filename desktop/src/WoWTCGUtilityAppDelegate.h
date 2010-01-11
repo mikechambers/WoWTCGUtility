@@ -93,8 +93,13 @@ typedef enum {
 -(void)saveSearchData;
 -(NSString *) pathForDataFile;
 
--(void)refreshTableViewData;
--(void)updateTableViewRowSelection;
+-(void)resetCardData;
+-(void)refreshCardTableData;
+-(void)redrawCardTable;
+-(void)selectCardTableRow:(int)index;
+
+
+//-(void)updateTableViewRowSelection;
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
 -(void)loadSearchData;

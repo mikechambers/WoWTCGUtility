@@ -92,11 +92,13 @@
 
 -(void)setCard:(Card *) c
 {
-	if (self->card != c)
+	if(self->card == c)
 	{
-		[self->card release];
-		self->card = [c retain];
+		return;
 	}
+	
+	[self->card release];
+	self->card = [c retain];
 	
 	if(c == nil)
 	{
