@@ -135,55 +135,31 @@
 	// Now you can parse the URL and perform whatever action is needed
 	
 	NSURL *url = [NSURL URLWithString:urlStr];	
-	NSLog(@"path %@", url.path);
 	
-	//note commented out code below is for cardName search urls.
-	//All of the code is in the app, but we have not exposed it via
-	//UI right now
-	
-	/*
-	if([url.path compare:SEARCH_ROOT_PATH] != NSOrderedSame || 
-		[url.path compare:ID_ROOT_PATH] != NSOrderedSame)
-	{
-		return;
-	}
-	 */
-	
-	if([url.path compare:ROOT_PATH] != NSOrderedSame)
-	{
-		return;
-	}
-	
-	//ID_ROOT_PATH
-	
-	NSString *query = url.query;
-	
-	NSArray *tokens = [query componentsSeparatedByString:@"="];
-	
-	if([tokens count] < 2)
-	{
-		return;
-	}
-	
-	NSString *key = [tokens objectAtIndex:0];
-	NSString *value = [[tokens objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	
-	/*	
-	if([key compare:@"cardname"] == NSOrderedSame)
-	{
-		searchField.stringValue = value;
-		[self filterOnCardName:value];
-	}
-	 */
+	NSArray *tokens = [url.path componentsSeparatedByString:@"/"];
 
-	if([key compare:CARD_ID_KEY] == NSOrderedSame)
+	if([tokens count] < 3)
 	{
-		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %i", [value intValue]];
-		
-		NSLog(@"%@", predicate.predicateFormat);
-		[self filterCardsWithPredicate:predicate];
+		return;
 	}
-
+	
+	NSString *identifier = [tokens objectAtIndex:0];
+	NSString *name = [tokens objectAtIndex:1];
+	NSString *value = [tokens objectAtIndex:2];
+	
+	//make case insensitive
+	if([identifier compare:CARD_IDENTIFIER options:NSCaseInsensitiveSearch] != NSOrderedSame)
+	{
+		return;
+	}
+	
+	if([name compare:CARD_ID_KEY options:NSCaseInsensitiveSearch] != NSOrderedSame )
+	{
+		return;
+	}
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %i", [value intValue]];
+	[self filterCardsWithPredicate:predicate];
 }
 
 
