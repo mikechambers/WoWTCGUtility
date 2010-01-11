@@ -24,10 +24,10 @@
 
 @interface Card : NSObject <NSCoding>
 {
+	int cardId;
 	NSString *cardName;
 	NSString *series;
 	int cardNumber;
-	NSString *seriesAbbreviation;
 	NSString *type;		
 	NSString *className;
 	NSString *race;
@@ -55,6 +55,9 @@
 	NSString *costModifier;
 }
 
+/* unique numeric id for the card */
+@property (assign) int cardId;
+
 /* Card Name*/
 @property (retain) NSString *cardName;
 
@@ -63,9 +66,6 @@
 
 /* Card Number within the series*/
 @property (assign) int cardNumber;
-
-/* DEPRECATED : An abbreviation for the card series */
-@property (retain) NSString *seriesAbbreviation;
 
 /* The Card type, such as Item, Hero, Ally, etc... */
 @property (retain) NSString *type;

@@ -25,10 +25,10 @@
 
 @implementation Card
 
+@synthesize cardId;
 @synthesize cardName;
 @synthesize series;
 @synthesize cardNumber;
-@synthesize seriesAbbreviation;
 @synthesize type;		
 @synthesize className;
 @synthesize race;
@@ -61,7 +61,6 @@
 	[damageType release];
 	[cardName release];
 	[series release];
-	[seriesAbbreviation release];
 	[type release];
 	[className release];
 	[race release];
@@ -87,10 +86,10 @@
 		return nil;
 	}
 	
+	self.cardId = [coder decodeIntForKey:@"cardId"];
 	self.cardName = [coder decodeObjectForKey:@"cardName"];
 	self.series = [coder decodeObjectForKey:@"series"];
 	self.cardNumber = [coder decodeIntForKey:@"cardNumber"];
-	self.seriesAbbreviation = [coder decodeObjectForKey:@"seriesAbbreviation"];
 	self.type = [coder decodeObjectForKey:@"type"];
 	self.className = [coder decodeObjectForKey:@"className"];
 	self.race = [coder decodeObjectForKey:@"race"];
@@ -122,10 +121,10 @@
 
 - (void) encodeWithCoder: (NSCoder *)coder
 {
+	[coder encodeInt:cardId forKey:@"cardId"];
 	[coder encodeObject: cardName forKey:@"cardName"];
 	[coder encodeObject: series forKey:@"series"];
 	[coder encodeInt: cardNumber forKey:@"cardNumber"];
-	[coder encodeObject: seriesAbbreviation forKey:@"seriesAbbreviation"];
 	[coder encodeObject: type forKey:@"type"];
 	[coder encodeObject: className forKey:@"className"];
 	[coder encodeObject: race forKey:@"race"];

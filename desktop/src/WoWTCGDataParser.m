@@ -24,8 +24,8 @@
 #import "Card.h"
 #import "Rarity.h"
 
-#define SERIES_INDEX 0
-#define SERIES_ABR_INDEX 1
+#define CARD_ID_INDEX 0
+#define SERIES_INDEX 1
 #define CARD_NUMBER_INDEX 2
 #define CARD_NAME_INDEX 3
 #define TYPE_INDEX 4
@@ -195,7 +195,7 @@
 		[seriesKey setValue:placeHolder forKey:c.series];
 		
 		
-		c.seriesAbbreviation = [row objectAtIndex:SERIES_ABR_INDEX];
+		c.cardId = [[row objectAtIndex:CARD_ID_INDEX] intValue];
 		c.cardNumber = [[row objectAtIndex:CARD_NUMBER_INDEX] intValue];
 		c.type = [row objectAtIndex:TYPE_INDEX];
 		[typesKey setValue:placeHolder forKey:c.type];
