@@ -113,7 +113,7 @@
 	self.professionRestrictions = [coder decodeObjectForKey:@"professionRestrictions"];
 	self.damageType = [coder decodeObjectForKey:@"damageType"];
 	self.reputationRestrictions = [coder decodeObjectForKey:@"reputationRestrictions"];
-	self.cost = [coder decodeIntForKey:@"strikeCost"];	
+	self.strikeCost = [coder decodeIntForKey:@"strikeCost"];	
 	self.costModifier = [coder decodeObjectForKey:@"costModifier"];	
 	
 	return self;
