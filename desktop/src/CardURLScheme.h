@@ -21,8 +21,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "Card.h"
 
-#define URL_SCHEME_ROOT_PATH @"/search"
+#define SEARCH_ROOT_PATH @"/search"
+#define ID_ROOT_PATH @"/card_id"
 #define URL_SCHEME @"wowtcg:/"
 
 @interface CardURLScheme : NSObject
@@ -30,6 +32,6 @@
 
 }
 
-+(NSURL *)createURLForCardName:(NSString *)cardName;
++(NSURL *)createURLForCard:(Card *)card;
 
 @end

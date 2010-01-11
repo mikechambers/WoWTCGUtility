@@ -235,7 +235,7 @@
 	NSPasteboard *pb = [NSPasteboard generalPasteboard];
 	[pb declareTypes:[NSArray arrayWithObjects:NSURLPboardType, NSStringPboardType, nil] owner:self];
 	
-	NSURL *data = [CardURLScheme createURLForCardName:card.cardName];
+	NSURL *data = [CardURLScheme createURLForCard:card];
 	
 	
 	//write to board as both a URL and a String

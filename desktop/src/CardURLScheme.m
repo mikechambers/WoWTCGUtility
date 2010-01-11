@@ -25,11 +25,12 @@
 
 @implementation CardURLScheme
 
-+(NSURL *)createURLForCardName:(NSString *)cardName
++(NSURL *)createURLForCard:(Card *)card
 {
-	NSString *data = [cardName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	NSString *out = [NSString stringWithFormat:@"%@%@?cardname=%@", URL_SCHEME, URL_SCHEME_ROOT_PATH, data];
-	
+	int data = card.cardId;
+	//NSString *data = [cardName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	//NSString *out = [NSString stringWithFormat:@"%@%@?cardname=%@", URL_SCHEME, URL_SCHEME_ROOT_PATH, data];
+	NSString *out = [NSString stringWithFormat:@"%@%@?card_id=%i", URL_SCHEME, ID_ROOT_PATH, data];
 	
 	
 	return [NSURL URLWithString:out];

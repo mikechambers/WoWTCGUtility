@@ -136,10 +136,25 @@
 	
 	NSURL *url = [NSURL URLWithString:urlStr];	
 	NSLog(@"path %@", url.path);
-	if([url.path compare:URL_SCHEME_ROOT_PATH] != NSOrderedSame)
+	
+	//note commented out code below is for cardName search urls.
+	//All of the code is in the app, but we have not exposed it via
+	//UI right now
+	
+	/*
+	if([url.path compare:SEARCH_ROOT_PATH] != NSOrderedSame || 
+		[url.path compare:ID_ROOT_PATH] != NSOrderedSame)
 	{
 		return;
 	}
+	 */
+	
+	if([url.path compare:ID_ROOT_PATH] != NSOrderedSame)
+	{
+		return;
+	}
+	
+	//ID_ROOT_PATH
 	
 	NSString *query = url.query;
 	
@@ -151,11 +166,26 @@
 	}
 	
 	NSString *key = [tokens objectAtIndex:0];
-	if([key compare:@"cardname"] == NSOrderedSame)
+	NSString *value = [[tokens objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	
+	/*
+	if([url.path compare:SEARCH_ROOT_PATH] != NSOrderedSame)
 	{
-		NSString *value = [[tokens objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-		searchField.stringValue = value;
-		[self filterOnCardName:value];
+	
+		if([key compare:@"cardname"] == NSOrderedSame)
+		{
+			searchField.stringValue = value;
+			[self filterOnCardName:value];
+		}
+	}
+	 */
+	if([url.path compare:ID_ROOT_PATH] != NSOrderedSame)
+	{
+		if([key compare:@"card_id"] == NSOrderedSame)
+		{
+			NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %@", value];
+			[self filterCardsWithPredicate:predicate];
+		}
 	}
 }
 
