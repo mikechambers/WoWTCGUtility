@@ -23,9 +23,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Card.h"
 
-#define SEARCH_ROOT_PATH @"/search"
-#define ID_ROOT_PATH @"/card_id"
+#define ROOT_PATH @"/search"
 #define URL_SCHEME @"wowtcg:/"
+#define CARD_ID_KEY @"card_id"
 
 @interface CardURLScheme : NSObject
 {

@@ -149,7 +149,7 @@
 	}
 	 */
 	
-	if([url.path compare:ID_ROOT_PATH] != NSOrderedSame)
+	if([url.path compare:ROOT_PATH] != NSOrderedSame)
 	{
 		return;
 	}
@@ -168,25 +168,22 @@
 	NSString *key = [tokens objectAtIndex:0];
 	NSString *value = [[tokens objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
-	/*
-	if([url.path compare:SEARCH_ROOT_PATH] != NSOrderedSame)
+	/*	
+	if([key compare:@"cardname"] == NSOrderedSame)
 	{
-	
-		if([key compare:@"cardname"] == NSOrderedSame)
-		{
-			searchField.stringValue = value;
-			[self filterOnCardName:value];
-		}
+		searchField.stringValue = value;
+		[self filterOnCardName:value];
 	}
 	 */
-	if([url.path compare:ID_ROOT_PATH] != NSOrderedSame)
+
+	if([key compare:CARD_ID_KEY] == NSOrderedSame)
 	{
-		if([key compare:@"card_id"] == NSOrderedSame)
-		{
-			NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %@", value];
-			[self filterCardsWithPredicate:predicate];
-		}
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"cardId == %i", [value intValue]];
+		
+		NSLog(@"%@", predicate.predicateFormat);
+		[self filterCardsWithPredicate:predicate];
 	}
+
 }
 
 

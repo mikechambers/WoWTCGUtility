@@ -30,7 +30,7 @@
 	int data = card.cardId;
 	//NSString *data = [cardName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	//NSString *out = [NSString stringWithFormat:@"%@%@?cardname=%@", URL_SCHEME, URL_SCHEME_ROOT_PATH, data];
-	NSString *out = [NSString stringWithFormat:@"%@%@?card_id=%i", URL_SCHEME, ID_ROOT_PATH, data];
+	NSString *out = [NSString stringWithFormat:@"%@%@?%@=%i", URL_SCHEME, ROOT_PATH, CARD_ID_KEY, data];
 	
 	
 	return [NSURL URLWithString:out];
