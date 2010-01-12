@@ -21,14 +21,12 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "WoWTCGDataStore.h"
 
 
 @interface WoWTCGDataParser : NSObject
 {
-	NSArray *types;
-	NSArray *cards;
-	NSArray *series;
-	NSArray *damageTypes;
+	WoWTCGDataStore *dataStore;
 	
 	NSDictionary *classesByNames;
 	NSDictionary *classesByAbbreviations;
@@ -36,10 +34,7 @@
 	NSString *allClassNames;
 }
 
-@property (retain, readwrite) NSArray *types;
-@property (retain, readwrite) NSArray *cards;
-@property (retain, readwrite) NSArray *series;
-@property (retain, readwrite) NSArray *damageTypes;
+@property (retain, readwrite) WoWTCGDataStore *dataStore;
 
 @property (retain, readwrite) NSDictionary *classesByNames;
 @property (retain, readwrite) NSDictionary *classesByAbbreviations;

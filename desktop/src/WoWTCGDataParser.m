@@ -59,23 +59,17 @@
 
 @implementation WoWTCGDataParser
 
-@synthesize types;
-@synthesize cards;
-@synthesize series;
+@synthesize dataStore;
 @synthesize classesByNames;
 @synthesize classesByAbbreviations;
 @synthesize allClassNames;
-@synthesize damageTypes;
 
 -(void)dealloc
 {
-	[damageTypes release];
+	[dataStore release];
 	[allClassNames dealloc];
 	[classesByNames dealloc];
 	[classesByAbbreviations dealloc];
-	[types dealloc];
-	[cards dealloc];
-	[series dealloc];
 	[super dealloc];
 }
 
@@ -167,6 +161,10 @@
 
 -(void)parseData:(NSString *)csvData
 {
+
+	self.dataStore = [[WoWTCGDataStore alloc] init];
+	[self.dataStore release];
+	
 	
 	NSArray *data = [csvData csvRows];
 	
@@ -180,6 +178,8 @@
 	NSMutableDictionary *seriesKey = [NSMutableDictionary dictionaryWithCapacity:SERIES_COUNT];
 	NSMutableDictionary *typesKey = [NSMutableDictionary dictionaryWithCapacity:TYPES_COUNT];
 	NSMutableDictionary *damageTypesKey = [NSMutableDictionary dictionaryWithCapacity:0];
+	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:3];
+	
 	
 	NSString *placeHolder = @"";
 	
@@ -239,9 +239,13 @@
 		c.raceRestrictions = [row objectAtIndex:RACE_RESTRICTIONS_INDEX];
 		c.professionRestrictions = [row objectAtIndex:PROFESSION_RESTRICTIONS_INDEX];
 		
-		//NSLog(@"%@", c.cardName);
+
 		c.reputationRestrictions = [row objectAtIndex:REPUTATION_RESTRICTIONS_INDEX];
-		//NSLog(@"done");
+
+		if([c.reputationRestrictions compare:@""] != NSOrderedSame)
+		{
+			[reputationRestrictionTypesKey setValue:placeHolder forKey:c.reputationRestrictions];
+		}
 		
 		c.strikeCost = [[row objectAtIndex:STRIKE_COST_INDEX] intValue];
 
@@ -254,17 +258,21 @@
 	
 	NSMutableArray *tempSeries = [[seriesKey allKeys] mutableCopy];
 	[tempSeries sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	self.series = tempSeries;
+	dataStore.series = tempSeries;
 	
 	NSMutableArray *tempTypes = [[typesKey allKeys] mutableCopy];
 	[tempTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	self.types = tempTypes;	
+	dataStore.types = tempTypes;	
 	
 	NSMutableArray *tempDamageTypes = [[damageTypesKey allKeys] mutableCopy];
 	[tempDamageTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	self.damageTypes = tempDamageTypes;	
+	dataStore.damageTypes = tempDamageTypes;	
 	
-	self.cards = out;
+	NSMutableArray *reputationRestrictionTypes = [[reputationRestrictionTypesKey allKeys] mutableCopy];
+	[reputationRestrictionTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
+	dataStore.reputationRestrictionTypes = reputationRestrictionTypes;	
+									
+	dataStore.cards = out;
 }
 
 @end

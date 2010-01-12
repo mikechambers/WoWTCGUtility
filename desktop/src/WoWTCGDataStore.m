@@ -29,9 +29,11 @@
 @synthesize series;
 @synthesize types;
 @synthesize damageTypes;
+@synthesize reputationRestrictionTypes;
 
 -(void)dealloc
 {
+	[reputationRestrictionTypes release];
 	[damageTypes release];
 	[types release];
 	[cards release];
@@ -50,6 +52,7 @@
 	self.cards = [coder decodeObjectForKey:@"cards"];
 	self.series = [coder decodeObjectForKey:@"series"];
 	self.damageTypes = [coder decodeObjectForKey:@"damageTypes"];
+	self.reputationRestrictionTypes = [coder decodeObjectForKey:@"reputationRestrictionTypes"];
 	
 	return self;
 }
@@ -60,6 +63,7 @@
 	[coder encodeObject: cards forKey:@"cards"];
 	[coder encodeObject: series forKey:@"series"];
 	[coder encodeObject: damageTypes forKey:@"damageTypes"];
+	[coder encodeObject: reputationRestrictionTypes forKey:@"reputationRestrictionTypes"];
 }
 
 @end

@@ -51,12 +51,7 @@ int main (int argc, const char * argv[]) {
 	
 	[parser parseData:data];
 	
-	WoWTCGDataStore *dataStore = [[WoWTCGDataStore alloc] init];
-	
-	dataStore.cards = parser.cards;
-	dataStore.types = parser.types;
-	dataStore.series = parser.series;
-	dataStore.damageTypes = parser.damageTypes;
+	WoWTCGDataStore *dataStore = parser.dataStore;
 	
 	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
     	
