@@ -22,10 +22,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Card.h"
+#import "CardImageView.h"
 
 @interface CardView : NSView
 {
-	IBOutlet NSImageView *image;
+	IBOutlet CardImageView *image;
 	IBOutlet NSTextField *ruleField;
 	IBOutlet NSTextField *nameField;
 	IBOutlet NSTextField *seriesField;
@@ -50,7 +51,7 @@
 
 @property (retain) Card *card;
 
-@property (retain) IBOutlet NSImageView *image;
+@property (retain) IBOutlet CardImageView *image;
 @property (retain) IBOutlet NSTextField *ruleField;
 @property (retain) IBOutlet NSTextField *nameField;
 @property (retain) IBOutlet NSTextField *seriesField;
@@ -71,7 +72,6 @@
 @property (retain) IBOutlet NSTextField *defenseField;
 
 -(void)setCard:(Card *) c;
--(void)loadImage:(NSString *)path;
 -(void)clearAllFields;
 
 

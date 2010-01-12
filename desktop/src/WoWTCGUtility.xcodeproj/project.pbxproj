@@ -47,6 +47,8 @@
 		47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1991910E925A000F0F708 /* DataOutlineView.m */; };
 		47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */; };
 		47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */; };
+		47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B610FCDE1B00939599 /* CardWindow.m */; };
+		47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B910FCDF3B00939599 /* CardImageView.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -127,6 +129,10 @@
 		47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		47E19D0310E97C9900F0F708 /* RarityPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RarityPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		47EDD5B510FCDE1B00939599 /* CardWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardWindow.h; sourceTree = "<group>"; };
+		47EDD5B610FCDE1B00939599 /* CardWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardWindow.m; sourceTree = "<group>"; };
+		47EDD5B810FCDF3B00939599 /* CardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageView.h; sourceTree = "<group>"; };
+		47EDD5B910FCDF3B00939599 /* CardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageView.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WoWTCGUtility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* WoWTCG Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoWTCG Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,6 +198,10 @@
 				47BE55F210F44FB60098716A /* HyperlinkNSTextField.m */,
 				47089B0110F7DDA0003A572F /* CardURLScheme.h */,
 				47089B0210F7DDA0003A572F /* CardURLScheme.m */,
+				47EDD5B510FCDE1B00939599 /* CardWindow.h */,
+				47EDD5B610FCDE1B00939599 /* CardWindow.m */,
+				47EDD5B810FCDF3B00939599 /* CardImageView.h */,
+				47EDD5B910FCDF3B00939599 /* CardImageView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -403,6 +413,8 @@
 				47BE55F310F44FB60098716A /* HyperlinkNSTextField.m in Sources */,
 				470899AF10F7C0B6003A572F /* TopAnchorView.m in Sources */,
 				47089B0310F7DDA0003A572F /* CardURLScheme.m in Sources */,
+				47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */,
+				47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
