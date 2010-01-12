@@ -7,11 +7,12 @@
 //
 
 #import "CardImageView.h"
-
+#import "CardWindow.h"
 
 @implementation CardImageView
 
 @synthesize card;
+@synthesize enableClick;
 
 -(void)dealloc
 {
@@ -51,6 +52,20 @@
 	self.image = im;
 	
 	[im release];	
+}
+
+- (void)mouseDown:(NSEvent *)event
+{
+    unsigned flags = [event modifierFlags];	
+	
+	if(enableClick && (flags & NSShiftKeyMask))
+	{
+		CardWindow *w = [[CardWindow alloc] init];
+		w.card = card;
+		[w showWindow:self];
+	}
+	
+	[super mouseDown:event];
 }
 
 @end

@@ -49,6 +49,7 @@
 		47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */; };
 		47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B610FCDE1B00939599 /* CardWindow.m */; };
 		47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B910FCDF3B00939599 /* CardImageView.m */; };
+		47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EDD60A10FCE49600939599 /* CardWindow.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -133,6 +134,7 @@
 		47EDD5B610FCDE1B00939599 /* CardWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardWindow.m; sourceTree = "<group>"; };
 		47EDD5B810FCDF3B00939599 /* CardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageView.h; sourceTree = "<group>"; };
 		47EDD5B910FCDF3B00939599 /* CardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageView.m; sourceTree = "<group>"; };
+		47EDD60A10FCE49600939599 /* CardWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardWindow.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WoWTCGUtility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* WoWTCG Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoWTCG Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -271,6 +273,7 @@
 				47CCB22110E86B7600B2F018 /* SearchSheet.xib */,
 				475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */,
 				47411C1210EC6652001183F2 /* Credits.html */,
+				47EDD60A10FCE49600939599 /* CardWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				478CB13110F070D6004AD24D /* config_tool_center.png in Resources */,
 				478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */,
 				478CB1B610F07E81004AD24D /* divider.png in Resources */,
+				47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

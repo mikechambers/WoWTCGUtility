@@ -81,6 +81,7 @@
 {	
 	[image setEditable:TRUE];
 	[image setAllowsCutCopyPaste:TRUE];
+	image.enableClick = TRUE;
 	
 	if(!card)
 	{

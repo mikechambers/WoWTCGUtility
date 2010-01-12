@@ -1,5 +1,5 @@
 //
-//  CardImage.h
+//  CardWindow.h
 //  WoWTCGUtility
 //
 //  Created by Mike Chambers on 1/12/10.
@@ -8,17 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Card.h"
+#import "CardImageView.h"
 
-@interface CardImageView : NSImageView
+@interface CardWindow : NSWindowController
 {
 	Card *card;
-	BOOL enableClick;
+	IBOutlet CardImageView *imageView;
 }
 
 @property (retain) Card *card;
-@property (assign) BOOL enableClick;
-
-
--(void)displayCard;
+@property (retain) IBOutlet CardImageView *imageView;
 
 @end
