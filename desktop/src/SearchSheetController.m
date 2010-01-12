@@ -24,6 +24,7 @@
 #import "RarityPredicateEditorRowTemplate.h"
 #import "ArrayPredicateEditorRowTemplate.h"
 #import "DamageTypePredicateEditorRowTemplate.h"
+#import "ReputationRestrictionsEditorRowTemplate.h"
 
 @implementation SearchSheetController
 
@@ -122,10 +123,24 @@
 													 forKeyPath:@"series"
 													   ];
 	
-	DamageTypePredicateEditorRowTemplate *damageTypesTemplate = [[DamageTypePredicateEditorRowTemplate alloc] initWithArray:dataStore.damageTypes];
+	DamageTypePredicateEditorRowTemplate *damageTypesTemplate = 
+								[[DamageTypePredicateEditorRowTemplate alloc] initWithArray:dataStore.damageTypes];
+	
+	ReputationRestrictionsEditorRowTemplate *reputationRestrictionsTemplate = 
+											[[ReputationRestrictionsEditorRowTemplate alloc] 
+											initWithArray:dataStore.reputationRestrictionTypes];
+	
+	NSMutableArray *templates = [NSMutableArray arrayWithObjects:seriesTemplate, typeTemplate, 
+								 rarityTemplate, damageTypesTemplate, reputationRestrictionsTemplate,
+								 nil];
 	
 	
-	NSMutableArray *templates = [NSMutableArray arrayWithObjects:seriesTemplate, typeTemplate, rarityTemplate, damageTypesTemplate, nil];
+	//release these since we alloced them
+	for(id template in templates)
+	{
+		[template release];
+	}
+	
 	[templates addObjectsFromArray:predicateEditor.rowTemplates];
 	
 	

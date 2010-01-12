@@ -27,6 +27,7 @@
 		478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB14A10F07417004AD24D /* config_tool_grab.png */; };
 		478CB15710F0755A004AD24D /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478CB15610F0755A004AD24D /* SplitViewDelegate.m */; };
 		478CB1B610F07E81004AD24D /* divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB1B510F07E81004AD24D /* divider.png */; };
+		478FA84610FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 478FA84510FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m */; };
 		47A1CF3210EFDD0B0063D2A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */; };
 		47A1CF3F10F011740063D2A6 /* dataparser.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CF3D10F011620063D2A6 /* dataparser.m */; };
 		47A1CFC010F0206B0063D2A6 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
@@ -111,6 +112,8 @@
 		478CB15510F0755A004AD24D /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
 		478CB15610F0755A004AD24D /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
 		478CB1B510F07E81004AD24D /* divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = divider.png; sourceTree = "<group>"; };
+		478FA84410FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReputationRestrictionsEditorRowTemplate.h; sourceTree = "<group>"; };
+		478FA84510FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReputationRestrictionsEditorRowTemplate.m; sourceTree = "<group>"; };
 		47A1CF2D10EFDCF40063D2A6 /* dataparser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataparser; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A1CF3110EFDD0B0063D2A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		47A1CF3D10F011620063D2A6 /* dataparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataparser.m; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */,
 				474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */,
 				474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */,
+				478FA84410FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.h */,
+				478FA84510FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m */,
 			);
 			name = EditorRowTemplates;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				47089B0310F7DDA0003A572F /* CardURLScheme.m in Sources */,
 				47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */,
 				47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */,
+				478FA84610FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
