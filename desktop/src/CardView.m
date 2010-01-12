@@ -84,9 +84,7 @@
 	
 	if(!card)
 	{
-		NSString *path = [[[NSBundle mainBundle] resourcePath] 
-						  stringByAppendingPathComponent:@"/assets/icons/background.png"];
-		[self loadImage:path];
+		image.card = nil;
 	}
 }
 
@@ -105,12 +103,8 @@
 		[self clearAllFields];
 		return;
 	}
-		
-	NSString *path = [[[[NSBundle mainBundle] resourcePath] 
-						stringByAppendingPathComponent:@"/assets/cards/"]
-						stringByAppendingPathComponent:c.cardImageName];
 	
-	[self loadImage:path];
+	image.card = card;
 	
 	[ruleField setStringValue:[c.rules stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\n"]];
 	[nameField setStringValue:c.cardName];
@@ -152,24 +146,7 @@
 	[healthField setStringValue:empty];
 	[defenseField setStringValue:empty];
 	
-	[self loadImage:nil];
-}
-
--(void)loadImage:(NSString *)path
-{
-	NSFileManager *fMan = [NSFileManager defaultManager];
-	if(![fMan fileExistsAtPath:path])
-	{
-		path = [[[NSBundle mainBundle] resourcePath] 
-						  stringByAppendingPathComponent:@"/assets/icons/background.png"];
-	}
-	
-	
-	NSImage *im = [[NSImage alloc] initByReferencingFile:path];
-	
-	image.image = im;
-	
-	[im release];
+	image.card = nil;
 }
 
 -(IBAction)handleInfoClick:(NSSegmentedControl *)sender;
