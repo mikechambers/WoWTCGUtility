@@ -23,6 +23,8 @@
 #import "WoWTCGDataParser.h"
 #import "Card.h"
 #import "Rarity.h"
+#import "NSString+IsEmptyCategory.h"
+#import "NSString+CSVCategory.h"
 
 #define CARD_ID_INDEX 0
 #define SERIES_INDEX 1
@@ -275,7 +277,7 @@
 	NSMutableArray *reputationRestrictionTypes = [[reputationRestrictionTypesKey allKeys] mutableCopy];
 	[reputationRestrictionTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	
-	if([self stringIsEmpty:[reputationRestrictionTypes objectAtIndex:0]])
+	if([[reputationRestrictionTypes objectAtIndex:0] stringIsEmpty])
 	{
 		[reputationRestrictionTypes removeObjectAtIndex:0];
 	}	
@@ -286,30 +288,13 @@
 	NSMutableArray *races = [[racesKey allKeys] mutableCopy];
 	
 	[races sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	if([self stringIsEmpty:[races objectAtIndex:0]])
+	if([[races objectAtIndex:0] stringIsEmpty])
 	{
 		[races removeObjectAtIndex:0];
 	}
-	
 	dataStore.races = races;
 									
 	dataStore.cards = out;
-}
-
-//make this a category on NSString
--(BOOL)stringIsEmpty:(NSString *)value
-{
-	if(!value)
-	{
-		return TRUE;
-	}
-	
-	if([[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] compare:@""] == NSOrderedSame)
-	{
-		return TRUE;
-	}
-	
-	return FALSE;
 }
 
 @end

@@ -21,6 +21,8 @@
 		4753840110E3CD6600EE2083 /* Rarity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753840010E3CD6600EE2083 /* Rarity.m */; };
 		4753A0F610E53FC300EE2083 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753A0F510E53FC300EE2083 /* CardView.m */; };
 		4753F34A10E54CFC00EE2083 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 4753E7A110E54CFB00EE2083 /* assets */; };
+		47552B6E10FD924100B82586 /* NSString+IsEmptyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */; };
+		47552B8110FD93A200B82586 /* NSString+IsEmptyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */; };
 		475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */; };
 		475AEF7A10EB30F500F2C8A4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */; };
 		478CB13110F070D6004AD24D /* config_tool_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB13010F070D6004AD24D /* config_tool_center.png */; };
@@ -35,11 +37,6 @@
 		47A1CFC210F0206B0063D2A6 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
 		47A1CFC310F0206B0063D2A6 /* Rarity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753840010E3CD6600EE2083 /* Rarity.m */; };
 		47A1CFE010F022A00063D2A6 /* NSString+CSVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47539ECF10E45E3900EE2083 /* NSString+CSVCategory.m */; };
-		47A1CFF910F0230E0063D2A6 /* WoWTCGDataStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */; };
-		47A1CFFA10F0230E0063D2A6 /* WoWTCGDataParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 47A1CFA210F0196E0063D2A6 /* WoWTCGDataParser.h */; };
-		47A1CFFB10F0230E0063D2A6 /* Card.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383DC10E3C85700EE2083 /* Card.h */; };
-		47A1CFFC10F0230E0063D2A6 /* Rarity.h in Sources */ = {isa = PBXBuildFile; fileRef = 475383FF10E3CD6600EE2083 /* Rarity.h */; };
-		47A1CFFD10F0230E0063D2A6 /* NSString+CSVCategory.h in Sources */ = {isa = PBXBuildFile; fileRef = 47539ECE10E45E3900EE2083 /* NSString+CSVCategory.h */; };
 		47A1D05A10F024060063D2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A1D05910F024060063D2A6 /* Foundation.framework */; };
 		47BE55F310F44FB60098716A /* HyperlinkNSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE55F210F44FB60098716A /* HyperlinkNSTextField.m */; };
 		47CCB09210E842E600B2F018 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CCB09110E842E600B2F018 /* Node.m */; };
@@ -102,6 +99,8 @@
 		4753A0F410E53FC300EE2083 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		4753A0F510E53FC300EE2083 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		4753E7A110E54CFB00EE2083 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		47552B6C10FD924100B82586 /* NSString+IsEmptyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IsEmptyCategory.h"; sourceTree = "<group>"; };
+		47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsEmptyCategory.m"; sourceTree = "<group>"; };
 		475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -181,6 +180,8 @@
 				4753840010E3CD6600EE2083 /* Rarity.m */,
 				47539ECE10E45E3900EE2083 /* NSString+CSVCategory.h */,
 				47539ECF10E45E3900EE2083 /* NSString+CSVCategory.m */,
+				47552B6C10FD924100B82586 /* NSString+IsEmptyCategory.h */,
+				47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */,
 				4753A0F410E53FC300EE2083 /* CardView.h */,
 				4753A0F510E53FC300EE2083 /* CardView.m */,
 				47CCB09010E842E600B2F018 /* Node.h */,
@@ -387,15 +388,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A1CFF910F0230E0063D2A6 /* WoWTCGDataStore.h in Sources */,
+				47552B8110FD93A200B82586 /* NSString+IsEmptyCategory.m in Sources */,
 				47A1CFC010F0206B0063D2A6 /* WoWTCGDataStore.m in Sources */,
-				47A1CFFA10F0230E0063D2A6 /* WoWTCGDataParser.h in Sources */,
 				47A1CFC110F0206B0063D2A6 /* WoWTCGDataParser.m in Sources */,
-				47A1CFFB10F0230E0063D2A6 /* Card.h in Sources */,
 				47A1CFC210F0206B0063D2A6 /* Card.m in Sources */,
-				47A1CFFC10F0230E0063D2A6 /* Rarity.h in Sources */,
 				47A1CFC310F0206B0063D2A6 /* Rarity.m in Sources */,
-				47A1CFFD10F0230E0063D2A6 /* NSString+CSVCategory.h in Sources */,
 				47A1CFE010F022A00063D2A6 /* NSString+CSVCategory.m in Sources */,
 				47A1CF3F10F011740063D2A6 /* dataparser.m in Sources */,
 			);
@@ -425,6 +422,7 @@
 				47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */,
 				47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */,
 				478FA84610FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m in Sources */,
+				47552B6E10FD924100B82586 /* NSString+IsEmptyCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
