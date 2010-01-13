@@ -29,19 +29,12 @@
 #import "PreferencesWindowController.h"
 #import "DeleteKeyDelegate.h"
 
-typedef enum {
-	CardFilterSearch = 0,
-	RulesForumSearch = 1
-} SearchTypeEnum;
-
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1060
 	@interface WoWTCGUtilityAppDelegate : NSObject <DeleteKeyDelegate>
 #else
 	@interface WoWTCGUtilityAppDelegate : NSObject <NSApplicationDelegate, DeleteKeyDelegate>
 #endif
-{
-	SearchTypeEnum searchType;
-	
+{	
 	IBOutlet NSTableView *cardTable;
 	IBOutlet CardView *cardView;
 	IBOutlet NSSearchField *searchField;
@@ -87,7 +80,6 @@ typedef enum {
 -(IBAction)handleCreateSearchClick:(id)sender;
 -(IBAction)handleDeleteNodeMenu:(id)sender;
 -(IBAction)handleAlwaysOnTopMenu:(id)sender;
--(IBAction)handleSearchMenu:(id)sender;
 -(IBAction)handleRenameItemMenu:(id)sender;
 -(IBAction)handlePreferencesMenuClick:(id)sender;
 
@@ -108,7 +100,6 @@ typedef enum {
 -(void)loadSearchData;
 -(void)deleteNode:(Node *)node;
 -(void)updateOutlineViewSelection;
--(void)searchRulesForum:(NSString *)searchString;
 -(void)updateTitle;
 -(NSString *)getNewNodeName:(Node *)parentNode;
 - (void)registerMyApp;

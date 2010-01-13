@@ -12,7 +12,6 @@
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<integer value="81"/>
-			<integer value="915"/>
 			<integer value="563"/>
 			<integer value="624"/>
 		</array>
@@ -3160,49 +3159,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 			<object class="NSUserDefaultsController" id="295954775">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
-			<object class="NSMenu" id="61103138">
-				<string key="NSTitle">Search Menu</string>
-				<array class="NSMutableArray" key="NSMenuItems">
-					<object class="NSMenuItem" id="890267619">
-						<reference key="NSMenu" ref="61103138"/>
-						<string key="NSTitle">Card Name</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<int key="NSState">1</int>
-						<reference key="NSOnImage" ref="35465992"/>
-						<reference key="NSMixedImage" ref="502551668"/>
-						<int key="NSTag">12</int>
-						<object class="NSAttributedString" key="NSAttributedTitle">
-							<string key="NSString">Card Name</string>
-							<dictionary key="NSAttributes" id="660129081">
-								<object class="NSFont" key="NSFont">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">12</double>
-									<int key="NSfFlags">16</int>
-								</object>
-								<object class="NSParagraphStyle" key="NSParagraphStyle">
-									<int key="NSAlignment">4</int>
-									<nil key="NSTabStops"/>
-								</object>
-							</dictionary>
-						</object>
-					</object>
-					<object class="NSMenuItem" id="448382436">
-						<reference key="NSMenu" ref="61103138"/>
-						<string key="NSTitle">Rules Forum</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="35465992"/>
-						<reference key="NSMixedImage" ref="502551668"/>
-						<int key="NSTag">11</int>
-						<object class="NSAttributedString" key="NSAttributedTitle">
-							<string key="NSString">Rules Forum</string>
-							<reference key="NSAttributes" ref="660129081"/>
-						</object>
-					</object>
-				</array>
-				<bool key="NSNoAutoenable">YES</bool>
-			</object>
 			<object class="NSMenu" id="234015681">
 				<string key="NSTitle">New Button</string>
 				<array class="NSMutableArray" key="NSMenuItems">
@@ -3647,30 +3603,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<reference key="destination" ref="288776116"/>
 					</object>
 					<int key="connectionID">913</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">searchMenuTemplate</string>
-						<reference key="source" ref="101652977"/>
-						<reference key="destination" ref="61103138"/>
-					</object>
-					<int key="connectionID">919</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">handleSearchMenu:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="890267619"/>
-					</object>
-					<int key="connectionID">920</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">handleSearchMenu:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="448382436"/>
-					</object>
-					<int key="connectionID">921</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -4577,25 +4509,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<int key="objectID">912</int>
 						<reference key="object" ref="288776116"/>
 						<reference key="parent" ref="835318025"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">914</int>
-						<reference key="object" ref="61103138"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="890267619"/>
-							<reference ref="448382436"/>
-						</array>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">915</int>
-						<reference key="object" ref="890267619"/>
-						<reference key="parent" ref="61103138"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">916</int>
-						<reference key="object" ref="448382436"/>
-						<reference key="parent" ref="61103138"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">560</int>
@@ -5912,10 +5825,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="910.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="911.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="912.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="914.IBEditorWindowLastContentRect">{{377, 1079}, {137, 43}}</string>
-				<string key="914.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="915.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="916.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="92.ImportedFromIB2"/>
 				<string key="956.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5986,7 +5895,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<string key="defenseField">NSTextField</string>
 						<string key="factionField">NSTextField</string>
 						<string key="healthField">NSTextField</string>
-						<string key="image">NSImageView</string>
+						<string key="image">CardImageView</string>
 						<string key="nameField">NSTextField</string>
 						<string key="numberField">NSTextField</string>
 						<string key="professionsField">NSTextField</string>
@@ -6068,7 +5977,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<string key="handlePreferencesMenuClick:">id</string>
 						<string key="handleRenameItemMenu:">id</string>
 						<string key="handleSearch:">NSSearchField</string>
-						<string key="handleSearchMenu:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addOutlineButton">NSButton</string>

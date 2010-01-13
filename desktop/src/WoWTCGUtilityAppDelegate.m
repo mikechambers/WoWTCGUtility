@@ -89,8 +89,6 @@
 	NSBundle *bundle = [NSBundle mainBundle];
 	self.appName = [bundle objectForInfoDictionaryKey:@"Bundle name"];
 	
-	searchType = CardFilterSearch;
-	
 	[self initData];
 		
 	//self.filteredCards = [dataStore.cards mutableCopy];
@@ -467,12 +465,6 @@
 -(IBAction)handleSearch:(NSSearchField *)sField
 {
 	NSString *searchString = [sField stringValue];
-		
-	if(searchType == RulesForumSearch)
-	{
-		[self searchRulesForum:searchString];
-		return;
-	}
 	
 	if([searchString length] == 0)
 	{
@@ -527,20 +519,6 @@
 	[self resetCardData];
 	[filteredCards filterUsingPredicate:predicate];
 	[self refreshCardTableData];
-}
-
-
--(void)searchRulesForum:(NSString *)searchString
-{
-	if([searchString length] == 0)
-	{
-		return;
-	}
-	
-	NSString *escapedSearch = [searchString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_RULES_SEARCH_URL, escapedSearch];
-
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 }
 
 /************ General Outline View APIs **************/
@@ -777,36 +755,6 @@
 -(IBAction)handleRenameItemMenu:(id)sender
 {
 	[outlineView setSelectedItemToEdit];
-}
-
--(IBAction)handleSearchMenu:(id)sender
-{
-	NSMenuItem *item = (NSMenuItem *)sender;
-	NSMenu *parent = item.menu;
-	
-	item.state = NSOnState;
-	
-	NSArray *items = parent.itemArray;
-	
-	for(NSMenuItem *mi in items)
-	{
-		if(mi.tag != item.tag)
-		{
-			mi.state = NSOffState;
-		}
-	}
-	
-	NSSearchFieldCell *cell = [searchField cell];
-	if(item.tag == SEARCH_CARDS_TAG)
-	{
-		searchType = CardFilterSearch;
-		[cell setSendsWholeSearchString:FALSE];
-	}
-	else if(item.tag == SEARCH_RULES_FORUM_TAG)
-	{
-		searchType = RulesForumSearch;
-		[cell setSendsWholeSearchString:TRUE];
-	}
 }
 
 -(IBAction)handlePreferencesMenuClick:(id)sender
