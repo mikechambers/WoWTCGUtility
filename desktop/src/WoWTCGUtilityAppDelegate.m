@@ -51,9 +51,11 @@
 @synthesize cardsNode;
 @synthesize preferencesWindow;
 @synthesize appName;
+@synthesize searchKeys;
 
 -(void)dealloc
 {
+	[searchKeys release];
 	[appName release];
 	[preferencesWindow release];
 	[cardsNode release];
@@ -474,19 +476,46 @@
 	
 	if([searchString length] == 0)
 	{
-		//self.filteredCards = [dataStore.cards mutableCopy];
 		[self resetCardData];
 		[self refreshCardTableData];
 		return;
 	}
 	
-	[self filterOnCardName:searchString];
-}
-
--(void)filterOnCardName:(NSString *)cardName
-{
-	NSPredicate *namePredicate = [NSPredicate predicateWithFormat:@"cardName contains[c] %@", cardName];
-	[self filterCardsWithPredicate:namePredicate];
+	if(!searchKeys)
+	{
+		self.searchKeys = [NSArray arrayWithObjects:
+					 @"cardName",
+					 @"series",
+					 @"type",
+					 @"className",
+					 @"race",
+					 @"professions",
+					 @"talent",
+					 @"faction",
+					 @"keywords",
+					 @"rules",
+					 @"seriesType",
+					 @"allyFaction",
+					 @"talentRestrictions",
+					 @"raceRestrictions",
+					 @"professionRestrictions",
+					 @"damageType",
+					 @"reputationRestrictions",
+					 nil
+					 ];
+	}
+	
+	int len = [searchKeys count];
+	NSMutableArray *predicates = [NSMutableArray arrayWithCapacity:len];
+	for(int i = 0; i < len; i++)
+	{
+		NSPredicate *p = [NSPredicate predicateWithFormat:@"%K contains[c] %@", 
+											[searchKeys objectAtIndex:i], searchString];
+		[predicates addObject:p];
+	}
+	
+	NSPredicate *searchPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:predicates];
+	[self filterCardsWithPredicate:searchPredicate];
 	[outlineView selectOutlineViewItem:cardsNode];
 }
 

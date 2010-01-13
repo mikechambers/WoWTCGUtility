@@ -60,8 +60,11 @@ typedef enum {
 	WoWTCGDataStore *dataStore;	
 	NSButton *addOutlineButton;
 	PreferencesWindowController *preferencesWindow;
+	
+	NSArray *searchKeys;
 }
 
+@property (retain) NSArray *searchKeys;
 @property (retain) PreferencesWindowController *preferencesWindow;
 @property (assign) IBOutlet NSWindow *window;
 @property (retain) IBOutlet NSTableView *cardTable;
@@ -109,6 +112,5 @@ typedef enum {
 -(void)updateTitle;
 -(NSString *)getNewNodeName:(Node *)parentNode;
 - (void)registerMyApp;
--(void)filterOnCardName:(NSString *)cardName;
 
 @end
