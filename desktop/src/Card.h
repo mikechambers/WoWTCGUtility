@@ -40,7 +40,6 @@
 	int attack;
 	int defense;
 	int health;
-	int quantity;
 	NSString *rules;
 	NSString *urlID;
 	NSString *cardImageName;
