@@ -28,9 +28,10 @@
 +(NSURL *)createURLForCard:(Card *)card
 {
 	int data = card.cardId;
-	NSString *out = [NSString stringWithFormat:@"%@%@/%@/%i/%@/", 
-					 URL_SCHEME, CARD_IDENTIFIER, CARD_ID_KEY, data, card.cardName];
 	
+	NSString *out = [NSString stringWithFormat:@"%@%@/%@/%i/%@/", 
+					 URL_SCHEME, CARD_IDENTIFIER, CARD_ID_KEY, data, 
+					 [card.cardName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	
 	return [NSURL URLWithString:out];
 }
