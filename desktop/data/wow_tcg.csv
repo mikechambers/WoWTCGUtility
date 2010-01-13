@@ -4455,7 +4455,7 @@ Protector
 When Sister of Pleasure defends, she heals 1 damage from target hero or ally.",2094,BTR_041.jpg,Raid,Neutral,Traitor,,,
 2856,Black Temple Raid,042,Temple Concubine,Ally,Any,Blood Elf,,,Neutral,,C,4,,2,,,0,3,"Traitor Hero Required
 If Temple Concubine would be dealt 3 or more damage, prevent it.",2076,BTR_042.jpg,Raid,Neutral,Traitor,,,
-2857,Burning Crusade Promo,001,Nimaasus the Implacable,Hero,Paladin,Draenei,"Mining, Jewelcraft",Restoration,Alliance,,R,0,,0,,Holy,0,29,"Pay 3, Flip Nimaasus >>> Nimaasus deals X holy damage to target ally, where X is the amount of damage that ally dealt to Nimaasus this turn.",473,BCP_001.jpg,Promo,Neutral,,,,
+2857,Burning Crusade Promo,001,Nimaasus the Implacable,Hero,Paladin,Draenei,"Mining, Jewelcrafting",Restoration,Alliance,,R,0,,0,,Holy,0,29,"Pay 3, Flip Nimaasus >>> Nimaasus deals X holy damage to target ally, where X is the amount of damage that ally dealt to Nimaasus this turn.",473,BCP_001.jpg,Promo,Neutral,,,,
 2858,Burning Crusade Promo,002,Varanis Bitterstar,Hero,Mage,Blood Elf,"Enchanting, Jewelcrafting",Arcane,Horde,,R,0,,0,,Arcane,0,25,"Pay 4, Flip Varanis Bitterstar >>> Varanis deals 2 arcane damage to target hero or ally.  Draw a card.   Use only on your turn.",474,BCP_002.jpg,Promo,Neutral,,,,
 2859,Burning Crusade Promo,003,Through the Dark Portal,Quest,Any,,,,Neutral,,R,0,,0,,,0,0,"During your turn, pay 13 to complete this quest.
 Reward: Remove your deck and graveyard from the game.  Build a new ten-card deck using cards from your entire collection.",472,BCP_003.jpg,Promo,Neutral,,,,
@@ -4502,7 +4502,7 @@ Pay 3 >>> Ready Hovin.",2372,DWS_002.jpg,Promo,Neutral,,,,
 2889,Drums of War Starter,006,Joja'bee,Ally,Shaman,Troll,,,Horde,,U,3,,3,,,0,4,"When Joja'bee enters play, you may ready one of your resources.",2376,DWS_006.jpg,Promo,Neutral,,,,
 2890,Drums of War Starter,007,Ra'za Wildstorm,Ally,Shaman,Troll,,,Horde,,U,4,,4,,,0,2,,2377,DWS_007.jpg,Promo,Neutral,,,,
 2891,Drums of War Starter,008,Selin Duskrunner,Ally,Warlock,Blood Elf,,,Horde,,U,2,,2,,,0,2,"When you play an ability, Selin deals 1 shadow damage to target hero or ally.",2378,DWS_008.jpg,Promo,Neutral,,,,
-2892,Death Knight Starter,001,Randolphe Mortimer,Hero,Death Knight,Human,"Mining, Jewelcraft",Frost,Alliance,,U,0,,0,,,0,29,"Pay 3, Flip Randolphe >>> Each opposing hero and ally has -1 ATK this turn for each damage on it.",2644,DKS_001.jpg,Promo,Neutral,,,,
+2892,Death Knight Starter,001,Randolphe Mortimer,Hero,Death Knight,Human,"Mining, Jewelcrafting",Frost,Alliance,,U,0,,0,,,0,29,"Pay 3, Flip Randolphe >>> Each opposing hero and ally has -1 ATK this turn for each damage on it.",2644,DKS_001.jpg,Promo,Neutral,,,,
 2893,Death Knight Starter,002,Saeryn Dusksorrow,Hero,Death Knight,Blood Elf,"Herbalism, Inscription",Blood,Horde,,U,0,,0,,,0,29,"Pay 3, Fllip Saeryn >>> Put target weapon card from your graveyard into hand.",2646,DKS_002.jpg,Promo,Neutral,,,,
 2894,Death Knight Starter,003,Blood Boil,Ability,Death Knight,,,Blood,Neutral,,U,2,,0,,Shadow,0,0,Destroy any number of Diseases you control. Your hero deals 2 shadow damage to each opposing ally for each Disease destroyed this way.,2657,DKS_003.jpg,Promo,Neutral,,,,
 2895,Death Knight Starter,004,Blood Presence,Ability,Death Knight,,,Blood,Neutral,,U,4,,0,,,0,0,"Ongoing: If your hero would deal damage, it deals that much +1 instead.
