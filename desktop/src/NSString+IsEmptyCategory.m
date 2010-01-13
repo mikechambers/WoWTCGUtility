@@ -11,7 +11,7 @@
 
 @implementation NSString (IsEmptyExtensions)
 
--(BOOL)stringIsEmpty
+-(BOOL)isEmpty
 {	
 	if([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] 
 																		compare:@""] == NSOrderedSame)

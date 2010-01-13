@@ -277,7 +277,7 @@
 	NSMutableArray *reputationRestrictionTypes = [[reputationRestrictionTypesKey allKeys] mutableCopy];
 	[reputationRestrictionTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	
-	if([[reputationRestrictionTypes objectAtIndex:0] stringIsEmpty])
+	if([[reputationRestrictionTypes objectAtIndex:0] isEmpty])
 	{
 		[reputationRestrictionTypes removeObjectAtIndex:0];
 	}	
@@ -288,7 +288,7 @@
 	NSMutableArray *races = [[racesKey allKeys] mutableCopy];
 	
 	[races sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	if([[races objectAtIndex:0] stringIsEmpty])
+	if([[races objectAtIndex:0] isEmpty])
 	{
 		[races removeObjectAtIndex:0];
 	}

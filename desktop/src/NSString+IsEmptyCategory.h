@@ -10,6 +10,6 @@
 
 @interface NSString (IsEmptyExtensions)
 
--(BOOL)stringIsEmpty;
+-(BOOL)isEmpty;
 
 @end
