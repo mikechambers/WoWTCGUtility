@@ -43,5 +43,6 @@
 
 -(void)parseData:(NSString *)csvData;
 -(NSString *) parseCardName:(NSString *)data;
+-(BOOL)stringIsEmpty:(NSString *)value;
 
 @end

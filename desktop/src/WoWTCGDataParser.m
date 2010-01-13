@@ -179,7 +179,7 @@
 	NSMutableDictionary *typesKey = [NSMutableDictionary dictionaryWithCapacity:TYPES_COUNT];
 	NSMutableDictionary *damageTypesKey = [NSMutableDictionary dictionaryWithCapacity:0];
 	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:3];
-	
+	NSMutableDictionary *racesKey = [NSMutableDictionary dictionaryWithCapacity:2];
 	
 	NSString *placeHolder = @"";
 	
@@ -205,6 +205,9 @@
 		c.className = [self parseCardName:[row objectAtIndex:CLASS_NAME_INDEX]];
 		
 		c.race = [row objectAtIndex:RACE_INDEX];
+		
+		[racesKey setValue:placeHolder forKey:c.race];
+		
 		c.professions = [row objectAtIndex:PROFESSIONS_INDEX];
 		c.talent = [row objectAtIndex:TALENT_INDEX];
 		c.faction = [row objectAtIndex:FACTION_INDEX];
@@ -242,10 +245,7 @@
 
 		c.reputationRestrictions = [row objectAtIndex:REPUTATION_RESTRICTIONS_INDEX];
 
-		if([c.reputationRestrictions compare:@""] != NSOrderedSame)
-		{
-			[reputationRestrictionTypesKey setValue:placeHolder forKey:c.reputationRestrictions];
-		}
+		[reputationRestrictionTypesKey setValue:placeHolder forKey:c.reputationRestrictions];
 		
 		c.strikeCost = [[row objectAtIndex:STRIKE_COST_INDEX] intValue];
 
@@ -256,23 +256,60 @@
 		[c release];
 	}
 	
+	/******** tempSeries ********/
 	NSMutableArray *tempSeries = [[seriesKey allKeys] mutableCopy];
 	[tempSeries sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	dataStore.series = tempSeries;
 	
+	/******** types ********/
 	NSMutableArray *tempTypes = [[typesKey allKeys] mutableCopy];
 	[tempTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	dataStore.types = tempTypes;	
 	
+	/******** damageType ********/
 	NSMutableArray *tempDamageTypes = [[damageTypesKey allKeys] mutableCopy];
 	[tempDamageTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	dataStore.damageTypes = tempDamageTypes;	
 	
+	/******** reputationRestrictionTypes ********/
 	NSMutableArray *reputationRestrictionTypes = [[reputationRestrictionTypesKey allKeys] mutableCopy];
 	[reputationRestrictionTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
-	dataStore.reputationRestrictionTypes = reputationRestrictionTypes;	
+	
+	if([self stringIsEmpty:[reputationRestrictionTypes objectAtIndex:0]])
+	{
+		[reputationRestrictionTypes removeObjectAtIndex:0];
+	}	
+	
+	dataStore.reputationRestrictionTypes = reputationRestrictionTypes;
+	
+	/******** races ********/
+	NSMutableArray *races = [[racesKey allKeys] mutableCopy];
+	
+	[races sortUsingSelector:@selector(caseInsensitiveCompare:)];
+	if([self stringIsEmpty:[races objectAtIndex:0]])
+	{
+		[races removeObjectAtIndex:0];
+	}
+	
+	dataStore.races = races;
 									
 	dataStore.cards = out;
+}
+
+//make this a category on NSString
+-(BOOL)stringIsEmpty:(NSString *)value
+{
+	if(!value)
+	{
+		return TRUE;
+	}
+	
+	if([[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] compare:@""] == NSOrderedSame)
+	{
+		return TRUE;
+	}
+	
+	return FALSE;
 }
 
 @end

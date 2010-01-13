@@ -130,8 +130,14 @@
 											[[ReputationRestrictionsEditorRowTemplate alloc] 
 											initWithArray:dataStore.reputationRestrictionTypes];
 	
+	ArrayPredicateEditorRowTemplate *racesTemplate = [[ArrayPredicateEditorRowTemplate alloc] 
+													   initWithArray:dataStore.races 
+													   forKeyPath:@"race"
+													   ];	
+	
 	NSMutableArray *templates = [NSMutableArray arrayWithObjects:seriesTemplate, typeTemplate, 
 								 rarityTemplate, damageTypesTemplate, reputationRestrictionsTemplate,
+								 racesTemplate,
 								 nil];
 	
 	
