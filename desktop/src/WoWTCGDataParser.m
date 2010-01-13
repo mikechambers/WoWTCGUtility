@@ -182,6 +182,7 @@
 	NSMutableDictionary *damageTypesKey = [NSMutableDictionary dictionaryWithCapacity:0];
 	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:3];
 	NSMutableDictionary *racesKey = [NSMutableDictionary dictionaryWithCapacity:2];
+	NSMutableDictionary *talentsKey = [NSMutableDictionary dictionaryWithCapacity:10];
 	
 	NSString *placeHolder = @"";
 	
@@ -212,6 +213,20 @@
 		
 		c.professions = [row objectAtIndex:PROFESSIONS_INDEX];
 		c.talent = [row objectAtIndex:TALENT_INDEX];
+			
+		
+		NSArray *talArr = [c.talent componentsSeparatedByString:@", "];
+		
+		for(NSString *tal in talArr)
+		{
+			if([tal isEmpty])
+			{
+				continue;
+			}
+			[talentsKey setValue:placeHolder forKey:tal];
+		}
+		
+		
 		c.faction = [row objectAtIndex:FACTION_INDEX];
 		c.keywords = [row objectAtIndex:KEYWORDS_INDEX];
 		
@@ -225,7 +240,7 @@
 		
 		for(NSString *dt in dtArr)
 		{
-			if([c.damageType compare:@""] == NSOrderedSame)
+			if([dt isEmpty])
 			{
 				continue;
 			}
@@ -273,6 +288,7 @@
 	[tempDamageTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	dataStore.damageTypes = tempDamageTypes;	
 	
+	
 	/******** reputationRestrictionTypes ********/
 	NSMutableArray *reputationRestrictionTypes = [[reputationRestrictionTypesKey allKeys] mutableCopy];
 	[reputationRestrictionTypes sortUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -293,7 +309,12 @@
 		[races removeObjectAtIndex:0];
 	}
 	dataStore.races = races;
-									
+			
+	/******** talents ********/
+	NSMutableArray *talents = [[talentsKey allKeys] mutableCopy];
+	[talents sortUsingSelector:@selector(caseInsensitiveCompare:)];
+	dataStore.talents = talents;	
+	
 	dataStore.cards = out;
 }
 

@@ -32,6 +32,7 @@
 	NSArray *damageTypes;
 	NSArray *reputationRestrictionTypes;
 	NSArray *races;
+	NSArray *talents;
 }
 
 @property (retain) NSArray *cards;
@@ -40,6 +41,7 @@
 @property (retain) NSArray *damageTypes;
 @property (retain) NSArray *reputationRestrictionTypes;
 @property (retain) NSArray *races;
+@property (retain) NSArray *talents;
 
 @end
 
