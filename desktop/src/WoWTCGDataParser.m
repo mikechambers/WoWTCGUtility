@@ -183,6 +183,8 @@
 	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:3];
 	NSMutableDictionary *racesKey = [NSMutableDictionary dictionaryWithCapacity:2];
 	NSMutableDictionary *talentsKey = [NSMutableDictionary dictionaryWithCapacity:10];
+	NSMutableDictionary *professionsKey = [NSMutableDictionary dictionaryWithCapacity:10];
+	
 	
 	NSString *placeHolder = @"";
 	
@@ -212,6 +214,18 @@
 		[racesKey setValue:placeHolder forKey:c.race];
 		
 		c.professions = [row objectAtIndex:PROFESSIONS_INDEX];
+		
+		NSArray *profArr = [c.professions componentsSeparatedByString:@", "];
+		
+		for(NSString *pro in profArr)
+		{
+			if([pro isEmpty])
+			{
+				continue;
+			}
+			[professionsKey setValue:placeHolder forKey:pro];
+		}
+		
 		c.talent = [row objectAtIndex:TALENT_INDEX];
 			
 		
@@ -309,11 +323,18 @@
 		[races removeObjectAtIndex:0];
 	}
 	dataStore.races = races;
+	
 			
 	/******** talents ********/
 	NSMutableArray *talents = [[talentsKey allKeys] mutableCopy];
 	[talents sortUsingSelector:@selector(caseInsensitiveCompare:)];
 	dataStore.talents = talents;	
+	
+	/******** professions ********/
+	NSMutableArray *professions = [[professionsKey allKeys] mutableCopy];
+	
+	[professions sortUsingSelector:@selector(caseInsensitiveCompare:)];
+	dataStore.professions = professions;
 	
 	dataStore.cards = out;
 }

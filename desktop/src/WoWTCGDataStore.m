@@ -32,9 +32,11 @@
 @synthesize reputationRestrictionTypes;
 @synthesize races;
 @synthesize talents;
+@synthesize professions;
 
 -(void)dealloc
 {
+	[professions release];
 	[talents release];
 	[races release];
 	[reputationRestrictionTypes release];
@@ -59,6 +61,7 @@
 	self.reputationRestrictionTypes = [coder decodeObjectForKey:@"reputationRestrictionTypes"];
 	self.races = [coder decodeObjectForKey:@"races"];
 	self.talents = [coder decodeObjectForKey:@"talents"];
+	self.professions = [coder decodeObjectForKey:@"professions"];
 	
 	return self;
 }
@@ -72,6 +75,7 @@
 	[coder encodeObject: reputationRestrictionTypes forKey:@"reputationRestrictionTypes"];
 	[coder encodeObject: races forKey:@"races"];
 	[coder encodeObject: talents forKey:@"talents"];
+	[coder encodeObject: professions forKey:@"professions"];
 }
 
 @end

@@ -33,6 +33,7 @@
 	NSArray *reputationRestrictionTypes;
 	NSArray *races;
 	NSArray *talents;
+	NSArray *professions;
 }
 
 @property (retain) NSArray *cards;
@@ -42,6 +43,7 @@
 @property (retain) NSArray *reputationRestrictionTypes;
 @property (retain) NSArray *races;
 @property (retain) NSArray *talents;
+@property (retain) NSArray *professions;
 
 @end
 
