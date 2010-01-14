@@ -20,43 +20,22 @@
  THE SOFTWARE.
  */
 
-#import "ArrayPredicateEditorRowTemplate.h"
+#import "TypesEditorRowTemplate.h"
 
 
-@implementation ArrayPredicateEditorRowTemplate
+@implementation TypesEditorRowTemplate
 
--(void)dealloc
+-(id)initWithArray:(NSArray *)arr
 {
-	[super dealloc];
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return [self retain]; //we are immutable
-}
-
-//designated constructor
--(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath andTitle:(NSString *)title withOperators:(NSArray *)operators
-{	
-	NSMutableArray *expressions = [NSMutableArray arrayWithCapacity:[arr count]];
-	for(NSString *s in arr)
-	{
-		[expressions addObject:[NSExpression expressionForConstantValue:s]];
-	}	
-	
-	if(!(self = [super initWithLeftExpressions:[NSArray arrayWithObjects:[NSExpression expressionForKeyPath:keyPath], nil]
-					  rightExpressions:expressions
-							  modifier:NSDirectPredicateModifier
-							 operators:operators
-							   options:NSCaseInsensitivePredicateOption
-		 ]))
+	if(![super initWithArray:arr forKeyPath:@"type" 
+					andTitle:@"Type" 
+			   withOperators:[NSArray arrayWithObjects:[NSNumber numberWithInt: NSContainsPredicateOperatorType],
+							  [NSNumber numberWithInt: NSEqualToPredicateOperatorType],
+							  [NSNumber numberWithInt: NSNotEqualToPredicateOperatorType],
+							  nil]])
 	{
 		return nil;
 	}
-	
-	NSPopUpButton *popup = [[super templateViews] objectAtIndex:0];
-	NSMenuItem *item = [popup itemAtIndex:0];
-	item.title = title;
 	
 	return self;
 }

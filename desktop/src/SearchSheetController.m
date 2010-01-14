@@ -26,6 +26,10 @@
 #import "DamageTypePredicateEditorRowTemplate.h"
 #import "ReputationRestrictionsEditorRowTemplate.h"
 #import "TalentsEditorRowTemplate.h"
+#import "ProfessionsEditorRowTemplate.h"
+#import "TypesEditorRowTemplate.h"
+#import "SeriesPredicateEditorRowTemplate.h"
+#import "RacesPredicateEditorRowTemplate.h"
 
 @implementation SearchSheetController
 
@@ -84,17 +88,11 @@
 	
 	if(node.data == nil)
 	{
-		//predicateNode = [[Node alloc] initWithLabel:@"Untitled"];
-		//predicateNode.data = [NSCompoundPredicate
-		//					  orPredicateWithSubpredicates:[NSArray arrayWithObjects:
-		//													nil]];
 		predicateEditor.objectValue = nil;
 		[predicateEditor addRow:self];
 	}
 	else
 	{
-		//predicateNode = node;
-		//NSLog(@"%@", (NSPredicate *)predicateNode.data);
 		predicateEditor.objectValue = ((NSPredicate *)predicateNode.data);
 	}
 	
@@ -114,15 +112,11 @@
 
 	RarityPredicateEditorRowTemplate *rarityTemplate = [[RarityPredicateEditorRowTemplate alloc] init];
 
-	 ArrayPredicateEditorRowTemplate *typeTemplate = [[ArrayPredicateEditorRowTemplate alloc] 
-															initWithArray:dataStore.types 
-															forKeyPath:@"type"
-													 ];
+	 TypesEditorRowTemplate *typeTemplate = [[TypesEditorRowTemplate alloc] 
+															initWithArray:dataStore.types];
 	
-	ArrayPredicateEditorRowTemplate *seriesTemplate = [[ArrayPredicateEditorRowTemplate alloc] 
-													 initWithArray:dataStore.series 
-													 forKeyPath:@"series"
-													   ];
+	SeriesPredicateEditorRowTemplate *seriesTemplate = [[SeriesPredicateEditorRowTemplate alloc] 
+													 initWithArray:dataStore.series];
 	
 	DamageTypePredicateEditorRowTemplate *damageTypesTemplate = 
 								[[DamageTypePredicateEditorRowTemplate alloc] initWithArray:dataStore.damageTypes];
@@ -131,18 +125,20 @@
 											[[ReputationRestrictionsEditorRowTemplate alloc] 
 											initWithArray:dataStore.reputationRestrictionTypes];
 	
-	ArrayPredicateEditorRowTemplate *racesTemplate = [[ArrayPredicateEditorRowTemplate alloc] 
-													   initWithArray:dataStore.races 
-													   forKeyPath:@"race"
-													   ];	
+	RacesPredicateEditorRowTemplate *racesTemplate = [[RacesPredicateEditorRowTemplate alloc] 
+													   initWithArray:dataStore.races];	
 	
 	TalentsEditorRowTemplate *talentsTemplate = [[TalentsEditorRowTemplate alloc] 
 													  initWithArray:dataStore.talents
 													  ];		
 	
+	ProfessionsEditorRowTemplate *professionsTemplate = [[ProfessionsEditorRowTemplate alloc] 
+												 initWithArray:dataStore.professions
+												 ];	
+	
 	NSMutableArray *templates = [NSMutableArray arrayWithObjects:seriesTemplate, typeTemplate, 
 								 rarityTemplate, damageTypesTemplate, reputationRestrictionsTemplate,
-								 racesTemplate, talentsTemplate,
+								 racesTemplate, talentsTemplate, professionsTemplate,
 								 nil];
 	
 	
@@ -165,6 +161,8 @@
 
 -(IBAction)handleSaveButtonClick:(id)sender
 {
+	NSLog(@"%@", predicateEditor.objectValue);
+	
 	predicateNode.data = predicateEditor.objectValue;
 	predicateNode.label = nameField.stringValue;
 	[delegate predicateNodeWasCreated:predicateNode];
@@ -212,11 +210,6 @@
 	{
 		[predicateEditor addRow:self];
 	}
-}
-
-- (void)predicateNodeWasCreated:(Node *)prediateNode
-{
-	//NSLog(@"predicateNodeWasCreated");
 }
 
 @end

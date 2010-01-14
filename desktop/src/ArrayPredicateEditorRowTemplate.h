@@ -25,12 +25,8 @@
 
 @interface ArrayPredicateEditorRowTemplate : NSPredicateEditorRowTemplate
 {
-	NSMutableArray *customTemplateViews;
 }
 
-@property (retain) NSMutableArray *customTemplateViews;
-
--(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath;
--(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath andTitle:(NSString *)title;
+-(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath andTitle:(NSString *)title withOperators:(NSArray *)operators;
 
 @end

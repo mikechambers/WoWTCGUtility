@@ -20,43 +20,19 @@
  THE SOFTWARE.
  */
 
-#import "ArrayPredicateEditorRowTemplate.h"
+#import "ProfessionsEditorRowTemplate.h"
 
 
-@implementation ArrayPredicateEditorRowTemplate
+@implementation ProfessionsEditorRowTemplate
 
--(void)dealloc
+-(id)initWithArray:(NSArray *)arr
 {
-	[super dealloc];
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return [self retain]; //we are immutable
-}
-
-//designated constructor
--(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath andTitle:(NSString *)title withOperators:(NSArray *)operators
-{	
-	NSMutableArray *expressions = [NSMutableArray arrayWithCapacity:[arr count]];
-	for(NSString *s in arr)
-	{
-		[expressions addObject:[NSExpression expressionForConstantValue:s]];
-	}	
-	
-	if(!(self = [super initWithLeftExpressions:[NSArray arrayWithObjects:[NSExpression expressionForKeyPath:keyPath], nil]
-					  rightExpressions:expressions
-							  modifier:NSDirectPredicateModifier
-							 operators:operators
-							   options:NSCaseInsensitivePredicateOption
-		 ]))
+	if(![super initWithArray:arr forKeyPath:@"professions" 
+						 andTitle:@"Profession" 
+					withOperators:[NSArray arrayWithObject:[NSNumber numberWithInt: NSContainsPredicateOperatorType]]])
 	{
 		return nil;
 	}
-	
-	NSPopUpButton *popup = [[super templateViews] objectAtIndex:0];
-	NSMenuItem *item = [popup itemAtIndex:0];
-	item.title = title;
 	
 	return self;
 }

@@ -118,20 +118,6 @@
 		[expressionMenu addItem:mItem];
 	}
 	
-	/*
-	NSMenuItem *equalsMenuItem = [[[NSMenuItem alloc] initWithTitle:@"is" action:nil keyEquivalent:@""] autorelease];
-	[equalsMenuItem setRepresentedObject:[NSNumber numberWithInt: NSEqualToPredicateOperatorType]];
-	[equalsMenuItem setEnabled:YES];
-	
-	[expressionMenu addItem:equalsMenuItem];
-	
-	NSMenuItem *notEqualsMenuItem = [[[NSMenuItem alloc] initWithTitle:@"is not" action:nil keyEquivalent:@""] autorelease];
-	[notEqualsMenuItem setRepresentedObject:[NSNumber numberWithInt:NSNotEqualToPredicateOperatorType]];
-	[notEqualsMenuItem setEnabled:YES];
-	
-	[expressionMenu addItem:notEqualsMenuItem];
-	*/
-	
 	expressionPopup = [[NSPopUpButton alloc] initWithFrame:NSZeroRect pullsDown:NO];
 	[expressionPopup setMenu:expressionMenu];		
 

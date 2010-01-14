@@ -24,6 +24,10 @@
 		47552B6E10FD924100B82586 /* NSString+IsEmptyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */; };
 		47552B8110FD93A200B82586 /* NSString+IsEmptyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */; };
 		475614C110FE778900E23B7D /* TalentsEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475614C010FE778900E23B7D /* TalentsEditorRowTemplate.m */; };
+		475614EE10FE817400E23B7D /* ProfessionsEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475614ED10FE817400E23B7D /* ProfessionsEditorRowTemplate.m */; };
+		4756165710FEA55100E23B7D /* TypesEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756165610FEA55100E23B7D /* TypesEditorRowTemplate.m */; };
+		4756166F10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */; };
+		4756168110FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */; };
 		475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */; };
 		475AEF7A10EB30F500F2C8A4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */; };
 		478CB13110F070D6004AD24D /* config_tool_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB13010F070D6004AD24D /* config_tool_center.png */; };
@@ -104,6 +108,14 @@
 		47552B6D10FD924100B82586 /* NSString+IsEmptyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IsEmptyCategory.m"; sourceTree = "<group>"; };
 		475614BF10FE778900E23B7D /* TalentsEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalentsEditorRowTemplate.h; sourceTree = "<group>"; };
 		475614C010FE778900E23B7D /* TalentsEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentsEditorRowTemplate.m; sourceTree = "<group>"; };
+		475614EC10FE817400E23B7D /* ProfessionsEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionsEditorRowTemplate.h; sourceTree = "<group>"; };
+		475614ED10FE817400E23B7D /* ProfessionsEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionsEditorRowTemplate.m; sourceTree = "<group>"; };
+		4756165510FEA55100E23B7D /* TypesEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypesEditorRowTemplate.h; sourceTree = "<group>"; };
+		4756165610FEA55100E23B7D /* TypesEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypesEditorRowTemplate.m; sourceTree = "<group>"; };
+		4756166D10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeriesPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		4756167F10FEA74100E23B7D /* RacesPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -307,6 +319,14 @@
 				478FA84510FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m */,
 				475614BF10FE778900E23B7D /* TalentsEditorRowTemplate.h */,
 				475614C010FE778900E23B7D /* TalentsEditorRowTemplate.m */,
+				475614EC10FE817400E23B7D /* ProfessionsEditorRowTemplate.h */,
+				475614ED10FE817400E23B7D /* ProfessionsEditorRowTemplate.m */,
+				4756165510FEA55100E23B7D /* TypesEditorRowTemplate.h */,
+				4756165610FEA55100E23B7D /* TypesEditorRowTemplate.m */,
+				4756166D10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.h */,
+				4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */,
+				4756167F10FEA74100E23B7D /* RacesPredicateEditorRowTemplate.h */,
+				4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */,
 			);
 			name = EditorRowTemplates;
 			sourceTree = "<group>";
@@ -429,6 +449,10 @@
 				478FA84610FD1B8B009CCD81 /* ReputationRestrictionsEditorRowTemplate.m in Sources */,
 				47552B6E10FD924100B82586 /* NSString+IsEmptyCategory.m in Sources */,
 				475614C110FE778900E23B7D /* TalentsEditorRowTemplate.m in Sources */,
+				475614EE10FE817400E23B7D /* ProfessionsEditorRowTemplate.m in Sources */,
+				4756165710FEA55100E23B7D /* TypesEditorRowTemplate.m in Sources */,
+				4756166F10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m in Sources */,
+				4756168110FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

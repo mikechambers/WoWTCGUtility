@@ -20,45 +20,14 @@
  THE SOFTWARE.
  */
 
+#import <Cocoa/Cocoa.h>
+
 #import "ArrayPredicateEditorRowTemplate.h"
 
-
-@implementation ArrayPredicateEditorRowTemplate
-
--(void)dealloc
+@interface TypesEditorRowTemplate : ArrayPredicateEditorRowTemplate
 {
-	[super dealloc];
 }
 
-- (id)copyWithZone:(NSZone *)zone
-{
-    return [self retain]; //we are immutable
-}
-
-//designated constructor
--(id)initWithArray:(NSArray *)arr forKeyPath:(NSString *)keyPath andTitle:(NSString *)title withOperators:(NSArray *)operators
-{	
-	NSMutableArray *expressions = [NSMutableArray arrayWithCapacity:[arr count]];
-	for(NSString *s in arr)
-	{
-		[expressions addObject:[NSExpression expressionForConstantValue:s]];
-	}	
-	
-	if(!(self = [super initWithLeftExpressions:[NSArray arrayWithObjects:[NSExpression expressionForKeyPath:keyPath], nil]
-					  rightExpressions:expressions
-							  modifier:NSDirectPredicateModifier
-							 operators:operators
-							   options:NSCaseInsensitivePredicateOption
-		 ]))
-	{
-		return nil;
-	}
-	
-	NSPopUpButton *popup = [[super templateViews] objectAtIndex:0];
-	NSMenuItem *item = [popup itemAtIndex:0];
-	item.title = title;
-	
-	return self;
-}
+-(id)initWithArray:(NSArray *)arr;
 
 @end
