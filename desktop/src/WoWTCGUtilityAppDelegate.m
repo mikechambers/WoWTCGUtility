@@ -274,12 +274,19 @@
 //-(void)updateTableViewRowSelection:(int)index
 -(void)selectCardTableRow:(int)index
 {
-	
+	int previousRow = cardTable.selectedRow;
 	NSIndexSet *row = [NSIndexSet indexSetWithIndex:index];	
 	[cardTable selectRowIndexes:row byExtendingSelection:FALSE];
-	cardView.card = [filteredCards objectAtIndex:index];
+	
+	//note, we do the check here because if the index changes
+	//then the table view will automatically call the change
+	//delegate where we will set the cardView.card
+	//this prevents it from being called twice.
+	if(previousRow == index)
+	{
+		cardView.card = [filteredCards objectAtIndex:index];
+	}
 }
-
 
 -(void)resetCardData
 {
