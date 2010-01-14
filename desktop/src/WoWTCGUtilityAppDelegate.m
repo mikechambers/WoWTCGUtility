@@ -86,12 +86,11 @@
 	
     [defaults registerDefaults:appDefaults];	
 	
-	NSBundle *bundle = [NSBundle mainBundle];
-	self.appName = [bundle objectForInfoDictionaryKey:@"Bundle name"];
+	NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+    self.appName = [[NSFileManager defaultManager] displayNameAtPath: bundlePath];	
 	
 	[self initData];
 		
-	//self.filteredCards = [dataStore.cards mutableCopy];
 	[self resetCardData];
 	
 	self.deckNode = [[Node alloc] initWithLabel:@"DECKS"];
@@ -108,7 +107,7 @@
 }
 
 -(void)awakeFromNib
-{	
+{		
 	NSSize minSize = { 500, 380 };
 	[window setContentMinSize:minSize];
 	
@@ -254,9 +253,7 @@
 }
 
 - (NSString *) pathForDataFile
-{
-	//NSString *appName = [self appName];
-    
+{    
 	NSString *folder = [NSString stringWithFormat:@"~/Library/Application Support/%@/", appName];
 	folder = [folder stringByExpandingTildeInPath];
 	
@@ -324,7 +321,7 @@
 	{
 		Node *node = [outlineView itemAtRow:index];
 	
-		title = [NSString stringWithFormat:@"WoWTCG Utility : %@ (%i of %i Cards)", node.label, 
+		title = [NSString stringWithFormat:@"%@ : %@ (%i of %i Cards)", appName, node.label, 
 				self.filteredCards.count, 
 				self.dataStore.cards.count];
 	}
@@ -766,6 +763,23 @@
 	
 	[preferencesWindow showWindow:self];
 	[preferencesWindow.window center];
+}
+
+-(IBAction)handleLogBugMenu:(id)sender
+{
+	NSURL *url = [NSURL URLWithString:@"http://github.com/mikechambers/WoWTCGUtility/issues"];
+	[[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+-(IBAction)handleSendFeedbackMenu:(id)sender
+{
+	NSString *to = @"mikechambers@gmail.com";
+	NSString *subject = [NSString stringWithFormat:@"%@ Feedback", appName];
+	NSString *encodedSubject = [NSString stringWithFormat:@"SUBJECT=%@", [subject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	NSString *encodedTo = [to stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	NSString *encodedURLString = [NSString stringWithFormat:@"mailto:%@?%@", encodedTo, encodedSubject];
+	NSURL *mailtoURL = [NSURL URLWithString:encodedURLString];
+	[[NSWorkspace sharedWorkspace] openURL:mailtoURL];	
 }
 
 /****************** Search Sheet APIs ***********/

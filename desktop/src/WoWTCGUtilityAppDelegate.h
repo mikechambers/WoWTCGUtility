@@ -40,7 +40,7 @@
 	IBOutlet NSSearchField *searchField;
 	IBOutlet DataOutlineView *outlineView;
 	IBOutlet NSMenu *addOutlineMenu;
-	IBOutlet NSString *appName;
+	NSString *appName;
 	
 	NSMutableArray *filteredCards;
 	NSInteger iPreviousRowCount;
@@ -66,7 +66,7 @@
 @property (retain) IBOutlet DataOutlineView *outlineView;
 @property (retain) IBOutlet NSMenu *addOutlineMenu;
 @property (retain) IBOutlet NSButton *addOutlineButton;
-@property (retain) IBOutlet NSString *appName;
+@property (retain) NSString *appName;
 
 @property (retain) NSMutableArray *filteredCards;
 @property (retain) WoWTCGDataStore *dataStore;
@@ -82,6 +82,8 @@
 -(IBAction)handleAlwaysOnTopMenu:(id)sender;
 -(IBAction)handleRenameItemMenu:(id)sender;
 -(IBAction)handlePreferencesMenuClick:(id)sender;
+-(IBAction)handleLogBugMenu:(id)sender;
+-(IBAction)handleSendFeedbackMenu:(id)sender;
 
 -(void)initData;
 
