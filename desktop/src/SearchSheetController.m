@@ -160,9 +160,7 @@
 }
 
 -(IBAction)handleSaveButtonClick:(id)sender
-{
-	NSLog(@"%@", predicateEditor.objectValue);
-	
+{	
 	predicateNode.data = predicateEditor.objectValue;
 	predicateNode.label = nameField.stringValue;
 	[delegate predicateNodeWasCreated:predicateNode];
