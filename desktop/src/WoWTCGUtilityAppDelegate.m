@@ -790,6 +790,11 @@
 	[[NSWorkspace sharedWorkspace] openURL:mailtoURL];	
 }
 
+-(IBAction)handleQuickSearchMenu:(id)sender
+{
+	[window makeFirstResponder:searchField];
+}
+
 /****************** Search Sheet APIs ***********/
 
 
@@ -828,6 +833,5 @@
 	Node *node = ((Node *)[outlineView itemAtRow:rowIndex]);
 	[self deleteOutlineViewNode:node];
 }
-
 
 @end

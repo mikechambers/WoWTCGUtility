@@ -11,7 +11,7 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="563"/>
+			<integer value="371"/>
 			<integer value="29"/>
 			<integer value="624"/>
 		</array>
@@ -354,6 +354,25 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
+								<object class="NSMenuItem" id="1029407307">
+									<reference key="NSMenu" ref="789758025"/>
+									<bool key="NSIsDisabled">YES</bool>
+									<bool key="NSIsSeparator">YES</bool>
+									<string key="NSTitle"/>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
+								<object class="NSMenuItem" id="149726249">
+									<reference key="NSMenu" ref="789758025"/>
+									<string key="NSTitle">Quick Search...</string>
+									<string key="NSKeyEquiv">f</string>
+									<int key="NSKeyEquivModMask">1572864</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
 							</array>
 						</object>
 					</object>
@@ -483,7 +502,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="154119261">
+								<object class="NSMenuItem" id="603190968">
 									<reference key="NSMenu" ref="992780483"/>
 									<bool key="NSIsDisabled">YES</bool>
 									<bool key="NSIsSeparator">YES</bool>
@@ -493,7 +512,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="593852566">
+								<object class="NSMenuItem" id="664643898">
 									<reference key="NSMenu" ref="992780483"/>
 									<string key="NSTitle">Send Feedback...</string>
 									<string key="NSKeyEquiv"/>
@@ -501,7 +520,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="74684042">
+								<object class="NSMenuItem" id="698416772">
 									<reference key="NSMenu" ref="992780483"/>
 									<string key="NSTitle">Log a Bug...</string>
 									<string key="NSKeyEquiv"/>
@@ -544,9 +563,11 @@
 							<string key="NSToolbarItemPaletteLabel"/>
 							<nil key="NSToolbarItemToolTip"/>
 							<object class="NSSearchField" key="NSToolbarItemView" id="101652977">
-								<nil key="NSNextResponder"/>
+								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{0, 14}, {233, 22}}</string>
+								<reference key="NSSuperview"/>
+								<reference key="NSWindow"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSSearchFieldCell" key="NSCell" id="222531457">
 									<int key="NSCellFlags">343014976</int>
@@ -3963,7 +3984,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					<object class="IBActionConnection" key="connection">
 						<string key="label">handleLogBugMenu:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="74684042"/>
+						<reference key="destination" ref="698416772"/>
 					</object>
 					<int key="connectionID">1155</int>
 				</object>
@@ -3971,9 +3992,17 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					<object class="IBActionConnection" key="connection">
 						<string key="label">handleSendFeedbackMenu:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="593852566"/>
+						<reference key="destination" ref="664643898"/>
 					</object>
 					<int key="connectionID">1156</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleQuickSearchMenu:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="149726249"/>
+					</object>
+					<int key="connectionID">1159</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4100,6 +4129,8 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 							<reference ref="790794224"/>
 							<reference ref="82994268"/>
 							<reference ref="587738887"/>
+							<reference ref="1029407307"/>
+							<reference ref="149726249"/>
 						</array>
 						<reference key="parent" ref="952259628"/>
 					</object>
@@ -4325,9 +4356,9 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<reference key="object" ref="992780483"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="105068016"/>
-							<reference ref="154119261"/>
-							<reference ref="593852566"/>
-							<reference ref="74684042"/>
+							<reference ref="603190968"/>
+							<reference ref="664643898"/>
+							<reference ref="698416772"/>
 						</array>
 						<reference key="parent" ref="448692316"/>
 					</object>
@@ -5597,18 +5628,28 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1151</int>
-						<reference key="object" ref="154119261"/>
+						<reference key="object" ref="603190968"/>
 						<reference key="parent" ref="992780483"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1152</int>
-						<reference key="object" ref="593852566"/>
+						<reference key="object" ref="664643898"/>
 						<reference key="parent" ref="992780483"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1153</int>
-						<reference key="object" ref="74684042"/>
+						<reference key="object" ref="698416772"/>
 						<reference key="parent" ref="992780483"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1157</int>
+						<reference key="object" ref="1029407307"/>
+						<reference key="parent" ref="789758025"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1158</int>
+						<reference key="object" ref="149726249"/>
+						<reference key="parent" ref="789758025"/>
 					</object>
 				</array>
 			</object>
@@ -5704,6 +5745,8 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="1151.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1152.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1153.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1157.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1158.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="129.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="129.ImportedFromIB2"/>
 				<string key="130.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5822,7 +5865,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="597.CustomClassName">CardImageView</string>
 				<string key="597.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="598.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="612.IBEditorWindowLastContentRect">{{549, 930}, {616, 0}}</string>
+				<string key="612.IBEditorWindowLastContentRect">{{541, 972}, {617, 0}}</string>
 				<string key="612.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="613.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="614.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5939,7 +5982,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1156</int>
+			<int key="maxID">1159</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -6012,20 +6055,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">NSString+CSVCategory.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">NSString+IsEmptyCategory.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">SplitViewDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
@@ -6055,6 +6084,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<string key="handleEditSearchClick:">id</string>
 						<string key="handleLogBugMenu:">id</string>
 						<string key="handlePreferencesMenuClick:">id</string>
+						<string key="handleQuickSearchMenu:">id</string>
 						<string key="handleRenameItemMenu:">id</string>
 						<string key="handleSearch:">NSSearchField</string>
 						<string key="handleSendFeedbackMenu:">id</string>
@@ -6062,7 +6092,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addOutlineButton">NSButton</string>
 						<string key="addOutlineMenu">NSMenu</string>
-						<string key="appName">NSString</string>
 						<string key="cardTable">NSTableView</string>
 						<string key="cardView">CardView</string>
 						<string key="outlineView">DataOutlineView</string>
@@ -6384,7 +6413,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="133327567">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSPasteboard.h</string>
 					</object>
@@ -6531,7 +6560,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="407360833">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURL.h</string>
 					</object>
@@ -6641,36 +6670,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSSplitView.h</string>
 					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<reference key="sourceIdentifier" ref="133327567"/>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">AppKit.framework/Headers/NSStringDrawing.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">Foundation.framework/Headers/NSPathUtilities.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">Foundation.framework/Headers/NSString.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<reference key="sourceIdentifier" ref="407360833"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSTabView</string>

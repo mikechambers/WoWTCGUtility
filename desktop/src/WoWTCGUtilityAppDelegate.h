@@ -84,6 +84,7 @@
 -(IBAction)handlePreferencesMenuClick:(id)sender;
 -(IBAction)handleLogBugMenu:(id)sender;
 -(IBAction)handleSendFeedbackMenu:(id)sender;
+-(IBAction)handleQuickSearchMenu:(id)sender;
 
 -(void)initData;
 
