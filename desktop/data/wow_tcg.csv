@@ -63,8 +63,8 @@ Ongoing: Attached hero's controller's maximum hand size is increased by three.",
 48,Heroes of Azeroth,048,Blink,Ability,Mage,,,Arcane,Neutral,Instant  ,C,2,,0,,,0,0,"Draw a card.
 If your hero is defending, remove all attackers from combat.",147,HoA_048.jpg,Core,Neutral,,,,
 49,Heroes of Azeroth,049,Brain Freeze,Ability,Mage,,,Frost,Neutral,Instant  ,R,3,,0,,,0,0,Players can't draw cards this turn.,337,HoA_049.jpg,Core,Neutral,,,,
-50,Heroes of Azeroth,050,Cold Snap,Ability,Mage,,,Frost,Neutral,Instant Talent ,R,2,+x,0,,,0,0,"Frost Hero Required Remove
-Cold Snap from the game. 
+50,Heroes of Azeroth,050,Cold Snap,Ability,Mage,,,Frost,Neutral,Instant Talent ,R,2,+x,0,,,0,0,"Frost Hero Required 
+Remove Cold Snap from the game. 
 Put up to X Frost ability cards with different names from your graveyard into your hand.",135,HoA_050.jpg,Core,Neutral,Frost,,,
 51,Heroes of Azeroth,051,Counterspell,Ability,Mage,,,Arcane,Neutral,Instant  ,R,2,,0,,,0,0,Interrupt target ability card.,305,HoA_051.jpg,Core,Neutral,,,,
 52,Heroes of Azeroth,052,Fire Blast,Ability,Mage,,,Fire,Neutral,Instant  ,C,1,,0,,Fire,0,0,Your hero deals 2 fire damage to target hero or ally.,91,HoA_052.jpg,Core,Neutral,,,,
