@@ -200,7 +200,6 @@
 	
 	NSString *urlString = [NSString stringWithFormat:@"%@%@", urlFormat, escapedName];
 	
-	NSLog(@"%@", urlString);
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlString]];
 	
 }

@@ -95,8 +95,6 @@
 -(void)redrawCardTable;
 -(void)selectCardTableRow:(int)index;
 
-
-//-(void)updateTableViewRowSelection;
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
 -(void)loadSearchData;

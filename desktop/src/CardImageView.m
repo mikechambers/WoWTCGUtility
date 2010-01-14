@@ -54,12 +54,11 @@
 					  stringByAppendingPathComponent:card.cardImageName];
 	
 	NSFileManager *fMan = [NSFileManager defaultManager];
-	if(![fMan fileExistsAtPath:path])
+	if(card == nil || ![fMan fileExistsAtPath:path])
 	{
 		path = [[[NSBundle mainBundle] resourcePath] 
 				stringByAppendingPathComponent:@"/assets/icons/background.png"];
 	}
-	
 	
 	NSImage *im = [[NSImage alloc] initByReferencingFile:path];
 	

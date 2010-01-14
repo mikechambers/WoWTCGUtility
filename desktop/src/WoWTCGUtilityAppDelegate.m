@@ -293,6 +293,7 @@
 	
 	if(filteredCards.count == 0)
 	{
+		cardView.card = nil;
 		return;
 	}
 	
