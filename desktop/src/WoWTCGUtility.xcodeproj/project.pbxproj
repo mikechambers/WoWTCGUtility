@@ -28,6 +28,9 @@
 		4756165710FEA55100E23B7D /* TypesEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756165610FEA55100E23B7D /* TypesEditorRowTemplate.m */; };
 		4756166F10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */; };
 		4756168110FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */; };
+		47577E5E11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 47577E5D11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.m */; };
+		47577E6111039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47577E6011039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.m */; };
+		47577E841103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47577E831103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m */; };
 		475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */; };
 		475AEF7A10EB30F500F2C8A4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */; };
 		478CB13110F070D6004AD24D /* config_tool_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 478CB13010F070D6004AD24D /* config_tool_center.png */; };
@@ -116,6 +119,12 @@
 		4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeriesPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		4756167F10FEA74100E23B7D /* RacesPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		47577E5C11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatesModifierPredicateEditorRowTemplateBase.h; sourceTree = "<group>"; };
+		47577E5D11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesModifierPredicateEditorRowTemplateBase.m; sourceTree = "<group>"; };
+		47577E5F11039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFieldPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		47577E6011039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberFieldPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
+		47577E821103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringFieldPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
+		47577E831103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringFieldPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -327,6 +336,12 @@
 				4756166E10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m */,
 				4756167F10FEA74100E23B7D /* RacesPredicateEditorRowTemplate.h */,
 				4756168010FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m */,
+				47577E5C11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.h */,
+				47577E5D11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.m */,
+				47577E5F11039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.h */,
+				47577E6011039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.m */,
+				47577E821103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.h */,
+				47577E831103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m */,
 			);
 			name = EditorRowTemplates;
 			sourceTree = "<group>";
@@ -453,6 +468,9 @@
 				4756165710FEA55100E23B7D /* TypesEditorRowTemplate.m in Sources */,
 				4756166F10FEA6A000E23B7D /* SeriesPredicateEditorRowTemplate.m in Sources */,
 				4756168110FEA74100E23B7D /* RacesPredicateEditorRowTemplate.m in Sources */,
+				47577E5E11039E3F00A9FC81 /* TemplatesModifierPredicateEditorRowTemplateBase.m in Sources */,
+				47577E6111039F3200A9FC81 /* NumberFieldPredicateEditorRowTemplate.m in Sources */,
+				47577E841103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
