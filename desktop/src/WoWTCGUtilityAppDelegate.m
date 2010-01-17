@@ -32,6 +32,9 @@
 #define SEARCH_NODE_INDEX 1
 #define DECK_NODE_INDEX 2
 
+#define MIN_WINDOW_WIDTH 400
+#define MIN_WINDOW_HEIGHT 380
+
 #define BASE_RULES_SEARCH_URL @"http://entertainment.upperdeck.com/wow/community/search/SearchResults.aspx?s=122&q="
 
 @implementation WoWTCGUtilityAppDelegate
@@ -108,7 +111,7 @@
 
 -(void)awakeFromNib
 {		
-	NSSize minSize = { 500, 380 };
+	NSSize minSize = { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT };
 	[window setContentMinSize:minSize];
 	
 	[outlineView selectOutlineViewItem:cardsNode];
