@@ -14,7 +14,7 @@
 -(id)initWithArray:(NSArray *)arr
 {
 	if(![super initWithArray:arr forKeyPath:@"talentRestrictions" 
-					andTitle:@"Talent Restriction" 
+					andTitle:@"Talent Restrictions" 
 			   withOperators:[NSArray arrayWithObjects:
 							  [NSNumber numberWithInt: NSEqualToPredicateOperatorType],
 							  [NSNumber numberWithInt: NSNotEqualToPredicateOperatorType],

@@ -29,7 +29,7 @@
 -(id)initWithArray:(NSArray *)arr
 {
 	if(![super initWithArray:arr forKeyPath:@"reputationRestrictions" 
-					andTitle:@"Reputation Restriction" 
+					andTitle:@"Reputation Restrictions" 
 			   withOperators:[NSArray arrayWithObject:[NSNumber numberWithInt: NSEqualToPredicateOperatorType]]])
 	{
 		return nil;
