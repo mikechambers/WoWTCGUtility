@@ -11,9 +11,9 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="371"/>
-			<integer value="29"/>
 			<integer value="624"/>
+			<integer value="29"/>
+			<integer value="563"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -563,11 +563,9 @@
 							<string key="NSToolbarItemPaletteLabel"/>
 							<nil key="NSToolbarItemToolTip"/>
 							<object class="NSSearchField" key="NSToolbarItemView" id="101652977">
-								<reference key="NSNextResponder"/>
+								<nil key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{0, 14}, {233, 22}}</string>
-								<reference key="NSSuperview"/>
-								<reference key="NSWindow"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSSearchFieldCell" key="NSCell" id="222531457">
 									<int key="NSCellFlags">343014976</int>
@@ -2503,7 +2501,7 @@
 								<object class="NSSegmentedControl" id="212966187">
 									<reference key="NSNextResponder" ref="582776424"/>
 									<int key="NSvFlags">266</int>
-									<string key="NSFrame">{{8, 324}, {239, 25}}</string>
+									<string key="NSFrame">{{-6, 324}, {265, 25}}</string>
 									<reference key="NSSuperview" ref="582776424"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSSegmentedCell" key="NSCell" id="448014524">
@@ -2513,7 +2511,7 @@
 										<reference key="NSControlView" ref="212966187"/>
 										<array class="NSMutableArray" key="NSSegmentImages">
 											<object class="NSSegmentItem">
-												<double key="NSSegmentItemWidth">85</double>
+												<double key="NSSegmentItemWidth">98</double>
 												<string key="NSSegmentItemLabel">Details</string>
 												<bool key="NSSegmentItemSelected">YES</bool>
 												<int key="NSSegmentItemImageScaling">0</int>
@@ -2524,7 +2522,7 @@
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
 											<object class="NSSegmentItem">
-												<double key="NSSegmentItemWidth">85</double>
+												<double key="NSSegmentItemWidth">98</double>
 												<string key="NSSegmentItemLabel">Resources</string>
 												<int key="NSSegmentItemTag">2</int>
 												<int key="NSSegmentItemImageScaling">0</int>
@@ -5813,10 +5811,10 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="296.editorWindowContentRectSynchronizationRect">{{475, 832}, {234, 43}}</string>
 				<string key="297.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="298.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="371.IBEditorWindowLastContentRect">{{305, 284}, {1089, 688}}</string>
+				<string key="371.IBEditorWindowLastContentRect">{{89, 284}, {1089, 688}}</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="371.IBViewEditorWindowController.showingLayoutRectangles"/>
-				<string key="371.IBWindowTemplateEditedContentRect">{{305, 284}, {1089, 688}}</string>
+				<string key="371.IBWindowTemplateEditedContentRect">{{89, 284}, {1089, 688}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="371.editorWindowContentRectSynchronizationRect">{{33, 99}, {480, 360}}</string>
 				<string key="371.windowTemplate.maxSize">{3.40282e+38, 3.40282e+38}</string>
