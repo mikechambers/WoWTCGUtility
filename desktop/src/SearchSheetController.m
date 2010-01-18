@@ -31,6 +31,7 @@
 #import "SeriesPredicateEditorRowTemplate.h"
 #import "RacesPredicateEditorRowTemplate.h"
 #import "TalentRestrictionsPredicateRowEditor.h"
+#import "RaceRestrictionsPredicateRowEditor.h"
 
 @implementation SearchSheetController
 
@@ -141,9 +142,14 @@
 														 initWithArray:dataStore.talents
 														 ];		
 	
+	RaceRestrictionsPredicateRowEditor *raceRestrictionsTemplate = [[RaceRestrictionsPredicateRowEditor alloc] 
+																	  initWithArray:dataStore.races
+																	  ];
+	
 	NSMutableArray *templates = [NSMutableArray arrayWithObjects:seriesTemplate, typeTemplate, 
 								 rarityTemplate, damageTypesTemplate, reputationRestrictionsTemplate,
 								 racesTemplate, talentsTemplate, professionsTemplate, talentRestrictionsTemplate,
+								 raceRestrictionsTemplate,
 								 nil];
 	
 	
