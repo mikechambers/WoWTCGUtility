@@ -23,11 +23,12 @@
 #import <Cocoa/Cocoa.h>
 #import "Card.h"
 #import "CardImageView.h"
+#import "PowersWebView.h"
 
 @interface CardView : NSView
 {
 	IBOutlet CardImageView *image;
-	IBOutlet NSTextField *ruleField;
+	IBOutlet PowersWebView *powersView;
 	IBOutlet NSTextField *nameField;
 	IBOutlet NSTextField *seriesField;
 	IBOutlet NSTextField *numberField;
@@ -52,7 +53,7 @@
 @property (retain) Card *card;
 
 @property (retain) IBOutlet CardImageView *image;
-@property (retain) IBOutlet NSTextField *ruleField;
+@property (retain) IBOutlet PowersWebView *powersView;
 @property (retain) IBOutlet NSTextField *nameField;
 @property (retain) IBOutlet NSTextField *seriesField;
 @property (retain) IBOutlet NSTextField *numberField;

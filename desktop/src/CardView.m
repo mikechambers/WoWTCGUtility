@@ -34,7 +34,7 @@
 
 @synthesize card;
 @synthesize image;
-@synthesize ruleField;
+@synthesize powersView;
 @synthesize nameField;
 @synthesize seriesField;
 @synthesize tabView;
@@ -73,7 +73,7 @@
 	[nameField release];
 	[image release];
 	[card release];
-	[ruleField release];
+	[powersView release];
 	[super dealloc];
 }
 
@@ -107,7 +107,7 @@
 	
 	image.card = card;
 	
-	[ruleField setStringValue:[c.rules stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\n"]];
+	[powersView setPowersText:c.rules];
 	[nameField setStringValue:c.cardName];
 	[seriesField setStringValue:c.series];
 	[numberField setIntValue:c.cardNumber];
@@ -129,7 +129,7 @@
 -(void)clearAllFields
 {
 	NSString *empty = @"";
-	[ruleField setStringValue:empty];
+	[powersView setPowersText:empty];
 	[nameField setStringValue:empty];
 	[seriesField setStringValue:empty];
 	[numberField setStringValue:empty];

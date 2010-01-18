@@ -18,6 +18,9 @@
 		474D0E061104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E051104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m */; };
 		474D0E371104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E361104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m */; };
 		474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */; };
+		474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E871104F5E10044BA5E /* PowersWebView.m */; };
+		474D0E8A1104F6B30044BA5E /* powers_template.html in Resources */ = {isa = PBXBuildFile; fileRef = 474D0E891104F6B30044BA5E /* powers_template.html */; };
+		474D0E981104FD0E0044BA5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D0E971104FD0E0044BA5E /* WebKit.framework */; };
 		474D44E310F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */; };
 		475383DB10E3C81C00EE2083 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
 		475383DE10E3C85700EE2083 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
@@ -103,6 +106,10 @@
 		474D0E361104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceRestrictionsPredicateRowEditor.m; sourceTree = "<group>"; };
 		474D0E551104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionRestrictionsPredicateRowEditor.h; sourceTree = "<group>"; };
 		474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionRestrictionsPredicateRowEditor.m; sourceTree = "<group>"; };
+		474D0E861104F5E10044BA5E /* PowersWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowersWebView.h; sourceTree = "<group>"; };
+		474D0E871104F5E10044BA5E /* PowersWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowersWebView.m; sourceTree = "<group>"; };
+		474D0E891104F6B30044BA5E /* powers_template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = powers_template.html; sourceTree = "<group>"; };
+		474D0E971104FD0E0044BA5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageTypePredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DamageTypePredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataStore.h; sourceTree = "<group>"; };
@@ -190,6 +197,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				470530BF10F917C900BD10D7 /* BWToolkitFramework.framework in Frameworks */,
+				474D0E981104FD0E0044BA5E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +249,8 @@
 				47EDD5B610FCDE1B00939599 /* CardWindow.m */,
 				47EDD5B810FCDF3B00939599 /* CardImageView.h */,
 				47EDD5B910FCDF3B00939599 /* CardImageView.m */,
+				474D0E861104F5E10044BA5E /* PowersWebView.h */,
+				474D0E871104F5E10044BA5E /* PowersWebView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -260,6 +270,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				474D0E971104FD0E0044BA5E /* WebKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 				475AEF7910EB30F500F2C8A4 /* PreferencesWindow.xib */,
 				47411C1210EC6652001183F2 /* Credits.html */,
 				47EDD60A10FCE49600939599 /* CardWindow.xib */,
+				474D0E891104F6B30044BA5E /* powers_template.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -433,6 +445,7 @@
 				478CB14B10F07417004AD24D /* config_tool_grab.png in Resources */,
 				478CB1B610F07E81004AD24D /* divider.png in Resources */,
 				47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */,
+				474D0E8A1104F6B30044BA5E /* powers_template.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +502,7 @@
 				474D0E061104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E371104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */,
+				474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
