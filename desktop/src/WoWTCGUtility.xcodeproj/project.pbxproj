@@ -17,6 +17,7 @@
 		4746362510EA8D63006AAB60 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4746362410EA8D63006AAB60 /* icon.icns */; };
 		474D0E061104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E051104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m */; };
 		474D0E371104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E361104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m */; };
+		474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */; };
 		474D44E310F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */; };
 		475383DB10E3C81C00EE2083 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
 		475383DE10E3C85700EE2083 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
@@ -100,6 +101,8 @@
 		474D0E051104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalentRestrictionsPredicateRowEditor.m; sourceTree = "<group>"; };
 		474D0E351104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceRestrictionsPredicateRowEditor.h; sourceTree = "<group>"; };
 		474D0E361104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceRestrictionsPredicateRowEditor.m; sourceTree = "<group>"; };
+		474D0E551104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionRestrictionsPredicateRowEditor.h; sourceTree = "<group>"; };
+		474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionRestrictionsPredicateRowEditor.m; sourceTree = "<group>"; };
 		474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageTypePredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DamageTypePredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataStore.h; sourceTree = "<group>"; };
@@ -352,6 +355,8 @@
 				474D0E051104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m */,
 				474D0E351104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.h */,
 				474D0E361104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m */,
+				474D0E551104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.h */,
+				474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */,
 			);
 			name = EditorRowTemplates;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				47577E841103A21300A9FC81 /* StringFieldPredicateEditorRowTemplate.m in Sources */,
 				474D0E061104DDF80044BA5E /* TalentRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E371104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m in Sources */,
+				474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
