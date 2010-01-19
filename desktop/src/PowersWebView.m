@@ -89,7 +89,9 @@
 	[replaceDict setObject:@"<b>Thrown</b>" forKey:@"Thrown" ];
 	[replaceDict setObject:@"<b>Shadowmeld</b>" forKey:@"Shadowmeld" ];
 	[replaceDict setObject:@"<b>Death Rattle</b>" forKey:@"Death Rattle" ];
-	[replaceDict setObject:@"<b>Conspicuous</b>" forKey:@"Conspicuous" ];	
+	[replaceDict setObject:@"<b>Conspicuous</b>" forKey:@"Conspicuous" ];
+	[replaceDict setObject:@"<b>Inspire</b>" forKey:@"Inspire" ];
+	[replaceDict setObject:@"<b>Sabotage</b>" forKey:@"Sabotage" ];	
 	
 	[replaceDict setObject:@"<b>Long-Range</b>" forKey:@"Long-Range" ];
 	[replaceDict setObject:@"<b>long-range</b>" forKey:@"long-range" ];
@@ -122,23 +124,21 @@
 	//out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>\\2</b>"];		
 	
 
-	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];		
 
-	GTMRegex *resistanceRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Resistance)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	GTMRegex *resistanceRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Resistance)" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [resistanceRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
 	
-	GTMRegex *reputationRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Reputation)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	GTMRegex *reputationRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Reputation)" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [reputationRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
 	
 	NSLog(@"%@", out);
 	
 	
-	//Marksmanship Hero Required <-- needs to be bold.
 	//pay|s
 	//pay
 	//horde / alliance tokens
-	//Aldor Reputation
 	//[Ranged]
 	//[Alliance] [Horce] -- need to replace on Spectral Tiger, Nazgrel, x-51 nether rocket, Kurzon the false, Consul Rhys Lorgrand, Medallion
 	//of the Alliance, Medallion of the Horde, Glacial Blade, Establishing New Outposts, Southshore, Rehgar Earthfury, Kelm Harguth, Whiteout Staff,
@@ -146,15 +146,12 @@
 	//Tarren Mill, Talisman of the Horde, Illiyana Moonblaze, All Aboard for Undercity
 	
 	//[Nature]
-	//stopped at March of the Legion
+	//stopped at Servant of the Betrayer
 	//Shadow Resistance
-
-	/*
-	 var s:String = "This is a test Mend 4 for Mike";
-	 var newS:String = s.replace(/(Mend \d+)/, "<bold>$1</bold>");
-	 trace(newS);
-	 
-	 */
+	//fire damage - [FIRE]
+	//Beast Mastery Hero Required - bold fails for this
+	//marksman boris - wrong bold long-range
+	//robotic homing chicken there is a period after elusive
 	
 	return out;	
 }
