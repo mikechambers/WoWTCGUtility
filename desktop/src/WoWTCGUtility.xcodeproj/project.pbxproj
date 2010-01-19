@@ -21,6 +21,7 @@
 		474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D0E871104F5E10044BA5E /* PowersWebView.m */; };
 		474D0E8A1104F6B30044BA5E /* powers_template.html in Resources */ = {isa = PBXBuildFile; fileRef = 474D0E891104F6B30044BA5E /* powers_template.html */; };
 		474D0E981104FD0E0044BA5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474D0E971104FD0E0044BA5E /* WebKit.framework */; };
+		474D10C811058B810044BA5E /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D10C711058B810044BA5E /* GTMRegex.m */; };
 		474D44E310F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */; };
 		475383DB10E3C81C00EE2083 /* WoWTCGDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DA10E3C81C00EE2083 /* WoWTCGDataStore.m */; };
 		475383DE10E3C85700EE2083 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 475383DD10E3C85700EE2083 /* Card.m */; };
@@ -110,6 +111,9 @@
 		474D0E871104F5E10044BA5E /* PowersWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowersWebView.m; sourceTree = "<group>"; };
 		474D0E891104F6B30044BA5E /* powers_template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = powers_template.html; sourceTree = "<group>"; };
 		474D0E971104FD0E0044BA5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		474D10C511058B810044BA5E /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = googleToolbox/GTMDefines.h; sourceTree = "<group>"; };
+		474D10C611058B810044BA5E /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = googleToolbox/GTMRegex.h; sourceTree = "<group>"; };
+		474D10C711058B810044BA5E /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = googleToolbox/GTMRegex.m; sourceTree = "<group>"; };
 		474D44E110F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageTypePredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		474D44E210F19D1A00E96225 /* DamageTypePredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DamageTypePredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		475383D910E3C81C00EE2083 /* WoWTCGDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoWTCGDataStore.h; sourceTree = "<group>"; };
@@ -207,6 +211,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				474D10C511058B810044BA5E /* GTMDefines.h */,
+				474D10C611058B810044BA5E /* GTMRegex.h */,
+				474D10C711058B810044BA5E /* GTMRegex.m */,
 				474D450C10F1A3C800E96225 /* EditorRowTemplates */,
 				256AC3D80F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */,
@@ -503,6 +510,7 @@
 				474D0E371104E3D30044BA5E /* RaceRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */,
+				474D10C811058B810044BA5E /* GTMRegex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

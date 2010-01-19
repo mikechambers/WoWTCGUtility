@@ -7,7 +7,7 @@
 //
 
 #import "PowersWebView.h"
-
+#import "GTMRegex.h"
 
 @implementation PowersWebView
 
@@ -111,14 +111,27 @@
 	
 	out = [NSString stringWithFormat:@"<p>%@</p>", out];
 	
+	GTMRegex *mendRegex = [GTMRegex regexWithPattern:@"(Mend [0-9]|Mend [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
+	out = [mendRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];
+
+	GTMRegex *assaultRegex = [GTMRegex regexWithPattern:@"(Assault [0-9]|Assault [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
+	out = [assaultRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];	
+	
+	
+	//GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"(([a-z][a-z0-9]*)( second third)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	//out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>\\2</b>"];		
+	
+
+	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"(\\b[A-Z][A-Z0-9]*)( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];		
+
+	NSLog(@"%@", out);
+	
 	
 	//Marksmanship Hero Required <-- needs to be bold.
 	//pay|s
 	//pay
 	//horde / alliance tokens
-	//Death Rattle
-	//Assault 5
-	//Mend 5
 	//Aldor Reputation
 	//[Ranged]
 	//[Alliance] [Horce] -- need to replace on Spectral Tiger, Nazgrel, x-51 nether rocket, Kurzon the false, Consul Rhys Lorgrand, Medallion
@@ -130,6 +143,12 @@
 	//stopped at March of the Legion
 	//Shadow Resistance
 
+	/*
+	 var s:String = "This is a test Mend 4 for Mike";
+	 var newS:String = s.replace(/(Mend \d+)/, "<bold>$1</bold>");
+	 trace(newS);
+	 
+	 */
 	
 	return out;	
 }
