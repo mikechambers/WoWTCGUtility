@@ -31,7 +31,8 @@ Ongoing: Attached ally has +2 ATK and +2 health.",81,HoA_024.jpg,Core,Neutral,,,
 Ongoing: Your hero is in bear form. (Has protector. Destroy this card when you strike with a weapon or play a non-Feral ability.)",272,HoA_025.jpg,Core,Neutral,,,,
 26,Heroes of Azeroth,026,Natural Defenses ,Ability,Druid,,,Feral,Neutral,Instant  ,R,1,,0,,,0,0,Ongoing: Each of your Armor has +1 DEF while your hero is in Bear form.,355,HoA_026.jpg,Core,Neutral,,,,
 27,Heroes of Azeroth,027,Natural Selection,Ability,Druid,,,Restoration,Neutral,Instant  ,C,3,,0,,Nature,0,0,Choose one: Your hero deals 3 Nature damage to target hero or ally or your hero heals 3 damage from target hero or ally.,209,HoA_027.jpg,Core,Neutral,,,,
-28,Heroes of Azeroth,028,Nature's Swiftness,Ability,Druid,,,Restoration,Neutral,Talent ,R,3,,0,,,0,0,Restoration Hero Required You pay 5 less to play your next card this turn.,343,HoA_028.jpg,Core,Neutral,Restoration,,,
+28,Heroes of Azeroth,028,Nature's Swiftness,Ability,Druid,,,Restoration,Neutral,Talent ,R,3,,0,,,0,0,"Restoration Hero Required
+You pay 5 less to play your next card this turn.",343,HoA_028.jpg,Core,Neutral,Restoration,,,
 29,Heroes of Azeroth,029,Predatory Strikes,Ability,Druid,,,Feral,Neutral,Talent ,R,1,,0,,,0,0,"Feral Hero Required
 Ongoing: While your hero is in bear form or cat form, it has +2 ATK while attacking.",191,HoA_029.jpg,Core,Neutral,Feral,,,
 30,Heroes of Azeroth,030,Primal Mending,Ability,Druid,,,Restoration,Neutral,Instant  ,U,1,,0,,,0,0,"Attach to target ally, and your hero heals 2 damage from it.
