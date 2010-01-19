@@ -122,9 +122,15 @@
 	//out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>\\2</b>"];		
 	
 
-	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"(\\b[A-Z][A-Z0-9]*)( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
 	out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];		
 
+	GTMRegex *resistanceRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Resistance)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	out = [resistanceRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
+	
+	GTMRegex *reputationRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][A-Z0-9]*[[:>:]])( Reputation)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	out = [reputationRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
+	
 	NSLog(@"%@", out);
 	
 	
