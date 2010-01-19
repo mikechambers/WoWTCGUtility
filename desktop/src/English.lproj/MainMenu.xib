@@ -12,9 +12,9 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
+			<integer value="989"/>
 			<integer value="624"/>
 			<integer value="29"/>
-			<integer value="1171"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -1622,7 +1622,7 @@
 										<object class="NSTabViewItem" id="183577613">
 											<string key="NSIdentifier">details</string>
 											<object class="NSView" key="NSView" id="723429189">
-												<nil key="NSNextResponder"/>
+												<reference key="NSNextResponder" ref="144956192"/>
 												<int key="NSvFlags">274</int>
 												<array class="NSMutableArray" key="NSSubviews">
 													<object class="NSScrollView" id="755593478">
@@ -2147,6 +2147,7 @@
 													</object>
 												</array>
 												<string key="NSFrameSize">{251, 324}</string>
+												<reference key="NSSuperview" ref="144956192"/>
 											</object>
 											<string key="NSLabel">Details</string>
 											<reference key="NSColor" ref="919454993"/>
@@ -2155,7 +2156,7 @@
 										<object class="NSTabViewItem" id="519852119">
 											<string key="NSIdentifier">2</string>
 											<object class="NSView" key="NSView" id="722801052">
-												<reference key="NSNextResponder" ref="144956192"/>
+												<nil key="NSNextResponder"/>
 												<int key="NSvFlags">274</int>
 												<array class="NSMutableArray" key="NSSubviews">
 													<object class="NSScrollView" id="754193383">
@@ -2190,7 +2191,7 @@
 																					<string>public.url</string>
 																					<string>public.url-name</string>
 																				</set>
-																				<string key="NSFrameSize">{251, 324}</string>
+																				<string key="NSFrameSize">{237, 324}</string>
 																				<reference key="NSSuperview" ref="510283651"/>
 																				<reference key="NSNextKeyView"/>
 																				<string key="FrameName"/>
@@ -2199,7 +2200,6 @@
 																					<string key="Identifier"/>
 																					<dictionary class="NSMutableDictionary" key="Values">
 																						<boolean value="NO" key="WebKitAllowAnimatedImageLoopingPreferenceKey"/>
-																						<boolean value="NO" key="WebKitAllowAnimatedImagesPreferenceKey"/>
 																						<integer value="12" key="WebKitDefaultFixedFontSize"/>
 																						<integer value="12" key="WebKitDefaultFontSize"/>
 																						<boolean value="NO" key="WebKitJavaEnabled"/>
@@ -2256,7 +2256,6 @@
 													</object>
 												</array>
 												<string key="NSFrameSize">{251, 324}</string>
-												<reference key="NSSuperview" ref="144956192"/>
 											</object>
 											<string key="NSLabel">Rules</string>
 											<reference key="NSColor" ref="919454993"/>
@@ -2565,12 +2564,12 @@
 											<reference key="NSTabView" ref="144956192"/>
 										</object>
 									</array>
-									<reference key="NSSelectedTabViewItem" ref="519852119"/>
+									<reference key="NSSelectedTabViewItem" ref="183577613"/>
 									<reference key="NSFont" ref="507197128"/>
 									<int key="NSTvFlags">6</int>
 									<bool key="NSAllowTruncatedLabels">YES</bool>
 									<array class="NSMutableArray" key="NSSubviews">
-										<reference ref="722801052"/>
+										<reference ref="723429189"/>
 									</array>
 								</object>
 								<object class="NSSegmentedControl" id="212966187">

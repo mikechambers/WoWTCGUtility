@@ -94,37 +94,31 @@
 	[replaceDict setObject:@"<b>Sabotage</b>" forKey:@"Sabotage" ];	
 	
 	[replaceDict setObject:@"<b>Long-Range</b>" forKey:@"Long-Range" ];
-	[replaceDict setObject:@"<b>long-range</b>" forKey:@"long-range" ];
 	[replaceDict setObject:@"<b>Reward</b>" forKey:@"Reward" ];
 	[replaceDict setObject:@"<b>Trap</b>" forKey:@"Trap" ];
 	[replaceDict setObject:@"<i>(" forKey:@"(" ];
 	[replaceDict setObject:@")</i>" forKey:@")" ];
 	[replaceDict setObject:activateImageHTML forKey:@"[Activate]" ];
 	[replaceDict setObject:paymentResultImageHTML forKey:@">>>" ];
-	
-	
-	//[string stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]
 
 	for(NSString *key in replaceDict)
 	{
 		out = [out stringByReplacingOccurrencesOfString:key withString:[replaceDict objectForKey:key]];
 	}
-	
-	
+
 	out = [NSString stringWithFormat:@"<p>%@</p>", out];
 	
 	GTMRegex *mendRegex = [GTMRegex regexWithPattern:@"(Mend [0-9]|Mend [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [mendRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];
 
+	GTMRegex *paysRegex = [GTMRegex regexWithPattern:@"(Pay[s]? )([0-9]|[x])|(Pay[s]? )([0-9][0-9]))" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
+	out = [paysRegex stringByReplacingMatchesInString:out withReplacement:@"\\1<span class='payCircle'>&nbsp;<b>\\2</b>&nbsp;</span>"];	
+	
 	GTMRegex *assaultRegex = [GTMRegex regexWithPattern:@"(Assault [0-9]|Assault [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [assaultRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];	
 	
-	
-	//GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"(([a-z][a-z0-9]*)( second third)" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
-	//out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>\\2</b>"];		
-	
 
-	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Hero Required)" options:kGTMRegexOptionSupressNewlineSupport];
+	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]] [[:<:]][A-Z][a-z]*[[:>:]]|[[:<:]][A-Z][a-z]*[[:>:]])( Hero Required)"];
 	out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];		
 
 	GTMRegex *resistanceRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Resistance)" options:kGTMRegexOptionSupressNewlineSupport];
@@ -135,9 +129,6 @@
 	
 	NSLog(@"%@", out);
 	
-	
-	//pay|s
-	//pay
 	//horde / alliance tokens
 	//[Ranged]
 	//[Alliance] [Horce] -- need to replace on Spectral Tiger, Nazgrel, x-51 nether rocket, Kurzon the false, Consul Rhys Lorgrand, Medallion
@@ -149,7 +140,6 @@
 	//stopped at Servant of the Betrayer
 	//Shadow Resistance
 	//fire damage - [FIRE]
-	//Beast Mastery Hero Required - bold fails for this
 	//marksman boris - wrong bold long-range
 	//robotic homing chicken there is a period after elusive
 	
