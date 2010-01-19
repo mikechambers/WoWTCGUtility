@@ -15,11 +15,13 @@
 	NSString *tempData;
 	BOOL hasLoaded;
 	NSString *activateImageHTML;
+	NSString *paymentResultImageHTML;
 }
 
 @property (retain) WebView *webView;
 @property (retain) NSString *tempData;
 @property (retain) NSString *activateImageHTML;
+@property (retain) NSString *paymentResultImageHTML;
 
 -(void)setPowersText:(NSString *)data;
 -(void)renderPowerText:(NSString *)data;

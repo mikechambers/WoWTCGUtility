@@ -1589,7 +1589,7 @@ Non-Shadow allies have -2 ATK / -2 health.",1414,MoL_145.jpg,Core,Neutral,,,,
 1073,March of the Legion,147,Force Commander Danath Trollbane,Ally,Warrior,Human,,,Alliance,Unique,E,7,,6,,Melee,0,7,"Protector
 When Danath enters play, destroy target Horde ally.",1415,MoL_147.jpg,Core,Neutral,,,,
 1074,March of the Legion,148,Gabble,Ally,Mage,Gnome,,,Alliance,,C,7,,7,,Arcane,0,5,Elusive (Can't be attacked.),1227,MoL_148.jpg,Core,Neutral,,,,
-1075,March of the Legion,149,Gareth Ironshot,Ally,Hunter,Dwarf,,,Alliance,,C,5,,2,,Ranged,0,6,Long Range (Defenders deal no combat damage to this character.),1336,MoL_149.jpg,Core,Neutral,,,,
+1075,March of the Legion,149,Gareth Ironshot,Ally,Hunter,Dwarf,,,Alliance,,C,5,,2,,Ranged,0,6,Long-Range (Defenders deal no combat damage to this character.),1336,MoL_149.jpg,Core,Neutral,,,,
 1076,March of the Legion,150,Givon,Ally,Druid,Night Elf,,,Alliance,,U,6,,5,,Melee,0,4,"Protector
 Opposing allies have -2 ATK while in combat with Givon.",1416,MoL_150.jpg,Core,Neutral,,,,
 1077,March of the Legion,151,Hanaga Silvervein,Ally,Priest,Dwarf,,,Alliance,,C,2,,1,,Holy,0,3,"Elusive (Can't be attacked)
@@ -1616,7 +1616,7 @@ When Magdeline defends, she heals 1 damage from target hero or ally.",1243,MoL_1
 [Activate], Destroy Syluri >>> Destroy target equipment.",1277,MoL_166.jpg,Core,Neutral,,,,
 1093,March of the Legion,167,Tarwila Gladespring,Ally,Druid,Night Elf,,,Alliance,,C,2,,1,,Nature,0,1,"Elusive (Can't be attacked.)
 [Activate] >>> You pay 1 less to play your next card this turn.",1278,MoL_167.jpg,Core,Neutral,,,,
-1094,March of the Legion,168,Tracker Pardo,Ally,Hunter,Night Elf,,,Alliance,,C,4,,1,,Ranged,0,3,"Long Range (Defenders deal no combat damage to this character.)
+1094,March of the Legion,168,Tracker Pardo,Ally,Hunter,Night Elf,,,Alliance,,C,4,,1,,Ranged,0,3,"Long-Range (Defenders deal no combat damage to this character.)
 Pardo has +1 ATK for each other ally in your party.",1354,MoL_168.jpg,Core,Neutral,,,,
 1095,March of the Legion,169,Waldo the Decoy,Ally,Rogue,Gnome,,,Alliance,,U,3,,2,,Melee,0,3,Exhaust your hero >>> Exhaust target ally.,1289,MoL_169.jpg,Core,Neutral,,,,
 1096,March of the Legion,170,Weeble,Ally,Warrior,Gnome,,,Alliance,,C,6,,4,,Melee,0,4,"Protector
@@ -1668,7 +1668,7 @@ When Spider Legs is destroyed, you may exhaust target hero or ally.",1432,MoL_20
 1133,March of the Legion,207,Varimathras,Ally,Any,Demon,,,Horde,Unique,E,9,,9,,Shadow,0,7,"At the end of your turn, Varimathras deals 5 shadow damage to target opposing hero or ally. When that character is destroyed this turn, its controller discards a card.",1298,MoL_207.jpg,Core,Neutral,,,,
 1134,March of the Legion,208,Volin Netherburn,Ally,Warlock,Blood Elf,,,Horde,,U,5,,3,,Shadow,0,5,"When you play an ability, Volin deals 2 shadow damage to target hero or ally and 2 shadow damage to himself.",1433,MoL_208.jpg,Core,Neutral,,,,
 1135,March of the Legion,209,Wysko,Ally,Warrior,Troll,,,Horde,,U,2,,3,,Melee,0,2,Your weapons have +1 ATK while your hero is attacking.,1292,MoL_209.jpg,Core,Neutral,,,,
-1136,March of the Legion,210,Yellowspine,Ally,Mage,Troll,,,Horde,,C,4,,3,,Arcane,0,1,"Long Range (Defenders deal no combat damage to this character.)
+1136,March of the Legion,210,Yellowspine,Ally,Mage,Troll,,,Horde,,C,4,,3,,Arcane,0,1,"Long-Range (Defenders deal no combat damage to this character.)
 Other allies in your party can protect Yellowspine.",1293,MoL_210.jpg,Core,Neutral,,,,
 1137,March of the Legion,211,Zul'that Steeltusk,Ally,Priest,Troll,,,Horde,,R,5,,5,,Holy,0,5,Damage that Holy allies in your party would deal is unpreventable.,1434,MoL_211.jpg,Core,Neutral,,,,
 1138,March of the Legion,212,Adyen the Lightwarden,Ally,Paladin,Draenei,,,Neutral,Unique,E,3,,3,,Holy,0,3,"Aldor Reputation (Can't put Scryer cards in your deck.)
@@ -1685,7 +1685,7 @@ Inspire: Ally (Ready one of your allies during each other player's ready step.)"
 1143,March of the Legion,217,"Ishanah, High Priestess of the Aldor",Ally,Priest,Draenei,,,Neutral,Unique,E,8,,5,,Holy,0,8,"Aldor Reputation (Can't put Scryer cards in your deck.)
 At the start of each opponent's turn, he chooses an ally in his party. Gain control of that ally.",1159,MoL_217.jpg,Core,Aldor,,,,Aldor
 1144,March of the Legion,218,Marksman Boriz,Ally,Hunter,Draenei,,,Neutral,,U,6,,3,,Ranged,0,5,"Aldor Reputation (Can't put Scryer cards in your deck.)
-Long Range (Defenders deal no combat damage to this character.)
+Long-Range (Defenders deal no combat damage to this character.)
 Opposing heroes and allies lose and can't have long-range.",1306,MoL_218.jpg,Core,Aldor,,,,Aldor
 1145,March of the Legion,219,Neophyte Morandi,Ally,Paladin,Draenei,,,Neutral,,C,3,,1,,Holy,0,3,"Aldor Reputation (Can't put Scryer cards in your deck.)
 If an ally in your party other than Morandi would be dealt damage, it's dealt to Morandi instead.",1324,MoL_219.jpg,Core,Aldor,,,,Aldor
@@ -1756,7 +1756,7 @@ If you would draw a card, draw two instead.",1142,MoL_245.jpg,Core,Scryer,,,,Scr
 1173,March of the Legion,247,Arazzius the Cruel,Ally,Demon,Demon,,,Neutral,Unique,R,4,,4,,Melee,0,4,"When Arazzius attacks, each player destroys an ally in his party.",1445,MoL_247.jpg,Core,Neutral,,,,
 1174,March of the Legion,248,Doom Lord Kazzak,Ally,Demon,Demon,,,Neutral,Unique,E,13,,13,,Melee,0,13,"At the end of your turn, destroy all non-Demon allies",1365,MoL_248.jpg,Core,Neutral,,,,
 1175,March of the Legion,249,Fel Cannon,Ally,Any,Mechanical,,,Neutral,,U,3,,1,,Fire,0,4,"When a player plays a card, Fel Cannon deals 2 fire damage to that player's hero.",1332,MoL_249.jpg,Core,Neutral,,,,
-1176,March of the Legion,250,Razorsaw,Ally,Demon,Demon,,,Neutral,Unique,R,6,,7,,Ranged,0,4,"Long Range (Defenders deal no combat damage to this character.)
+1176,March of the Legion,250,Razorsaw,Ally,Demon,Demon,,,Neutral,Unique,R,6,,7,,Ranged,0,4,"Long-Range (Defenders deal no combat damage to this character.)
 When Razorsaw enters play, he deals 4 ranged damage to target ally in your party. When Razorsaw leaves play, he deals 4 ranged damage to target ally.",1325,MoL_250.jpg,Core,Neutral,,,,
 1177,March of the Legion,251,Robotic Homing Chicken,Ally,Any,Mechanical Chicken,,,Neutral,,R,1,,0,,Melee,0,1,"Elusive.
 At the start of your turn, each player rolls a die. If two or more players roll the same number, destroy Robotic Homing Chicken and all allies in those players' parties.",1168,MoL_251.jpg,Core,Neutral,,,,
