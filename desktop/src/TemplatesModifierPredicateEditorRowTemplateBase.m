@@ -33,9 +33,11 @@
 	[super dealloc];
 }
 
+/*
 - (id)copyWithZone:(NSZone *)zone
 {
     return [self retain]; //we are immutable
 }
+ */
 
 @end
