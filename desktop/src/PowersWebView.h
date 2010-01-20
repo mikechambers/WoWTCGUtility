@@ -16,12 +16,16 @@
 	BOOL hasLoaded;
 	NSString *activateImageHTML;
 	NSString *paymentResultImageHTML;
+	NSString *hordeAllyImageHTML;
+	NSString *allianceAllyImageHTML;
 }
 
 @property (retain) WebView *webView;
 @property (retain) NSString *tempData;
 @property (retain) NSString *activateImageHTML;
 @property (retain) NSString *paymentResultImageHTML;
+@property (retain) NSString *hordeAllyImageHTML;
+@property (retain) NSString *allianceAllyImageHTML;
 
 -(void)setPowersText:(NSString *)data;
 -(void)renderPowerText:(NSString *)data;

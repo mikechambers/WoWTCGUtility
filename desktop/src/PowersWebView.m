@@ -15,9 +15,13 @@
 @synthesize tempData;
 @synthesize activateImageHTML;
 @synthesize paymentResultImageHTML;
+@synthesize hordeAllyImageHTML;
+@synthesize allianceAllyImageHTML;
 
 -(void)dealloc
 {
+	[allianceAllyImageHTML release];
+	[hordeAllyImageHTML release];
 	[paymentResultImageHTML release];
 	[activateImageHTML release];
 	[tempData release];
@@ -42,6 +46,16 @@
 							  stringByAppendingPathComponent:@"/assets/payment_result.png"];
 	NSURL *paymentResultURL = [NSURL fileURLWithPath: paymentResultPath isDirectory:FALSE];
 	self.paymentResultImageHTML = [NSString stringWithFormat:@"<img src=\"%@\" />", paymentResultURL.absoluteString];	
+	
+	NSString *hordeAllyPath = [[[NSBundle mainBundle] resourcePath] 
+								   stringByAppendingPathComponent:@"/assets/horde_ally.png"];
+	NSURL *hordeAllyURL = [NSURL fileURLWithPath: hordeAllyPath isDirectory:FALSE];
+	self.hordeAllyImageHTML = [NSString stringWithFormat:@"<img src=\"%@\" />", hordeAllyURL.absoluteString];		
+	
+	NSString *allianceAllyPath = [[[NSBundle mainBundle] resourcePath] 
+							   stringByAppendingPathComponent:@"/assets/alliance_ally.png"];
+	NSURL *allianceAllyURL = [NSURL fileURLWithPath: allianceAllyPath isDirectory:FALSE];
+	self.allianceAllyImageHTML = [NSString stringWithFormat:@"<img src=\"%@\" />", allianceAllyURL.absoluteString];		
 	
 	NSString *path = [[[NSBundle mainBundle] resourcePath] 
 					   stringByAppendingPathComponent:@"/powers_template.html"];
@@ -92,7 +106,7 @@
 	[replaceDict setObject:@"<b>Conspicuous</b>" forKey:@"Conspicuous" ];
 	[replaceDict setObject:@"<b>Inspire</b>" forKey:@"Inspire" ];
 	[replaceDict setObject:@"<b>Sabotage</b>" forKey:@"Sabotage" ];	
-	
+	[replaceDict setObject:@"<b>Diplomacy</b>" forKey:@"Diplomacy" ];		
 	[replaceDict setObject:@"<b>Long-Range</b>" forKey:@"Long-Range" ];
 	[replaceDict setObject:@"<b>Reward</b>" forKey:@"Reward" ];
 	[replaceDict setObject:@"<b>Trap</b>" forKey:@"Trap" ];
@@ -100,7 +114,9 @@
 	[replaceDict setObject:@")</i>" forKey:@")" ];
 	[replaceDict setObject:activateImageHTML forKey:@"[Activate]" ];
 	[replaceDict setObject:paymentResultImageHTML forKey:@">>>" ];
-
+	[replaceDict setObject:hordeAllyImageHTML forKey:@"[Horde]" ];
+	[replaceDict setObject:allianceAllyImageHTML forKey:@"[Alliance]" ];	
+	
 	for(NSString *key in replaceDict)
 	{
 		out = [out stringByReplacingOccurrencesOfString:key withString:[replaceDict objectForKey:key]];

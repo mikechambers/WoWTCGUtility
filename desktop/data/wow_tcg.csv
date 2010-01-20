@@ -384,8 +384,8 @@ When Zy'lah Manslayer deals combat damage to an ally, ready her.",115,HoA_276.jp
 277,Heroes of Azeroth,277,Chromie,Ally,Any,Dragonkin,,,Neutral,Unique,E,6,,2,,Melee,0,4,"[Activate], Remove Chromie from the game >>> Take an extra turn after this one.",28,HoA_277.jpg,Core,Neutral,,,,
 278,Heroes of Azeroth,278,Landro Longshot,Ally,Any,Goblin,,,Neutral,Unique,R,2,,1,,Melee,0,3,"Pay 1, [Activate], Discard a card >>> Flip a coin. If you win the flip, draw two cards. If you lose the flip, you may pay 2 to reflip.",57,HoA_278.jpg,Core,Neutral,,,,
 279,Heroes of Azeroth,279,Saltwater Snapjaw,Ally,Any,Turtle,,,Neutral,,R,3,,2,,Melee,0,3,Pay 3 >>> Prevent all damage that would be dealt to Saltwater Snapjaw this turn.,139,HoA_279.jpg,Core,Neutral,,,,
-280,Heroes of Azeroth,280,Thunderhead Hippogryph,Ally,Any,Hippogryph,,,Neutral,,R,4,,3,,Melee,0,3,"[Alliance Flag]: Thunderhead Hippogryph has elusive.
-[Horde Flag]: Thunderhead Hippogryph has ferocity.",141,HoA_280.jpg,Core,Neutral,,,,
+280,Heroes of Azeroth,280,Thunderhead Hippogryph,Ally,Any,Hippogryph,,,Neutral,,R,4,,3,,Melee,0,3,"[Alliance] : Thunderhead Hippogryph has elusive.
+[Horde] : Thunderhead Hippogryph has ferocity.",141,HoA_280.jpg,Core,Neutral,,,,
 281,Heroes of Azeroth,281,Bad Mojo Mask,Item,PrWk,,,,Neutral,[A] Cloth Head (1),R,4,,0,,,0,0,"At the start of each player's turn, that player discards a card.",42,HoA_281.jpg,Core,Neutral,,,,
 282,Heroes of Azeroth,282,Chromatic Cloak,Item,DrMgPaPrShWk,,,,Neutral,[A] Back (1),U,4,,0,,,0,0,"If your hero would deal damage with an ability, it deals that amount of damage plus 1 instead.",331,HoA_282.jpg,Core,Neutral,,,,
 283,Heroes of Azeroth,283,Deathdealer Breastplate,Item,HuPaShWr,,,,Neutral,[A] Mail Chest (1),R,5,,0,,,1,0,Your weapons have +2 ATK.,3,HoA_283.jpg,Core,Neutral,,,,
@@ -1287,8 +1287,8 @@ Snig Feralsnout has ferocity while you control a Form.",1092,FoO_186.jpg,Core,Ne
 When Uglund Duskrider attacks, target hero or ally has stealth this turn.",1095,FoO_190.jpg,Core,Neutral,,,,
 871,Fires of Outland,191,Vorden the Shadowbringer,Ally,Warlock,Orc,,,Horde,,R,6,,3,,Shadow,0,3,"When Vorden enters play, destroy any number of allies in your party, then destroy an opposing ally for each ally destroyed this way.",971,FoO_191.jpg,Core,Neutral,,,,
 872,Fires of Outland,192,Chen Stormstout,Ally,Any,Pandaren,,,Neutral,Instant Unique,E,7,,6,,Melee,0,6,"When Chen Stormstout enters play, say ""I bring PANDA-MONIUM!"" and opposing allies can't attack this turn.;3, Say ""Another round?"" >>> Target ally can't attack this turn.",892,FoO_192.jpg,Core,Neutral,,,,
-873,Fires of Outland,193,Spectral Tiger,Ally,Any,Spectral Tiger,,,Neutral,,R,4,,4,,Melee,0,3,"Alliance: Elusive allies in your party have +1 health.
-Horde: Allies with ferocity in your party have +1 ATK.",899,FoO_193.jpg,Core,Neutral,,,,
+873,Fires of Outland,193,Spectral Tiger,Ally,Any,Spectral Tiger,,,Neutral,,R,4,,4,,Melee,0,3,"[Alliance] : Elusive allies in your party have +1 health.
+[Horde] : Allies with ferocity in your party have +1 ATK.",899,FoO_193.jpg,Core,Neutral,,,,
 874,Fires of Outland,194,Aldori Legacy Defender,Item,PaShWr,,,,Neutral,[A] Shield Off-Hand (1),U,4,,0,,,2,0,[Activate] >>> Target hero or ally has -2 ATK this turn.,1096,FoO_194.jpg,Core,Neutral,,,,
 875,Fires of Outland,195,Doomplate Legguards,Item,PaWr,,,,Neutral,[A] Plate Legs (1),E,4,,0,,,2,0,Your weapons have +3 ATK while you have five or more equipment.,1097,FoO_195.jpg,Core,Neutral,,,,
 876,Fires of Outland,196,Emerald-Scale Greaves,Item,HuSh,,,,Neutral,[A] Mail Legs (1),R,4,,0,,,2,0,"Py 2, Destroy Emerald-Scale Greaves >>> Ready target friendly ally.",1098,FoO_196.jpg,Core,Neutral,,,,
@@ -1653,7 +1653,7 @@ When Ezra readies, he deals 2 ranged damage to target hero or ally.",1331,MoL_18
 1120,March of the Legion,194,Kallas Sunflame,Ally,Mage,Blood Elf,,,Horde,,R,6,,6,,Fire,0,5,Pay 1 >>> Other Fire allies in your party have +1 ATK this turn.,1429,MoL_194.jpg,Core,Neutral,,,,
 1121,March of the Legion,195,Marka Addington,Ally,Warlock,Undead,,,Horde,,U,5,,7,,Fire,0,7,"At the start of your turn, Marka deals 3 fire damage to herself.",1340,MoL_195.jpg,Core,Neutral,,,,
 1122,March of the Legion,196,"Nazgrel, Advisor to Thrall",Ally,Shaman,Orc,,,Horde,Unique,E,7,,7,,Melee,0,6,"Protector
-When Nazgrel enters play, destroy target Alliance ally.",1430,MoL_196.jpg,Core,Neutral,,,,
+When Nazgrel enters play, destroy target [Alliance] ally.",1430,MoL_196.jpg,Core,Neutral,,,,
 1123,March of the Legion,197,Osha Shadowdrinker,Ally,Warlock,Undead,,,Horde,,R,6,,5,,Shadow,0,5,"When a Shadow ally in your party deals combat damage, ready up to that many of your resources.",1166,MoL_197.jpg,Core,Neutral,,,,
 1124,March of the Legion,198,"Ossandran, Crematorium Master",Ally,Rogue,Undead,,,Horde,,C,4,,3,,Nature,0,5,"When an opposing ability, ally, equipment, or resource is destroyed, remove it from the game.",1344,MoL_198.jpg,Core,Neutral,,,,
 1125,March of the Legion,199,"""Poison Tongue"" McGillicutty",Ally,Priest,Undead,,,Horde,,U,5,,3,,Shadow,0,3,"When Poison Tongue is destroyed, you may destroy target resource.",1191,MoL_199.jpg,Core,Neutral,,,,
@@ -2251,8 +2251,8 @@ When another ally named Sunseeker Astromage in your party is destroyed, draw a c
 At the end of your turn, put a Naga Distiller ally token with 0 Melee ATK / 1 health into play.
 At the start of your turn, destroy a Naga Distiller in your party.
 If you do, Kalithresh has +5 ATK this turn.",1517,SoB_215.jpg,Core,Neutral,Traitor,,,
-1461,Servant of the Betrayer,216,X-51 Nether-Rocket,Ally,Any,Rocket,,,Neutral,,R,2,,0,,Melee,0,5,"Pay 1, [Activate] >>> Target Horde ally in your party has ferocity this turn. At end of turn, destroy it.
-Pay 1, [Activate] >>> Target Alliance ally in your party can use [Activate] powers this turn. At end of turn, destroy it.",1513,SoB_216.jpg,Core,Neutral,,,,
+1461,Servant of the Betrayer,216,X-51 Nether-Rocket,Ally,Any,Rocket,,,Neutral,,R,2,,0,,Melee,0,5,"Pay 1, [Activate] >>> Target [Horde] ally in your party has ferocity this turn. At end of turn, destroy it.
+Pay 1, [Activate] >>> Target [Alliance] ally in your party can use [Activate] powers this turn. At end of turn, destroy it.",1513,SoB_216.jpg,Core,Neutral,,,,
 1462,Servant of the Betrayer,217,Arcanium Signet Bands,Item,MgPrWk,,,,Neutral,[A] Cloth Wrist (1),U,2,,0,,,1,0,"[Activate] >>> If target ally would be dealt damage this turn, it's dealt double that much instead.",1763,SoB_217.jpg,Core,Neutral,,,,
 1463,Servant of the Betrayer,218,Armwraps of Disdain,Item,DrRo,,,,Neutral,[A] Leather Wrist (1),U,1,,0,,,1,0,Destroy an ability you control >>> your hero has +1 ATK while attacking this turn.,1764,SoB_218.jpg,Core,Neutral,,,,
 1464,Servant of the Betrayer,219,Azure-Shield of Coldarra,Item,PaShWr,,,,Neutral,[A] Shield Off-Hand (1),R,3,,0,,,0,0,"[Activate] >>> If your hero would be dealt damage, prevent all but 3 of it.",1765,SoB_219.jpg,Core,Neutral,,,,
@@ -2344,10 +2344,10 @@ Reward: Equipment card in your hand are instant this turn.",1800,SoB_264.jpg,Cor
 1525,Hunt for Illidan,016,Tahanu Brinkrunner,Hero,Druid,Tauren,"Enchanting, Jewelcrafting",Restoration,Horde,,U,0,,0,,,0,28,"Pay 4, Flip Tahanu, Put target ally card from your graveyard into hand.",1866,HfI_016.jpg,Core,Neutral,,,,
 1526,Hunt for Illidan,017,Valterus,Hero,Paladin,Blood Elf,"Skinning, Alchemy",Protection,Horde,,U,0,,0,,,0,29,"Pay 3, Flip Valterus, Target friendly hero or ally is untargetable this turn.",1867,HfI_017.jpg,Core,Neutral,,,,
 1527,Hunt for Illidan,018,Warmaster Bo'jo,Hero,Warrior,Troll,"Alchemy, Jewelcrafting",Arms,Horde,,U,0,,0,,,0,30,"Pay 2, Flip Bo'jo, Bo'jo has +2 ATK while attacking this turn.",1868,HfI_018.jpg,Core,Neutral,,,,
-1528,Hunt for Illidan,019,Kurzon the False,Hero,Demon,Demon,,,Alliance,,U,0,,0,,,0,28,"FRONT: Pay 1, Put three Alliance allies from your party into their owners' hands >>> Flip Kurzon face down.
-BACK: Alliance allies in your party are elusive.",1859,HfI_019.jpg,Core,Neutral,,,,
-1529,Hunt for Illidan,020,Famish the Binder,Hero,Demon,Demon,,,Horde,,U,0,,0,,,0,28,"FRONT: Pay 3, Destroy three Horde allies in your party >>> Flip Famish face down.
-BACK: Horde allies in your party have ferocity.",1869,HfI_020.jpg,Core,Neutral,,,,
+1528,Hunt for Illidan,019,Kurzon the False,Hero,Demon,Demon,,,Alliance,,U,0,,0,,,0,28,"FRONT: Pay 1, Put three [Alliance] allies from your party into their owners' hands >>> Flip Kurzon face down.
+BACK: [Alliance] allies in your party are elusive.",1859,HfI_019.jpg,Core,Neutral,,,,
+1529,Hunt for Illidan,020,Famish the Binder,Hero,Demon,Demon,,,Horde,,U,0,,0,,,0,28,"FRONT: Pay 3, Destroy three [Horde] allies in your party >>> Flip Famish face down.
+BACK: [Horde] allies in your party have ferocity.",1869,HfI_020.jpg,Core,Neutral,,,,
 1530,Hunt for Illidan,021,Imp Lord Pinprik,Hero,Demon,Demon,,,Neutral,,U,0,,0,,,0,8,"FRONT: Elusive
 BACK: Elusive
 Deckbuilding: You can include only neutral quests, any abilities that deal fire damage, and any [Fire] allies. You can't include cards with reputation or text restrictions (like Fire Hero Required).",1818,HfI_021.jpg,Core,Neutral,,,,
@@ -2560,7 +2560,7 @@ When Wimbly defends, draw a card.",1954,HfI_143.jpg,Core,Neutral,,,,
 Zorus can't be destroyed by fatal damage.",1986,HfI_144.jpg,Core,Neutral,,,,
 1654,Hunt for Illidan,145,Alecia Hall,Ally,Priest,Undead,,,Horde,,C,2,,2,,Holy,0,3,"When Alecia enters play, she heals 3 damage from target hero or ally.",1879,HfI_145.jpg,Core,Neutral,,,,
 1655,Hunt for Illidan,146,Blood Guard Gulmok,Ally,Warrior,Orc,,,Horde,Unique,E,9,,8,,Melee,0,8,"Protector
-When another Horde ally enters your party, you may destroy target ally.",1876,HfI_146.jpg,Core,Neutral,,,,
+When another [Horde] ally enters your party, you may destroy target ally.",1876,HfI_146.jpg,Core,Neutral,,,,
 1656,Hunt for Illidan,147,Blood Knight Kyria,Ally,Paladin,Blood Elf,,,Horde,,C,3,,2,,Holy,0,3,"Protector
 When you play an ability, Kyria heals 4 damage from target hero or ally.",1878,HfI_147.jpg,Core,Neutral,,,,
 1657,Hunt for Illidan,148,Brok Bloodcaller,Ally,Hunter,Orc,,,Horde,,U,4,,4,,Ranged,0,4,"Ferocity
@@ -4000,8 +4000,8 @@ When damage is dealt this way, your hero deals 1 shadow damage to target ally in
 2566,Scourgewar,121,Staunch Reprisal,Ability,DkPa, ,,,Neutral,,U,2,,0,,Melee,0,0,"Ongoing: Your hero has Protector.
 When your hero protects, it may deal 2 melee damage to target attacker.",3112,SGW_121.jpg,Core,Neutral,,,,
 2567,Scourgewar,122,Word of Blight,Ability,DkPr, ,,,Neutral,,U,1,,0,,Shadow,0,0,Your hero deals shadow damage to target ally equal to the number of allies in your graveyard.,3113,SGW_122.jpg,Core,Neutral,,,,
-2568,Scourgewar,123,"Next Stop, Menethil Harbor!",Ability,Any, ,,,Alliance,Instant,C,1,,0,,,0,0,Each player puts an Alliance ally he controls into its owner's hand.,3114,SGW_123.jpg,Core,Neutral,,,,
-2569,Scourgewar,124,All Aboard for Undercity!,Ability,Any, ,,,Horde,Instant,C,1,,0,,,0,0,Each player puts a Horde ally from his graveyard into his hand.,3115,SGW_124.jpg,Core,Neutral,,,,
+2568,Scourgewar,123,"Next Stop, Menethil Harbor!",Ability,Any, ,,,Alliance,Instant,C,1,,0,,,0,0,Each player puts an [Alliance] ally he controls into its owner's hand.,3114,SGW_123.jpg,Core,Neutral,,,,
+2569,Scourgewar,124,All Aboard for Undercity!,Ability,Any, ,,,Horde,Instant,C,1,,0,,,0,0,Each player puts a [Horde] ally from his graveyard into his hand.,3115,SGW_124.jpg,Core,Neutral,,,,
 2570,Scourgewar,125,Anarchist Bladewalker,Ally,Rogue,Human,,,Alliance,,U,5,,5,,Melee,0,4,"Finishing Move (To play, remove X Combo cards in your graveyard from the game, where X is 5 or less.)
 When this ally enters play, she may deal X melee damage to target hero or ally.",2863,SGW_125.jpg,Core,Neutral,,,,
 2571,Scourgewar,126,Anduros Silversong,Ally,Priest,Night Elf,,,Alliance,,C,4,,5,,Shadow,0,5,This ally can't attack heroes.,2998,SGW_126.jpg,Core,Neutral,,,,
@@ -4137,9 +4137,9 @@ When this ally enters play, put up to three cards from the top of your deck into
 2656,Scourgewar,211,Lord Darion Mograine,Ally,Death Knight,Human,,,Neutral,Unique,E,5,,5,,Frost,0,6,"Pay 1, Destroy a Death Knight you control  Put a 3 Melee / 3 Health Ghoul ally token into play.",2963,SGW_211.jpg,Core,Neutral,,,,
 2657,Scourgewar,212,Lord Jorach Ravenholdt,Ally,Rogue,Human,,,Neutral,Unique,E,4,,5,,Melee,0,4,"Pay 1, Exhaust a Rogue you control >>> Exhaust target hero or ally.",2964,SGW_212.jpg,Core,Neutral,,,,
 2658,Scourgewar,213,Mor'zul Bloodbringer,Ally,Warlock,Human,,,Neutral,Unique,E,5,,6,,Shadow,0,5,"Pay 1, Remove a Warlock ally you control from the game >>> Remove target ally from the game.",2965,SGW_213.jpg,Core,Neutral,,,,
-2659,Scourgewar,214,Spectral Kitten,Ally,Any,Tiger,,,Neutral,Pet (1),R,3,,4,,Melee,0,4,"Horde allies you control have +1 ATK. 
-Alliance allies you control have +1 Health. 
-Other Non-Horde, non-Alliance allies you control have +1 / +1.",2844,SGW_214.jpg,Core,Neutral,,,,
+2659,Scourgewar,214,Spectral Kitten,Ally,Any,Tiger,,,Neutral,Pet (1),R,3,,4,,Melee,0,4,"[Horde] allies you control have +1 ATK. 
+[Alliance] allies you control have +1 Health. 
+Other Non-[Horde], non-[Alliance] allies you control have +1 / +1.",2844,SGW_214.jpg,Core,Neutral,,,,
 2660,Scourgewar,215,Tiny,Ally,Any,Raptor,,,Neutral,Mount (1),U,1,,0,,Melee,0,3,"When you place a resource face up, you pay 2 less to complete your next quest this turn.
 (Mounts can't attack or be attacked.)",2842,SGW_215.jpg,Core,Neutral,,,,
 2661,Scourgewar,216,Bloodbane's Fall,Item,Any, ,,,Neutral,[A] Cloth Back (1),C,3,,0,,,1,0,Your hero has Assault 1. (+1 ATK on your turn.),2930,SGW_216.jpg,Core,Neutral,,,,
