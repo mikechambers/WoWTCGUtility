@@ -97,7 +97,6 @@
 	[replaceDict setObject:@"<b>Ferocity</b>" forKey:@"Ferocity" ];
 	[replaceDict setObject:@"<b>Elusive</b>" forKey:@"Elusive" ];
 	[replaceDict setObject:@"<b>Totem</b>" forKey:@"Totem" ];
-	
 	[replaceDict setObject:@"<b>Stealth</b>" forKey:@"Stealth" ];
 	[replaceDict setObject:@"<b>Untargetable</b>" forKey:@"Untargetable" ];
 	[replaceDict setObject:@"<b>Thrown</b>" forKey:@"Thrown" ];
@@ -110,6 +109,22 @@
 	[replaceDict setObject:@"<b>Long-Range</b>" forKey:@"Long-Range" ];
 	[replaceDict setObject:@"<b>Reward</b>" forKey:@"Reward" ];
 	[replaceDict setObject:@"<b>Trap</b>" forKey:@"Trap" ];
+	[replaceDict setObject:@"<b>Sextuple Wield</b>" forKey:@"Sextuple Wield" ];	
+	[replaceDict setObject:@"<b>Finishing Move</b>" forKey:@"Finishing Move" ];	 	
+	[replaceDict setObject:@"<b>War Stomp</b>" forKey:@"War Stomp" ];	 	
+	[replaceDict setObject:@"<b>Berserking</b>" forKey:@"Berserking" ];	 	
+	[replaceDict setObject:@"<b>AWESOME</b>" forKey:@"AWESOME" ];		
+	[replaceDict setObject:@"<b>Inspiring Presence</b>" forKey:@"Inspiring Presence" ];	
+	[replaceDict setObject:@"<b>Hardiness</b>" forKey:@"Hardiness" ];	
+	[replaceDict setObject:@"<b>Arcane Torrent</b>" forKey:@"Arcane Torrent" ];		
+	[replaceDict setObject:@"<b>Escape Artist</b>" forKey:@"Escape Artist" ];		
+	[replaceDict setObject:@"<b>Find Treasure</b>" forKey:@"Find Treasure" ];	
+	[replaceDict setObject:@"<b>Will of the Forsaken</b>" forKey:@"Will of the Forsaken" ];
+	[replaceDict setObject:@"<b>irradiated</b>" forKey:@"irradiated" ];	
+	[replaceDict setObject:@"<b>Preparation</b>" forKey:@"Preparation" ];		
+	[replaceDict setObject:@"<b>Invincible</b>" forKey:@"Invincible" ];	
+	
+	
 	[replaceDict setObject:@"<i>(" forKey:@"(" ];
 	[replaceDict setObject:@")</i>" forKey:@")" ];
 	[replaceDict setObject:activateImageHTML forKey:@"[Activate]" ];
@@ -124,14 +139,14 @@
 
 	out = [NSString stringWithFormat:@"<p>%@</p>", out];
 	
-	GTMRegex *mendRegex = [GTMRegex regexWithPattern:@"(Mend [0-9]|Mend [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [mendRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];
+	GTMRegex *mendRegex = [GTMRegex regexWithPattern:@"Mend ([0-9]|[0-9][0-9]|X)" options:kGTMRegexOptionSupressNewlineSupport];
+	out = [mendRegex stringByReplacingMatchesInString:out withReplacement:@"<b>Mend \\1</b>"];
 
 	GTMRegex *paysRegex = [GTMRegex regexWithPattern:@"(Pay[s]? )([0-9]|[x])|(Pay[s]? )([0-9][0-9]))" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
 	out = [paysRegex stringByReplacingMatchesInString:out withReplacement:@"\\1<span class='payCircle'>&nbsp;<b>\\2</b>&nbsp;</span>"];	
 	
-	GTMRegex *assaultRegex = [GTMRegex regexWithPattern:@"(Assault [0-9]|Assault [0-9][0-9])" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [assaultRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1</b>"];	
+	GTMRegex *assaultRegex = [GTMRegex regexWithPattern:@"Assault ([0-9]|[0-9][0-9]|X)" options:kGTMRegexOptionSupressNewlineSupport];
+	out = [assaultRegex stringByReplacingMatchesInString:out withReplacement:@"<b>Assault \\1</b>"];	
 	
 
 	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]] [[:<:]][A-Z][a-z]*[[:>:]]|[[:<:]][A-Z][a-z]*[[:>:]])( Hero Required)"];
@@ -145,19 +160,23 @@
 	
 	//NSLog(@"%@", out);
 	
-	//[Ranged]
+	//[Ranged], [Health], Boots of Whirling mist
 	//[Nature]
-	//stopped at Servant of the Betrayer
 	//fire damage - [FIRE]
 	//robotic homing chicken there is a period after elusive
-	
+	//sister remba elusive and untergetable lower case are bolded
+	//Two-Handed dual wield
+	//lady katrana payment
+	//bear form, cat form, Cat Form, protector, long-range, resistance, stealth, elusive, ferocity, dual wield, thown, untargetable
+	//Totems
+	//Mend - by itself
+	//Assault X Garrosh Hellscream
 	return out;	
 }
 						  
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
-	NSLog(@"didFinishLoadForFrame");
 	if(tempData)
 	{
 		[self renderPowerText:tempData];
