@@ -1622,7 +1622,7 @@
 										<object class="NSTabViewItem" id="183577613">
 											<string key="NSIdentifier">details</string>
 											<object class="NSView" key="NSView" id="723429189">
-												<reference key="NSNextResponder" ref="144956192"/>
+												<nil key="NSNextResponder"/>
 												<int key="NSvFlags">274</int>
 												<array class="NSMutableArray" key="NSSubviews">
 													<object class="NSScrollView" id="755593478">
@@ -2147,7 +2147,6 @@
 													</object>
 												</array>
 												<string key="NSFrameSize">{251, 324}</string>
-												<reference key="NSSuperview" ref="144956192"/>
 											</object>
 											<string key="NSLabel">Details</string>
 											<reference key="NSColor" ref="919454993"/>
@@ -2156,7 +2155,7 @@
 										<object class="NSTabViewItem" id="519852119">
 											<string key="NSIdentifier">2</string>
 											<object class="NSView" key="NSView" id="722801052">
-												<nil key="NSNextResponder"/>
+												<reference key="NSNextResponder" ref="144956192"/>
 												<int key="NSvFlags">274</int>
 												<array class="NSMutableArray" key="NSSubviews">
 													<object class="NSScrollView" id="754193383">
@@ -2256,6 +2255,7 @@
 													</object>
 												</array>
 												<string key="NSFrameSize">{251, 324}</string>
+												<reference key="NSSuperview" ref="144956192"/>
 											</object>
 											<string key="NSLabel">Rules</string>
 											<reference key="NSColor" ref="919454993"/>
@@ -2564,12 +2564,12 @@
 											<reference key="NSTabView" ref="144956192"/>
 										</object>
 									</array>
-									<reference key="NSSelectedTabViewItem" ref="183577613"/>
+									<reference key="NSSelectedTabViewItem" ref="519852119"/>
 									<reference key="NSFont" ref="507197128"/>
 									<int key="NSTvFlags">6</int>
 									<bool key="NSAllowTruncatedLabels">YES</bool>
 									<array class="NSMutableArray" key="NSSubviews">
-										<reference ref="723429189"/>
+										<reference ref="722801052"/>
 									</array>
 								</object>
 								<object class="NSSegmentedControl" id="212966187">
@@ -2587,12 +2587,12 @@
 											<object class="NSSegmentItem">
 												<double key="NSSegmentItemWidth">98</double>
 												<string key="NSSegmentItemLabel">Details</string>
-												<bool key="NSSegmentItemSelected">YES</bool>
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
 											<object class="NSSegmentItem">
 												<string key="NSSegmentItemLabel">Powers</string>
 												<int key="NSSegmentItemTag">1</int>
+												<bool key="NSSegmentItemSelected">YES</bool>
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
 											<object class="NSSegmentItem">
@@ -2602,6 +2602,7 @@
 												<int key="NSSegmentItemImageScaling">0</int>
 											</object>
 										</array>
+										<int key="NSSelectedSegment">1</int>
 										<int key="NSSegmentStyle">4</int>
 									</object>
 								</object>
@@ -6051,7 +6052,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<integer value="2" key="987.IBSegmentedControlTracker.RoundRobinState"/>
 				<integer value="1" key="987.IBSegmentedControlTracker.WasGrowing"/>
 				<string key="988.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<integer value="0" key="988.IBSegmentedControlInspectorSelectedSegmentMetadataKey"/>
+				<integer value="1" key="988.IBSegmentedControlInspectorSelectedSegmentMetadataKey"/>
 				<string key="989.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="990.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="993.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
