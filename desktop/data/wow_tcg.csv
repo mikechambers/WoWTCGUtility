@@ -1922,8 +1922,9 @@ When attached ally is destroyed, draw a card.",1623,SoB_038.jpg,Core,Neutral,,,,
 1284,Servant of the Betrayer,039,Form of the Serpent,Ability,Druid,,,Traitor,Neutral,Instant Form (1),R,3,,0,,Nature,0,0,"Traitor Hero Required
 Ongoing: When your hero attacks, put a poison counter on Form of the Serpent. Your hero has +1 ATK this combat for each poison counter.
 Remove all poison counters >>> Your hero deals 1 nature damage to target ally for each counter removed this way.",1510,SoB_039.jpg,Core,Neutral,Traitor,,,
-1285,Servant of the Betrayer,040,Gift of Nature,Ability,Druid,,,Restoration,Neutral,Talent,R,3,,0,,,0,0,"Ongoing: Allies in your party can't be destroyed by fatal damage.
-At the end of each turn, destroy all allies in your party with fatal damage.",1515,SoB_040.jpg,Core,Neutral,,,,
+1285,Servant of the Betrayer,040,Gift of Nature,Ability,Druid,,,Restoration,Neutral,Talent,R,3,,0,,,0,0,"Restoration Hero Required
+""Ongoing: Allies in your party can't be destroyed by fatal damage.
+At the end of each turn, destroy all allies in your party with fatal damage.""",1515,SoB_040.jpg,Core,Neutral,Restoration,,,
 1286,Servant of the Betrayer,041,King of the Jungle,Ability,Druid,,,Feral,Neutral,Instant Combo Form (1),R,6,,0,,,0,0,"Ongoing: Your hero has +1 ATK while attacking for each other ability you control.
 Your hero is in cat form. (+1 ATK while attacking. Destroy this card when you strike with a weapon or play a non-Feral ability.)",1624,SoB_041.jpg,Core,Neutral,,,,
 1287,Servant of the Betrayer,042,Lacerate,Ability,Druid,,,Feral,Neutral,Instant Form (1),C,3,,0,,Melee,0,0,"Ongoing: At the start of your turn, your hero deals 2 melee damage to target opposing hero.
@@ -1945,7 +1946,8 @@ Target Pet in your party has +2 ATK this turn for each ally destroyed this way."
 Interrupt all cards and effects, then end the turn.",1570,SoB_050.jpg,Core,Neutral,,,,
 1296,Servant of the Betrayer,051,King Khan,Ally,Hunter,Gorilla,,,Neutral,Pet (1),U,4,,2,,Nature,0,4,"When King Khan enters combat, he deals 2 nature damage to each opposing ally.",1630,SoB_051.jpg,Core,Neutral,,,,
 1297,Servant of the Betrayer,052,Rain of Arrows,Ability,Hunter,,,Marksmanship,Neutral,,C,2,,0,,Ranged,0,0,Your hero deals ranged damage to target hero or ally equal to 2 plus the number of other abilities you've played this turn.,1631,SoB_052.jpg,Core,Neutral,,,,
-1298,Servant of the Betrayer,053,Ranged Weapon Specialization,Ability,Hunter,,,Marksmanship,Neutral,Talent,R,3,,0,,,0,0,Ongoing: Your Ranged Weapons have +2 ATK and you pay 1 less to strike with them.,1632,SoB_053.jpg,Core,Neutral,,,,
+1298,Servant of the Betrayer,053,Ranged Weapon Specialization,Ability,Hunter,,,Marksmanship,Neutral,Talent,R,3,,0,,,0,0,"Marksmanship Hero Required
+Ongoing: Your Ranged Weapons have +2 ATK and you pay 1 less to strike with them.",1632,SoB_053.jpg,Core,Neutral,Marksmanship,,,
 1299,Servant of the Betrayer,054,Run to Ground,Ability,Hunter,,,Marksmanship,Neutral,,C,5,,0,,,0,0,"Ongoing: At the start of your turn, target an opposing hero or ally. Allies in your party have +3 ATK while attacking that character this turn.",1633,SoB_054.jpg,Core,Neutral,,,,
 1300,Servant of the Betrayer,055,Snake Trap,Ability,Hunter,,,Survival,Neutral,Instant,U,6,,0,,,0,0,"Trap (You may exhaust your defending hero rather than pay this card's cost.)
 Put X Snake ally tokens with 1 Nature ATK / 1 health into play, where X is target opposing attacker's cost.",1506,SoB_055.jpg,Core,Neutral,,,,
@@ -2025,7 +2027,8 @@ Ongoing: At the start of attached hero's controller's turn, he destroys an ally 
 1341,Servant of the Betrayer,096,Unbalance,Ability,Rogue,,,Combat,Neutral,Combo,C,2,,0,,,0,0,"Exhaust all opposing heroes and allies. If you have an equipment, each of them can't ready during its controller's next ready step.",1664,SoB_096.jpg,Core,Neutral,,,,
 1342,Servant of the Betrayer,097,Death Shock,Ability,Shaman,,,Traitor,Neutral,Instant,U,2,,0,,Nature,0,0,"Traitor Hero Required
 Your hero deals 1 nature damage to target ally for each damage on your hero.",1665,SoB_097.jpg,Core,Neutral,Traitor,,,
-1343,Servant of the Betrayer,098,Elemental Precision,Ability,Shaman,,,Elemental,Neutral,Talent,R,7,,0,,,0,0,"Ongoing: If a hero or ally in your party would deal nature damage, it deals double that much instead.",1666,SoB_098.jpg,Core,Neutral,,,,
+1343,Servant of the Betrayer,098,Elemental Precision,Ability,Shaman,,,Elemental,Neutral,Talent,R,7,,0,,,0,0,"Elemental Hero Required
+Ongoing: If a hero or ally in your party would deal nature damage, it deals double that much instead.",1666,SoB_098.jpg,Core,Neutral,Elemental,,,
 1344,Servant of the Betrayer,099,Life Cycle,Ability,Shaman,,,Restoration,Neutral,Instant,C,3,,0,,Nature,0,0,"Your hero heals 2 damage from each hero and ally in your party, then deals 1 nature damage to target hero or ally for each damage healed this way.",1667,SoB_099.jpg,Core,Neutral,,,,
 1345,Servant of the Betrayer,100,Maelstrom Weapon,Ability,Shaman,,,Enhancement,Neutral,Instant,C,3,,0,,Nature,0,0,"Your hero deals 2 nature damage to target hero or ally.
 Attach to one of your Melee weapons.
@@ -2080,7 +2083,8 @@ Your hero had dual wield. One or both of your weapons can be Two-Handed. You can
 1370,Servant of the Betrayer,125,Unbridled Wrath,Ability,Warrior,,,Fury,Neutral,Talent,R,2,,0,,,0,0,"Fury Hero Required
 Ongoing: Pay 1 >>> Target weapon you control has +1 ATK this turn.",1686,SoB_125.jpg,Core,Neutral,Fury,,,
 1371,Servant of the Betrayer,126,Whirlwind,Ability,Warrior,,,Fury,Neutral,Instant,U,5,,0,,Melee,0,0,Your hero deals melee damage to each opposing ally equal the ATK of one of your Melee weapons.,1687,SoB_126.jpg,Core,Neutral,,,,
-1372,Servant of the Betrayer,127,Papa Hummel's Old-Fashioned Pet Biscuit,Ability,Any,,,,Neutral,,U,0,+x,0,,,0,0,Attach to target Pet ally in your party and put X growth counters on Papa Hummel's Old-Fashioned Pet Biscuit.    Ongoing: Attached ally has +1 ATK/+1 health for each growth counter.,1505,SoB_127.jpg,Core,Neutral,,,,
+1372,Servant of the Betrayer,127,Papa Hummel's Old-Fashioned Pet Biscuit,Ability,Any,,,,Neutral,,U,0,+x,0,,,0,0,"Attach to target Pet ally in your party and put X growth counters on Papa Hummel's Old-Fashioned Pet Biscuit.
+Ongoing: Attached ally has +1 ATK/+1 health for each growth counter.",1505,SoB_127.jpg,Core,Neutral,,,,
 1373,Servant of the Betrayer,128,Personal Weather Maker,Ability,Any,,,,Neutral,,R,3,,0,,,0,0,"Ongoing: Play with the top card of your deck revealed.
 Opponents can't target cards in play you control that share a type with the top card of your deck.",1512,SoB_128.jpg,Core,Neutral,,,,
 1374,Servant of the Betrayer,129,Angelista,Ally,Rogue,Human,,,Alliance,,C,2,,2,,Melee,0,2,"Stealth
@@ -2166,18 +2170,18 @@ When Saurfang enters combat with an ally with damage, destroy it and ready Saurf
 When Ulrac attacks, put a Demon ally card from your graveyard into hand.",1739,SoB_182.jpg,Core,Neutral,,,,
 1428,Servant of the Betrayer,183,Vexmaster Nar'jo,Ally,Mage,Troll,,,Horde,,C,2,,1,,Frost,0,3,"Ferocity (Can attack immediately.)
 Nar'jo has +2 ATK while attacking a ready ally.",1740,SoB_183.jpg,Core,Neutral,,,,
-1429,Servant of the Betrayer,184,Anchorite Fareena,Ally,Priest,Draenei,,,Neutral,,U,3,,3,,Holy,0,3,"Aldor Repuation
+1429,Servant of the Betrayer,184,Anchorite Fareena,Ally,Priest,Draenei,,,Neutral,,U,3,,3,,Holy,0,3,"Aldor Reputation
 Pay 0 >>> Attach target attachment to Fareena. Use only once per turn.",1741,SoB_184.jpg,Core,Aldor,,,,
-1430,Servant of the Betrayer,185,Anchorite Karja,Ally,Priest,Draenei,,,Neutral,Unique Aldor,E,7,,6,,Holy,0,6,"Aldor Repuation
+1430,Servant of the Betrayer,185,Anchorite Karja,Ally,Priest,Draenei,,,Neutral,Unique Aldor,E,7,,6,,Holy,0,6,"Aldor Reputation
 Ready allies in your party have +3 ATK / +3 health.",1742,SoB_185.jpg,Core,Aldor,,,,
-1431,Servant of the Betrayer,186,Anchorite Onkoth,Ally,Priest,Draenei,,,Neutral,,U,5,,5,,Holy,0,4,"Aldor Repuation
+1431,Servant of the Betrayer,186,Anchorite Onkoth,Ally,Priest,Draenei,,,Neutral,,U,5,,5,,Holy,0,4,"Aldor Reputation
 Inspire: Ability, Ally, Equipment, Hero, or Resource.",1743,SoB_186.jpg,Core,Aldor,,,,
-1432,Servant of the Betrayer,187,Atani of the Watch,Ally,Paladin,Draenei,,,Neutral,,C,1,,0,,Melee,0,4,"Aldor Repuation (Can't put Scryer cards in your deck.)
+1432,Servant of the Betrayer,187,Atani of the Watch,Ally,Paladin,Draenei,,,Neutral,,C,1,,0,,Melee,0,4,"Aldor Reputation (Can't put Scryer cards in your deck.)
 If damage would be dealt to your hero, it's dealt to Atani instead.",1744,SoB_187.jpg,Core,Aldor,,,,
-1433,Servant of the Betrayer,188,Bulvai of the Watch,Ally,Paladin,Draenei,,,Neutral,,C,4,,3,,Melee,0,5,"Aldor Repuation (Can't put Scryer cards in your deck.)
+1433,Servant of the Betrayer,188,Bulvai of the Watch,Ally,Paladin,Draenei,,,Neutral,,C,4,,3,,Melee,0,5,"Aldor Reputation (Can't put Scryer cards in your deck.)
 Protector
 If damage would be dealt to your hero, it's dealt to Bulvai instead.",1745,SoB_188.jpg,Core,Aldor,,,,
-1434,Servant of the Betrayer,189,Exarch Orelis,Ally,Paladin,Draenei,,,Neutral,Unique Aldor,E,6,,5,,Holy,0,7,"Aldor Repuation
+1434,Servant of the Betrayer,189,Exarch Orelis,Ally,Paladin,Draenei,,,Neutral,Unique Aldor,E,6,,5,,Holy,0,7,"Aldor Reputation
 Inspire: Ability, ally, equipment, hero, and resource",1746,SoB_189.jpg,Core,Aldor,,,,
 1435,Servant of the Betrayer,190,Marksman Eowan,Ally,Hunter,Draenei,,,Neutral,,U,4,,3,,Ranged,0,2,"Aldor Reputation (Can't put Scryer cards in your deck.)
 Long-Range
@@ -2185,7 +2189,7 @@ When an opposing ally is dealt non-ranged damage, Eowan deals 1 Ranged damage to
 1436,Servant of the Betrayer,191,Marksman Glous,Ally,Hunter,Draenei,,,Neutral,,R,2,,3,,Ranged,0,2,"Aldor Reputation
 Inspire: Quest
 When a quest is inspired this way, you pay 1 less to complete it this turn.",1522,SoB_191.jpg,Core,Aldor,,,,Aldor
-1437,Servant of the Betrayer,192,Niyore of the Watch,Ally,Warrior,Draenei,,,Neutral,,R,6,,5,,Melee,0,6,"Aldor Repuation
+1437,Servant of the Betrayer,192,Niyore of the Watch,Ally,Warrior,Draenei,,,Neutral,,R,6,,5,,Melee,0,6,"Aldor Reputation
 If damage would be dealt to your hero, it's dealt to Niyore instead.
 When Niyore is dealt damage, he deals 2 melee damage to its source.",1748,SoB_192.jpg,Core,Aldor,,,,
 1438,Servant of the Betrayer,193,Vindicator Agran,Ally,Warrior,Draenei,,,Neutral,,C,3,,2,,Melee,0,4,"Aldor Reputation (Can't put Scryer cards in your deck.)
@@ -2385,11 +2389,13 @@ While you have a Pet this turn, prevent all damage that your hero would be dealt
 1546,Hunt for Illidan,037,Ice Trap,Ability,Hunter,,,Survival,Neutral,Instant,C,4,,0,,Frost,0,0,"Trap (You may exhaust your defending hero rather than pay this card's cost.)
 Your hero deals 3 frost damage to target attacker. Remove a character dealt damage this way from combat.",1888,HfI_037.jpg,Core,Neutral,,,,
 1547,Hunt for Illidan,038,Patient Shot,Ability,Hunter,,,Marksmanship,Neutral,,C,3,,0,,Ranged,0,0,"Ongoing: You're hero has ""[Activate] >>> This hero deals 1 ranged damage to target hero or ally.""",1994,HfI_038.jpg,Core,Neutral,,,,
-1548,Hunt for Illidan,039,Shadow,Ally,Hunter,Panther,,,Neutral,Pet (1),C,6,,7,,Melee,0,7,Elusive (Can't be attacked.),1834,HfI_039.jpg,Core,Neutral,,,,
+1548,Hunt for Illidan,039,Shadow,Ally,Hunter,Panther,,,Neutral,Pet (1),C,6,,7,,Melee,0,7,"Elusive
+(Can't be attacked.)",1834,HfI_039.jpg,Core,Neutral,,,,
 1549,Hunt for Illidan,040,Stable Master,Ability,Hunter,,,Beast Mastery,Neutral,,U,1,,0,,,0,0,Ongoing: You can have an additional Pet.,1921,HfI_040.jpg,Core,Neutral,,,,
 1550,Hunt for Illidan,041,Trueshot Aura,Ability,Hunter,,,Marksmanship,Neutral,Talent Aura (1),R,4,,0,,,0,0,"Marksmanship Hero Required
 Ongoing: Ranged allies in your party have +2 ATK while attacking.
-Your Ranged weapons have +2 ATK while your hero is attacking.",2013,HfI_041.jpg,Core,Neutral,Marksmanship,,,
+Your Ranged weapons have +2 ATK while your hero is attacking.
+If your hero would deal ranged damage with an ability, it deals that much +2 instead.",2013,HfI_041.jpg,Core,Neutral,Marksmanship,,,
 1551,Hunt for Illidan,042,Viper Sting,Ability,Hunter,,,Marksmanship,Neutral,Instant,R,4,,0,,,0,0,"Attach to target hero.
 Ongoing: At the start of attached hero's controller's turn, he exhausts one of his resources, or two if you have a Ranged weapon.",1998,HfI_042.jpg,Core,Neutral,,,,
 1552,Hunt for Illidan,043,Webster,Ally,Hunter,Spider,,,Neutral,Pet (1),R,3,,4,,Nature,0,3,"At the end of your turn, you may put a web counter on target ally.
@@ -3362,10 +3368,7 @@ At the start of your turn, you may put Karina into her owner's hand.",2546,BoG_1
 2165,Blood of Gladiators,136,Karta Foultongue,Ally,Warrior,Orc,,,Horde,,C,4,,3,,Melee,0,3,"Hardiness (If this ally would be dealt damage, prevent 1 of it.)
 Pay 1 >>> This turn, target ally must attack if able and can attack only Karta if able.",2526,BoG_136.jpg,Core,Neutral,,,,
 2166,Blood of Gladiators,137,Kazamon Steelskin,Ally,Warlock,Orc,,,Horde,,R,4,,5,,Shadow,0,1,"Orc Hero Required
-Hardiness Hardiness Hardiness Hardiness Hardiness
-Hardiness Hardiness Hardiness Hardiness Hardiness
-Hardiness Hardiness Hardiness Hardiness Hardiness
-Hardiness Hardiness Hardiness Hardiness Hardiness",2396,BoG_137.jpg,Core,Neutral,,Orc,,
+Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness Hardiness",2396,BoG_137.jpg,Core,Neutral,,Orc,,
 2167,Blood of Gladiators,138,Kino the Cold,Ally,Shaman,Orc,,,Horde,,C,1,,1,,Frost,0,2,"Protector
 Hardiness (If this ally would be dealt damage, prevent 1 of it.)",2553,BoG_138.jpg,Core,Neutral,,,,
 2168,Blood of Gladiators,139,Melissa Gerrard,Ally,Warlock,Undead,,,Horde,,C,1,,1,,Shadow,0,1,"When Melissa attacks, target hero or ally has -1 health this turn.",2445,BoG_139.jpg,Core,Neutral,,,,
@@ -4122,9 +4125,9 @@ This ally has +1 / +1 while an equipment is in your graveyard.",2958,SGW_201.jpg
 This ally has +1 / +1 while an equipment is in your graveyard.",2959,SGW_202.jpg,Core,Neutral,,,,Nerubian
 2648,Scourgewar,203,Azjol-anak Battleguard,Ally,Any,Nerubian,,,Neutral,,C,6,,6,,Melee,0,6,"Nerubian Reputation (You can't put cards with other reputations in your deck.)
 This ally has +1 / +1 while an ally is in your graveyard.",2960,SGW_203.jpg,Core,Neutral,,,,Nerubian
-2649,Scourgewar,204,Azjol-anak Broodguard,Ally,Any,Nerubian,,,Neutral,,C,4,,4,,Melee,0,4,"Nerubian Reputation (You can't put cards with other repuations in your deck.)
+2649,Scourgewar,204,Azjol-anak Broodguard,Ally,Any,Nerubian,,,Neutral,,C,4,,4,,Melee,0,4,"Nerubian Reputation (You can't put cards with other Reputations in your deck.)
 This ally has +1/+1 while an ally is in your graveyard.",2859,SGW_204.jpg,Core,Neutral,,,,Nerubian
-2650,Scourgewar,205,Azjol-anak Webspinner,Ally,Any,Nerubian,,,Neutral,,C,1,,1,,Melee,0,1,"Nerubian Reputation (You can't put cards with other repuations in your deck.)
+2650,Scourgewar,205,Azjol-anak Webspinner,Ally,Any,Nerubian,,,Neutral,,C,1,,1,,Melee,0,1,"Nerubian Reputation (You can't put cards with other Reputations in your deck.)
 This ally has +1/+1 while an ability is in your graveyard.",2858,SGW_205.jpg,Core,Neutral,,,,Nerubian
 2651,Scourgewar,206,Azjol-anak Webweaver,Ally,Any,Nerubian,,,Neutral,,C,3,,3,,Melee,0,3,"Nerubian Reputation (You can't put cards with other reputations in your deck.)
 This ally has +1 / +1 while an ability is in your graveyard.",2961,SGW_206.jpg,Core,Neutral,,,,Nerubian
@@ -4264,11 +4267,14 @@ Heroes and allies in combat with your hero have -1 ATK for each bolt counter.",2
 2729,Player Crafted Item,014,Talasite Owl,Item,DrHuMgPaPrShWk,,,,Neutral,[I] Trinket (2),E,2,,0,,,0,0,"Jewelcrafting Hero Required
 [Activate] >>> Put a hoot counter on Talasite Owl.
 [Activate], Remove X hoot counters, destroy Talasite Owl >>> Ready X of your resouces.",2058,PCI_014.jpg,Crafting,Neutral,,,Jewelcrafting,
-2730,Player Crafted Item,015,Bulwark of the Ancient Kings,Item,PaWr,,,,Neutral,[A] Plate Chest (1),E,4,,0,,,5,0,"Your hero has +5 health.
+2730,Player Crafted Item,015,Bulwark of the Ancient Kings,Item,PaWr,,,,Neutral,[A] Plate Chest (1),E,4,,0,,,5,0,"Blacksmithing Hero Required
+Your hero has +5 health.
 Destroy Bulwark of the Ancient Kings >>> Your hero has +25 health until the end of your next turn.",2057,PCI_015.jpg,Crafting,Neutral,,,,
-2731,Player Crafted Item,016,Tankatronic Goggles,Item,PaWr,,,,Neutral,[A] Plate Head (1),E,2,,0,,,2,0,"When Tankatronic Goggles enters play, look at target player's hand.
+2731,Player Crafted Item,016,Tankatronic Goggles,Item,PaWr,,,,Neutral,[A] Plate Head (1),E,2,,0,,,2,0,"Engineering Hero Required
+When Tankatronic Goggles enters play, look at target player's hand.
 Your hero is a protector.  Opposing allies lose and can't have elusive, stealth, and untargetable.",2056,PCI_016.jpg,Crafting,Neutral,,,Engineering,
-2732,Player Crafted Item,017,Goblin Rocket Launcher,Item,Any,,,,Neutral,[I] Trinket (2),E,4,,0,,,0,0,[Activate] >>> Remove the top card of your deck from the game. Your hero deals ranged damage equal to that card's cost to target ally.,2058,PCI_017.jpg,Crafting,Neutral,,,Engineering,
+2732,Player Crafted Item,017,Goblin Rocket Launcher,Item,Any,,,,Neutral,[I] Trinket (2),E,4,,0,,,0,0,"Engineering Hero Required
+[Activate] >>> Remove the top card of your deck from the game. Your hero deals ranged damage equal to that card's cost to target ally.",2058,PCI_017.jpg,Crafting,Neutral,,,Engineering,
 2733,Player Crafted Item,018,Battlecast Pants,Item,MgPrWk,,,,Neutral,[A] Cloth Legs (1),E,3,,0,,,0,0,[Activate] >>> Cards in your hand are instant this turn until you play a card.,2592,PCI_018.jpg,Crafting,Neutral,,,,
 2734,Player Crafted Item,019,Cloak of Darkness,Item,DrHuPaRoShWr,,,,Neutral,[A] Cloth Back (1),E,2,,0,,,0,0,"[Activate] >>> Put a +1 DEF counter on Cloak of Darkness.
 [Activate], Remove all +DEF counters >>> Your hero deals 1 shadow damage to target hero or ally for each counter removed this way.",2593,PCI_019.jpg,Crafting,Neutral,,,,
@@ -4604,7 +4610,8 @@ When this weapon enters play, put X +1 ATK counters on it, where X is the ATK of
 2957,Naxxramas,038,The Turning Tide,Item,MgPaWk,,,,Neutral,[W] 2-Hand Sword Melee (1),R,3,,1,3,Melee,0,0,You pay 2 less to play allies while you control fewer allies than an opponent.,3143,NAX_038.jpg,Raid,Neutral,,,,
 2958,Naxxramas,039,The Undeath Carrier,Item,DrHu,,,,Neutral,[W] 2-Hand Staff Melee (1),R,5,,1,3,Melee,0,0,"When a non-Undead ally you control is destroyed, put it into play, and it's also an Undead.",3144,NAX_039.jpg,Raid,Neutral,,,,
 2959,Naxxramas,040,Widow’s Fury,Item,DkRoWr,,,,Neutral,[W] 1-Hand Sword Melee (1),R,2,,3,2,Melee,0,0,This weapon has +3 ATK if an ally you controlled was destroyed this turn.,3145,NAX_040.jpg,Raid,Neutral,,,,
-2960,Player Crafted Item,001,Boots of Utter Darkness,Item,DrRo,,,,Neutral,[A] Feet (1),E,2,,0,,,1,0,"While you control an ability, your hero has Untargetable.
+2960,Player Crafted Item,001,Boots of Utter Darkness,Item,DrRo,,,,Neutral,[A] Feet (1),E,2,,0,,,1,0,"Leatherworking Hero Required
+While you control an ability, your hero has Untargetable.
 While you control an ally, your hero has Elusive.
 While you control a weapon, your hero has Stealth.",3146,PCI_001_ud.jpg,Crafting,Neutral,,,,
 2961,Player Crafted Item,002,Ebonweave Robe,Item,MgPrWk,,,,Neutral,[A] Chest (1),E,4,,0,,,1,0,"Allies you control have Shadow Resistance.
