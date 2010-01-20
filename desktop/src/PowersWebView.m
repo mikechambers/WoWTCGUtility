@@ -143,20 +143,12 @@
 	GTMRegex *reputationRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Reputation)" options:kGTMRegexOptionSupressNewlineSupport];
 	out = [reputationRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
 	
-	NSLog(@"%@", out);
+	//NSLog(@"%@", out);
 	
-	//horde / alliance tokens
 	//[Ranged]
-	//[Alliance] [Horce] -- need to replace on Spectral Tiger, Nazgrel, x-51 nether rocket, Kurzon the false, Consul Rhys Lorgrand, Medallion
-	//of the Alliance, Medallion of the Horde, Glacial Blade, Establishing New Outposts, Southshore, Rehgar Earthfury, Kelm Harguth, Whiteout Staff,
-	//Next Stop, Menethil Harbor, Spectral Kitten, Force Command Death Trollbane, Famish the Binder, Blood Guard Gulmok, Electrified Dagger, Bolstering Our Defenses,
-	//Tarren Mill, Talisman of the Horde, Illiyana Moonblaze, All Aboard for Undercity
-	
 	//[Nature]
 	//stopped at Servant of the Betrayer
-	//Shadow Resistance
 	//fire damage - [FIRE]
-	//marksman boris - wrong bold long-range
 	//robotic homing chicken there is a period after elusive
 	
 	return out;	
