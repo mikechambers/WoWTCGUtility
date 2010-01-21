@@ -837,4 +837,11 @@
 	[self deleteOutlineViewNode:node];
 }
 
+/*********** menu delegate apis *********/
+
+- (void)menuNeedsUpdate:(NSMenu *)menu
+{
+	[outlineView menuNeedsUpdate:menu];
+}
+
 @end
