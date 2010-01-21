@@ -102,7 +102,7 @@
 
 -(NSString *)formatPower:(NSString *)data
 {
-	NSString *out = [data mutableCopy];
+	NSMutableString *out = [data mutableCopy];
 
 	NSMutableDictionary *replaceDict = [NSMutableDictionary dictionaryWithCapacity:10];
 	[replaceDict setObject:@"</p><p>" forKey:@"\n" ];
@@ -137,7 +137,8 @@
 	[replaceDict setObject:@"<b>irradiated</b>" forKey:@"irradiated" ];	
 	[replaceDict setObject:@"<b>Preparation</b>" forKey:@"Preparation" ];		
 	[replaceDict setObject:@"<b>Invincible</b>" forKey:@"Invincible" ];	
-	
+	[replaceDict setObject:@"<b>Bear Form</b>" forKey:@"Bear Form" ];		
+	[replaceDict setObject:@"<b>Cat Form</b>" forKey:@"Cat Form" ];		
 	
 	[replaceDict setObject:@"<i>(" forKey:@"(" ];
 	[replaceDict setObject:@")</i>" forKey:@")" ];
@@ -148,29 +149,31 @@
 	
 	for(NSString *key in replaceDict)
 	{
-		out = [out stringByReplacingOccurrencesOfString:key withString:[replaceDict objectForKey:key]];
+		[out replaceOccurrencesOfString: key withString: [replaceDict objectForKey:key] options:NSCaseInsensitiveSearch range:NSMakeRange(0, [out length])];
+		//[out stringByReplacingOccurrencesOfString:key withString:[replaceDict objectForKey:key]];
+		//out = [out stringByReplacingOccurrencesOfString:key withString:[replaceDict objectForKey:key]];
 	}
 
-	out = [NSString stringWithFormat:@"<p>%@</p>", out];
+	NSString *out2 = [NSString stringWithFormat:@"<p>%@</p>", out];
 	
 	GTMRegex *mendRegex = [GTMRegex regexWithPattern:@"Mend ([0-9]|[0-9][0-9]|X)" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [mendRegex stringByReplacingMatchesInString:out withReplacement:@"<b>Mend \\1</b>"];
+	out2 = [mendRegex stringByReplacingMatchesInString:out2 withReplacement:@"<b>Mend \\1</b>"];
 
 	GTMRegex *paysRegex = [GTMRegex regexWithPattern:@"(Pay[s]? )([0-9]|[x])|(Pay[s]? )([0-9][0-9]))" options:kGTMRegexOptionSupressNewlineSupport|kGTMRegexOptionIgnoreCase];
-	out = [paysRegex stringByReplacingMatchesInString:out withReplacement:@"\\1<span class='payCircle'>&nbsp;<b>\\2</b>&nbsp;</span>"];	
+	out2 = [paysRegex stringByReplacingMatchesInString:out2 withReplacement:@"\\1<span class='payCircle'>&nbsp;<b>\\2</b>&nbsp;</span>"];	
 	
 	GTMRegex *assaultRegex = [GTMRegex regexWithPattern:@"Assault ([0-9]|[0-9][0-9]|X)" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [assaultRegex stringByReplacingMatchesInString:out withReplacement:@"<b>Assault \\1</b>"];	
+	out2 = [assaultRegex stringByReplacingMatchesInString:out2 withReplacement:@"<b>Assault \\1</b>"];	
 	
 
 	GTMRegex *requiredHeroRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]] [[:<:]][A-Z][a-z]*[[:>:]]|[[:<:]][A-Z][a-z]*[[:>:]])( Hero Required)"];
-	out = [requiredHeroRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];		
+	out2 = [requiredHeroRegex stringByReplacingMatchesInString:out2 withReplacement:@"<b>\\1\\2</b>"];		
 
 	GTMRegex *resistanceRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Resistance)" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [resistanceRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
+	out2 = [resistanceRegex stringByReplacingMatchesInString:out2 withReplacement:@"<b>\\1\\2</b>"];
 	
 	GTMRegex *reputationRegex = [GTMRegex regexWithPattern:@"([[:<:]][A-Z][a-z]*[[:>:]])( Reputation)" options:kGTMRegexOptionSupressNewlineSupport];
-	out = [reputationRegex stringByReplacingMatchesInString:out withReplacement:@"<b>\\1\\2</b>"];
+	out2 = [reputationRegex stringByReplacingMatchesInString:out2 withReplacement:@"<b>\\1\\2</b>"];
 	
 	//NSLog(@"%@", out);
 	
@@ -181,11 +184,9 @@
 	//sister remba elusive and untergetable lower case are bolded
 	//Two-Handed dual wield
 	//lady katrana payment
-	//bear form, cat form, Cat Form, protector, long-range, resistance, stealth, elusive, ferocity, dual wield, thown, untargetable
 	//Totems
 	//Mend - by itself
-	//Assault X Garrosh Hellscream
-	return out;	
+	return out2;	
 }
 						  
 
