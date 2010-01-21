@@ -12,9 +12,9 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="989"/>
 			<integer value="624"/>
 			<integer value="29"/>
+			<integer value="989"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -184,7 +184,8 @@
 								<object class="NSMenuItem" id="557828613">
 									<reference key="NSMenu" ref="720053764"/>
 									<string key="NSTitle">New Smart Deck...</string>
-									<string key="NSKeyEquiv"/>
+									<string key="NSKeyEquiv">n</string>
+									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
@@ -198,6 +199,14 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<int key="NSTag">31</int>
+								</object>
+								<object class="NSMenuItem" id="132198272">
+									<reference key="NSMenu" ref="720053764"/>
+									<string key="NSTitle">Edit Smart Deck...</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
 								<object class="NSMenuItem" id="425164168">
 									<reference key="NSMenu" ref="720053764"/>
@@ -2198,14 +2207,9 @@
 																				<object class="WebPreferences" key="Preferences">
 																					<string key="Identifier"/>
 																					<dictionary class="NSMutableDictionary" key="Values">
-																						<boolean value="NO" key="WebKitAllowAnimatedImageLoopingPreferenceKey"/>
 																						<integer value="12" key="WebKitDefaultFixedFontSize"/>
 																						<integer value="12" key="WebKitDefaultFontSize"/>
-																						<boolean value="NO" key="WebKitJavaEnabled"/>
-																						<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
 																						<integer value="1" key="WebKitMinimumFontSize"/>
-																						<boolean value="NO" key="WebKitPluginsEnabled"/>
-																						<string key="WebKitStandardFont">Lucida Grande</string>
 																					</dictionary>
 																				</object>
 																				<bool key="UseBackForwardList">NO</bool>
@@ -4077,6 +4081,14 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</object>
 					<int key="connectionID">1173</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleEditSearchClick:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="132198272"/>
+					</object>
+					<int key="connectionID">1175</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -4160,6 +4172,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 							<reference ref="1010469920"/>
 							<reference ref="557828613"/>
 							<reference ref="844797829"/>
+							<reference ref="132198272"/>
 						</array>
 						<reference key="parent" ref="379814623"/>
 					</object>
@@ -5744,6 +5757,11 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<reference key="object" ref="42514276"/>
 						<reference key="parent" ref="510283651"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1174</int>
+						<reference key="object" ref="132198272"/>
+						<reference key="parent" ref="720053764"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -5846,6 +5864,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="1171.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1172.CustomClassName">PowersWebView</string>
 				<string key="1172.IBPluginDependency">com.apple.WebKitIBPlugin</string>
+				<string key="1174.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="129.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="129.ImportedFromIB2"/>
 				<string key="130.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -6079,7 +6098,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1173</int>
+			<int key="maxID">1175</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
