@@ -51,7 +51,7 @@
 			<object class="NSWindowTemplate" id="401126015">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{235, -42}, {908, 601}}</string>
+				<string key="NSWindowRect">{{235, -73}, {910, 632}}</string>
 				<int key="NSWTFlags">611844096</int>
 				<string key="NSWindowTitle">Window</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -72,15 +72,15 @@
 									<string>NSFilenamesPboardType</string>
 								</object>
 							</object>
-							<string key="NSFrameSize">{908, 601}</string>
+							<string key="NSFrameSize">{910, 632}</string>
 							<reference key="NSSuperview" ref="263823970"/>
 							<int key="DisplayMode">1</int>
 							<bool key="PageBreaks">YES</bool>
-							<float key="ScaleFactor">1.4403226375579834</float>
+							<float key="ScaleFactor">1.4435484409332275</float>
 							<bool key="AutoScale">YES</bool>
 						</object>
 					</object>
-					<string key="NSFrameSize">{908, 601}</string>
+					<string key="NSFrameSize">{910, 632}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -174,9 +174,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.pdfkit.ibplugin</string>
-					<string>{{290, 421}, {908, 601}}</string>
+					<string>{{290, 390}, {910, 632}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{290, 421}, {908, 601}}</string>
+					<string>{{290, 390}, {910, 632}}</string>
 					<boolean value="YES"/>
 				</object>
 			</object>
