@@ -29,7 +29,7 @@
 {
 	if(![super initWithArray:arr forKeyPath:@"type" 
 					andTitle:@"Type" 
-			   withOperators:[NSArray arrayWithObjects:[NSNumber numberWithInt: NSContainsPredicateOperatorType],
+			   withOperators:[NSArray arrayWithObjects:
 							  [NSNumber numberWithInt: NSEqualToPredicateOperatorType],
 							  [NSNumber numberWithInt: NSNotEqualToPredicateOperatorType],
 							  nil]])
