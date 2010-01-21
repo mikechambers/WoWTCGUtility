@@ -28,6 +28,7 @@
 #import "DataOutlineView.h"
 #import "PreferencesWindowController.h"
 #import "DeleteKeyDelegate.h"
+#import "PDFViewWindowController.h"
 
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1060
 	@interface WoWTCGUtilityAppDelegate : NSObject <DeleteKeyDelegate>
@@ -53,6 +54,7 @@
 	WoWTCGDataStore *dataStore;	
 	NSButton *addOutlineButton;
 	PreferencesWindowController *preferencesWindow;
+	PDFViewWindowController *blocksWindow;
 	
 	NSArray *searchKeys;
 }
@@ -67,6 +69,7 @@
 @property (retain) IBOutlet NSMenu *addOutlineMenu;
 @property (retain) IBOutlet NSButton *addOutlineButton;
 @property (retain) NSString *appName;
+@property (retain) PDFViewWindowController *blocksWindow;
 
 @property (retain) NSMutableArray *filteredCards;
 @property (retain) WoWTCGDataStore *dataStore;
@@ -85,6 +88,8 @@
 -(IBAction)handleLogBugMenu:(id)sender;
 -(IBAction)handleSendFeedbackMenu:(id)sender;
 -(IBAction)handleQuickSearchMenu:(id)sender;
+-(IBAction)handleCoreSetPDFMenu:(id)sender;
+
 
 -(void)initData;
 

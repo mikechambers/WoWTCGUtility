@@ -55,9 +55,11 @@
 @synthesize preferencesWindow;
 @synthesize appName;
 @synthesize searchKeys;
+@synthesize blocksWindow;
 
 -(void)dealloc
 {
+	[blocksWindow release];
 	[searchKeys release];
 	[appName release];
 	[preferencesWindow release];
@@ -798,6 +800,20 @@
 	[window makeFirstResponder:searchField];
 }
 
+-(IBAction)handleCoreSetPDFMenu:(id)sender
+{
+	if(!blocksWindow)
+	{
+		NSString *path = [[[NSBundle mainBundle] resourcePath] 
+					  stringByAppendingPathComponent:@"/assets/blocks.pdf"];	
+		self.blocksWindow = [[PDFViewWindowController alloc] initWithPath:path];
+		[blocksWindow release];
+	}
+		
+	[blocksWindow showWindow:self];
+	[blocksWindow.window center];
+}
+
 /****************** Search Sheet APIs ***********/
 
 
@@ -843,5 +859,8 @@
 {
 	[outlineView menuNeedsUpdate:menu];
 }
+
+
+
 
 @end

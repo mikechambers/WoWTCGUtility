@@ -57,6 +57,9 @@
 		47CCB09210E842E600B2F018 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CCB09110E842E600B2F018 /* Node.m */; };
 		47CCB22210E86B7600B2F018 /* SearchSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47CCB22110E86B7600B2F018 /* SearchSheet.xib */; };
 		47CCB22510E86B8700B2F018 /* SearchSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CCB22410E86B8700B2F018 /* SearchSheetController.m */; };
+		47D7803D1108DE7C00FD4E72 /* PDFViewWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D7803C1108DE7C00FD4E72 /* PDFViewWindow.xib */; };
+		47D780411108E0C900FD4E72 /* PDFViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D780401108E0C900FD4E72 /* PDFViewWindowController.m */; };
+		47D7804F1108E19900FD4E72 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D7804E1108E19900FD4E72 /* Quartz.framework */; };
 		47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1991910E925A000F0F708 /* DataOutlineView.m */; };
 		47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */; };
 		47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */; };
@@ -170,6 +173,10 @@
 		47CCB22110E86B7600B2F018 /* SearchSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSheet.xib; sourceTree = "<group>"; };
 		47CCB22310E86B8700B2F018 /* SearchSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchSheetController.h; sourceTree = "<group>"; };
 		47CCB22410E86B8700B2F018 /* SearchSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchSheetController.m; sourceTree = "<group>"; };
+		47D7803C1108DE7C00FD4E72 /* PDFViewWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFViewWindow.xib; sourceTree = "<group>"; };
+		47D7803F1108E0C900FD4E72 /* PDFViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewWindowController.h; sourceTree = "<group>"; };
+		47D780401108E0C900FD4E72 /* PDFViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewWindowController.m; sourceTree = "<group>"; };
+		47D7804E1108E19900FD4E72 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		47E1991810E925A000F0F708 /* DataOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataOutlineView.h; sourceTree = "<group>"; };
 		47E1991910E925A000F0F708 /* DataOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOutlineView.m; sourceTree = "<group>"; };
 		47E19CCE10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
@@ -202,6 +209,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				470530BF10F917C900BD10D7 /* BWToolkitFramework.framework in Frameworks */,
 				474D0E981104FD0E0044BA5E /* WebKit.framework in Frameworks */,
+				47D7804F1108E19900FD4E72 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +266,8 @@
 				47EDD5B910FCDF3B00939599 /* CardImageView.m */,
 				474D0E861104F5E10044BA5E /* PowersWebView.h */,
 				474D0E871104F5E10044BA5E /* PowersWebView.m */,
+				47D7803F1108E0C900FD4E72 /* PDFViewWindowController.h */,
+				47D780401108E0C900FD4E72 /* PDFViewWindowController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -278,6 +288,7 @@
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				474D0E971104FD0E0044BA5E /* WebKit.framework */,
+				47D7804E1108E19900FD4E72 /* Quartz.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				47411C1210EC6652001183F2 /* Credits.html */,
 				47EDD60A10FCE49600939599 /* CardWindow.xib */,
 				474D0E891104F6B30044BA5E /* powers_template.html */,
+				47D7803C1108DE7C00FD4E72 /* PDFViewWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -453,6 +465,7 @@
 				478CB1B610F07E81004AD24D /* divider.png in Resources */,
 				47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */,
 				474D0E8A1104F6B30044BA5E /* powers_template.html in Resources */,
+				47D7803D1108DE7C00FD4E72 /* PDFViewWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +524,7 @@
 				474D0E571104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m in Sources */,
 				474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */,
 				474D10C811058B810044BA5E /* GTMRegex.m in Sources */,
+				47D780411108E0C900FD4E72 /* PDFViewWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
