@@ -28,32 +28,37 @@
 
 #define CARD_ID_INDEX 0
 #define SERIES_INDEX 1
-#define CARD_NUMBER_INDEX 2
-#define CARD_NAME_INDEX 3
-#define TYPE_INDEX 4
-#define CLASS_NAME_INDEX 5
-#define RACE_INDEX 6
-#define PROFESSIONS_INDEX 7
-#define TALENT_INDEX 8
-#define FACTION_INDEX 9
-#define KEYWORDS_INDEX 10
-#define RARITY_INDEX 11
-#define COST_INDEX 12
-#define COST_MODIFIER_INDEX 13
-#define ATTACK_INDEX 14
-#define STRIKE_COST_INDEX 15
-#define DAMAGE_TYPE_INDEX 16
-#define DEFENSE_INDEX 17
-#define HEALTH_INDEX 18
-#define RULES_INDEX 19
-#define URL_INDEX 20
-#define CARD_IMAGE_INDEX 21
-#define SERIES_TYPE_INDEX 22
-#define ALLY_FACTION_INDEX 23
-#define TALENT_RESTRICTIONS_INDEX 24
-#define RACE_RESTRICTIONS_INDEX 25
-#define PROFESSION_RESTRICTIONS_INDEX 26
-#define REPUTATION_RESTRICTIONS_INDEX 27
+
+#define BLOCK_INDEX 2
+#define FORMAT_INDEX 3
+
+
+#define CARD_NUMBER_INDEX 4
+#define CARD_NAME_INDEX 5
+#define TYPE_INDEX 6
+#define CLASS_NAME_INDEX 7
+#define RACE_INDEX 8
+#define PROFESSIONS_INDEX 9
+#define TALENT_INDEX 10
+#define FACTION_INDEX 11
+#define KEYWORDS_INDEX 12
+#define RARITY_INDEX 13
+#define COST_INDEX 14
+#define COST_MODIFIER_INDEX 15
+#define ATTACK_INDEX 16
+#define STRIKE_COST_INDEX 17
+#define DAMAGE_TYPE_INDEX 18
+#define DEFENSE_INDEX 19
+#define HEALTH_INDEX 20
+#define RULES_INDEX 21
+#define URL_INDEX 22
+#define CARD_IMAGE_INDEX 23
+#define SERIES_TYPE_INDEX 24
+#define ALLY_FACTION_INDEX 25
+#define TALENT_RESTRICTIONS_INDEX 26
+#define RACE_RESTRICTIONS_INDEX 27
+#define PROFESSION_RESTRICTIONS_INDEX 28
+#define REPUTATION_RESTRICTIONS_INDEX 29
 
 
 #define SERIES_COUNT 10
@@ -199,6 +204,9 @@
 		c.series = [row objectAtIndex:SERIES_INDEX];
 		[seriesKey setValue:placeHolder forKey:c.series];
 		
+		
+		c.block = [row objectAtIndex:BLOCK_INDEX];
+		c.format = [row objectAtIndex:FORMAT_INDEX];
 		
 		c.cardId = [[row objectAtIndex:CARD_ID_INDEX] intValue];
 		c.cardNumber = [[row objectAtIndex:CARD_NUMBER_INDEX] intValue];

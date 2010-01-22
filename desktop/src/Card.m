@@ -53,9 +53,13 @@
 @synthesize reputationRestrictions;
 @synthesize strikeCost;
 @synthesize costModifier;
+@synthesize format;
+@synthesize block;
 
 -(void)dealloc
 {
+	[format release];
+	[block release];
 	[costModifier release];
 	[reputationRestrictions release];
 	[damageType release];
@@ -114,7 +118,9 @@
 	self.damageType = [coder decodeObjectForKey:@"damageType"];
 	self.reputationRestrictions = [coder decodeObjectForKey:@"reputationRestrictions"];
 	self.strikeCost = [coder decodeIntForKey:@"strikeCost"];	
-	self.costModifier = [coder decodeObjectForKey:@"costModifier"];	
+	self.costModifier = [coder decodeObjectForKey:@"costModifier"];
+	self.format = [coder decodeObjectForKey:@"format"];	
+	self.block = [coder decodeObjectForKey:@"block"];	
 	
 	return self;
 }
@@ -149,7 +155,8 @@
 	[coder encodeObject: reputationRestrictions forKey:@"reputationRestrictions"];
 	[coder encodeInt: strikeCost forKey:@"strikeCost"];	
 	[coder encodeObject: costModifier forKey:@"costModifier"];	
-	
+	[coder encodeObject: format forKey:@"format"];
+	[coder encodeObject: block forKey:@"block"];
 }
 
 @end

@@ -52,6 +52,8 @@
 	NSString *reputationRestrictions;
 	int strikeCost;
 	NSString *costModifier;
+	NSString *format;
+	NSString *block;
 }
 
 /* unique numeric id for the card */
@@ -137,6 +139,13 @@
 
 /* Reputation restrictions required by the card, if any */
 @property (retain) NSString *reputationRestrictions;
+
+
+/* Format (Core and / or Classic) that the card is included in */
+@property (retain) NSString *format;
+
+/* Card set block that the card is associated with */
+@property (retain) NSString *block;
 
 
 @end
