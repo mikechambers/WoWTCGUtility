@@ -48,7 +48,6 @@
 @synthesize outlineView;
 @synthesize deckNode;
 @synthesize searchNode;
-@synthesize addOutlineMenu;
 @synthesize addOutlineButton;
 @synthesize searchSheet;
 @synthesize cardsNode;
@@ -66,7 +65,6 @@
 	[cardsNode release];
 	[searchSheet release];
 	[addOutlineButton release];
-	[addOutlineMenu release];
 	[searchNode release];
 	[deckNode release];
 	[outlineView release];

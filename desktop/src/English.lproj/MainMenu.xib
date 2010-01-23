@@ -15,7 +15,6 @@
 			<integer value="1172"/>
 			<integer value="624"/>
 			<integer value="81"/>
-			<integer value="837"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -2218,9 +2217,16 @@
 																				<object class="WebPreferences" key="Preferences">
 																					<string key="Identifier"/>
 																					<dictionary class="NSMutableDictionary" key="Values">
+																						<boolean value="NO" key="WebKitAllowAnimatedImageLoopingPreferenceKey"/>
+																						<boolean value="NO" key="WebKitAllowAnimatedImagesPreferenceKey"/>
 																						<integer value="12" key="WebKitDefaultFixedFontSize"/>
 																						<integer value="12" key="WebKitDefaultFontSize"/>
+																						<boolean value="NO" key="WebKitJavaEnabled"/>
+																						<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
+																						<boolean value="NO" key="WebKitJavaScriptEnabled"/>
 																						<integer value="1" key="WebKitMinimumFontSize"/>
+																						<boolean value="NO" key="WebKitPluginsEnabled"/>
+																						<string key="WebKitStandardFont">Lucida Grande</string>
 																					</dictionary>
 																				</object>
 																				<bool key="UseBackForwardList">NO</bool>
@@ -3294,30 +3300,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 			<object class="NSUserDefaultsController" id="295954775">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
-			<object class="NSMenu" id="234015681">
-				<string key="NSTitle">New Button</string>
-				<array class="NSMutableArray" key="NSMenuItems">
-					<object class="NSMenuItem" id="447099705">
-						<reference key="NSMenu" ref="234015681"/>
-						<string key="NSTitle">New Smart Deck...</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="35465992"/>
-						<reference key="NSMixedImage" ref="502551668"/>
-						<int key="NSTag">21</int>
-					</object>
-					<object class="NSMenuItem" id="523124476">
-						<reference key="NSMenu" ref="234015681"/>
-						<string key="NSTitle">New Deck...</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="35465992"/>
-						<reference key="NSMixedImage" ref="502551668"/>
-						<int key="NSTag">31</int>
-					</object>
-				</array>
-				<bool key="NSNoAutoenable">YES</bool>
-			</object>
 			<object class="NSMenu" id="874305976">
 				<string key="NSTitle">Context Menu</string>
 				<array class="NSMutableArray" key="NSMenuItems">
@@ -3696,14 +3678,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">addOutlineMenu</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="234015681"/>
-					</object>
-					<int key="connectionID">843</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">contextMenu</string>
 						<reference key="source" ref="334774680"/>
 						<reference key="destination" ref="874305976"/>
@@ -4026,14 +4000,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					<object class="IBActionConnection" key="connection">
 						<string key="label">handleCreateSearchClick:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="447099705"/>
-					</object>
-					<int key="connectionID">1134</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">handleCreateSearchClick:</string>
-						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="557828613"/>
 					</object>
 					<int key="connectionID">1135</int>
@@ -4125,14 +4091,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<reference key="destination" ref="844797829"/>
 					</object>
 					<int key="connectionID">1179</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">handleCreateDeck:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="523124476"/>
-					</object>
-					<int key="connectionID">1182</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -4636,25 +4594,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<int key="objectID">669</int>
 						<reference key="object" ref="295954775"/>
 						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">837</int>
-						<reference key="object" ref="234015681"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="447099705"/>
-							<reference ref="523124476"/>
-						</array>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">838</int>
-						<reference key="object" ref="447099705"/>
-						<reference key="parent" ref="234015681"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">839</int>
-						<reference key="object" ref="523124476"/>
-						<reference key="parent" ref="234015681"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">852</int>
@@ -6085,10 +6024,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="83.ImportedFromIB2"/>
 				<string key="831.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="837.IBEditorWindowLastContentRect">{{203, 895}, {176, 43}}</string>
-				<string key="837.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="838.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="839.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="852.IBEditorWindowLastContentRect">{{14, 962}, {201, 183}}</string>
 				<string key="852.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="853.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
