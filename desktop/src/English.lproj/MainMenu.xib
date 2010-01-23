@@ -12,9 +12,10 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="624"/>
 			<integer value="1172"/>
-			<integer value="296"/>
+			<integer value="624"/>
+			<integer value="81"/>
+			<integer value="837"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -193,7 +194,6 @@
 								</object>
 								<object class="NSMenuItem" id="844797829">
 									<reference key="NSMenu" ref="720053764"/>
-									<bool key="NSIsDisabled">YES</bool>
 									<string key="NSTitle">New Deck...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -2218,16 +2218,9 @@
 																				<object class="WebPreferences" key="Preferences">
 																					<string key="Identifier"/>
 																					<dictionary class="NSMutableDictionary" key="Values">
-																						<boolean value="NO" key="WebKitAllowAnimatedImageLoopingPreferenceKey"/>
-																						<boolean value="NO" key="WebKitAllowAnimatedImagesPreferenceKey"/>
 																						<integer value="12" key="WebKitDefaultFixedFontSize"/>
 																						<integer value="12" key="WebKitDefaultFontSize"/>
-																						<boolean value="NO" key="WebKitJavaEnabled"/>
-																						<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
-																						<boolean value="NO" key="WebKitJavaScriptEnabled"/>
 																						<integer value="1" key="WebKitMinimumFontSize"/>
-																						<boolean value="NO" key="WebKitPluginsEnabled"/>
-																						<string key="WebKitStandardFont">Lucida Grande</string>
 																					</dictionary>
 																				</object>
 																				<bool key="UseBackForwardList">NO</bool>
@@ -3311,6 +3304,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
+						<int key="NSTag">21</int>
 					</object>
 					<object class="NSMenuItem" id="523124476">
 						<reference key="NSMenu" ref="234015681"/>
@@ -3319,6 +3313,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
+						<int key="NSTag">31</int>
 					</object>
 				</array>
 				<bool key="NSNoAutoenable">YES</bool>
@@ -3333,16 +3328,16 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
-						<int key="NSTag">31</int>
+						<int key="NSTag">21</int>
 					</object>
 					<object class="NSMenuItem" id="480197687">
 						<reference key="NSMenu" ref="874305976"/>
-						<bool key="NSIsDisabled">YES</bool>
 						<string key="NSTitle">New Deck...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
+						<int key="NSTag">31</int>
 					</object>
 					<object class="NSMenuItem" id="331036461">
 						<reference key="NSMenu" ref="874305976"/>
@@ -4122,6 +4117,38 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 						<reference key="destination" ref="637919048"/>
 					</object>
 					<int key="connectionID">1178</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleCreateDeck:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="844797829"/>
+					</object>
+					<int key="connectionID">1179</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleCreateDeck:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="523124476"/>
+					</object>
+					<int key="connectionID">1182</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleCreateDeck:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="480197687"/>
+					</object>
+					<int key="connectionID">1183</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">handleCreateDeck:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="579393253"/>
+					</object>
+					<int key="connectionID">1184</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -6045,7 +6072,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<integer value="1" key="78.ImportedFromIB2"/>
 				<string key="79.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="79.ImportedFromIB2"/>
-				<string key="81.IBEditorWindowLastContentRect">{{849, 1013}, {215, 123}}</string>
+				<string key="81.IBEditorWindowLastContentRect">{{849, 993}, {215, 143}}</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<integer value="1" key="81.ImportedFromIB2"/>
 				<string key="81.editorWindowContentRectSynchronizationRect">{{145, 474}, {199, 203}}</string>
@@ -6139,7 +6166,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1178</int>
+			<int key="maxID">1184</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -6245,6 +6272,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="handleAlwaysOnTopMenu:">id</string>
 						<string key="handleCoreSetPDFMenu:">id</string>
+						<string key="handleCreateDeck:">id</string>
 						<string key="handleCreateSearchClick:">id</string>
 						<string key="handleDeleteNodeMenu:">id</string>
 						<string key="handleEditSearchClick:">id</string>

@@ -89,6 +89,7 @@
 -(IBAction)handleSendFeedbackMenu:(id)sender;
 -(IBAction)handleQuickSearchMenu:(id)sender;
 -(IBAction)handleCoreSetPDFMenu:(id)sender;
+-(IBAction)handleCreateDeck:(id)sender;
 
 
 -(void)initData;

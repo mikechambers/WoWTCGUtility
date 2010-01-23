@@ -474,6 +474,7 @@
 
 -(IBAction)handleSearch:(NSSearchField *)sField
 {
+	NSLog(@"handleSearch");
 	NSString *searchString = [sField stringValue];
 	
 	if([searchString length] == 0)
@@ -681,6 +682,10 @@
 	[self showSavedSearchSheet:n];
 }
 
+-(IBAction)handleCreateDeck:(id)sender
+{
+	NSLog(@"create deck");
+}
 
 -(IBAction)handleEditSearchClick:(id)sender
 {
