@@ -32,6 +32,7 @@
 	
     // Get newline character set
     NSMutableCharacterSet *newlineCharacterSet = (id)[NSMutableCharacterSet whitespaceAndNewlineCharacterSet];
+	
     [newlineCharacterSet formIntersectionWithCharacterSet:[[NSCharacterSet whitespaceCharacterSet] invertedSet]];
 	
     // Characters that are important to the parser
@@ -57,32 +58,23 @@
                 [currentColumn appendString:tempString];
             }
 			
-            if ( [scanner isAtEnd] )
-			{
-                if ( ![currentColumn isEqualToString:@""] ) [columns addObject:currentColumn];
-                finishedRow = YES;
-            }
-            else if ( [scanner scanCharactersFromSet:newlineCharacterSet intoString:&tempString] )
-			{
-                if ( insideQuotes )
-				{
-                    // Add line break to column text
-                    [currentColumn appendString:tempString];
-                }
-                else
-				{
-                    // End of row
-					/*
-                    if ( ![currentColumn isEqualToString:@""] ) 
-					{
-						[columns addObject:currentColumn];
-                    }
-					 */
-					
+			if ( [scanner isAtEnd] ) {
+				//CHANGED OMISSION REQUIREMENTS
+				if ( (![currentColumn isEqualToString:@""]) || ([columns count] > 0) ) [columns addObject:currentColumn];
+				finishedRow = YES;
+			}
+			else if ( [scanner scanCharactersFromSet:newlineCharacterSet intoString:&tempString] ) {
+				if ( insideQuotes ) {
+					// Add line break to column text
+					[currentColumn appendString:tempString];
+				}
+				else {
+					// End of row
+					//RETAIN AN EMPTY COLUMN BEFORE A NEWLINE
 					[columns addObject:currentColumn];
 					finishedRow = YES;
-                }
-            }
+				}
+			}
             else if ( [scanner scanString:@"\"" intoString:NULL] )
 			{
                 if ( insideQuotes && [scanner scanString:@"\"" intoString:NULL] )
