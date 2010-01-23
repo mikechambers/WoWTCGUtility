@@ -45,6 +45,19 @@
 
 -(void)awakeFromNib
 {	
+	WebPreferences *prefs = [WebPreferences standardPreferences];
+	
+	[prefs setJavaEnabled:FALSE];
+	[prefs setJavaScriptCanOpenWindowsAutomatically:FALSE];
+	[prefs setJavaScriptEnabled:FALSE];
+	[prefs setPlugInsEnabled:FALSE];
+	
+	NSFont *font = [NSFont systemFontOfSize:[NSFont systemFontSize]];
+	[prefs setStandardFontFamily:[font familyName]];
+	[prefs setAllowsAnimatedImages:FALSE];
+	[prefs setAllowsAnimatedImageLooping:FALSE];
+	[prefs setDefaultFontSize:[font pointSize]];
+	
 	//undocumented API
 	//http://lists.apple.com/archives/webkitsdk-dev/2005/Apr/msg00065.html
 	[self setDrawsBackground:FALSE];

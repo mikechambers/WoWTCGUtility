@@ -6220,7 +6220,6 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addOutlineButton">NSButton</string>
-						<string key="addOutlineMenu">NSMenu</string>
 						<string key="cardTable">NSTableView</string>
 						<string key="cardView">CardView</string>
 						<string key="outlineView">DataOutlineView</string>
