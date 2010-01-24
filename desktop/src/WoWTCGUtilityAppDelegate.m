@@ -340,50 +340,48 @@
 	window.title = title;
 }
 
--(NSString *)getNewNodeName:(Node *)parentNode
+-(NSString *)getNewNodeName:(Node *)parent withPrefix:(NSString *)prefix
 {
-	NSString *prefix;
+	//NSString *prefix;
 	NSString *out;
-	if(parentNode == searchNode)
+		
+	//prefix = @"untitled search";
+	int len = parent.children.count;
+	
+	if(len == 0)
 	{
-		
-		prefix = @"untitled search";
-		int len = searchNode.children.count;
-		
-		if(len == 0)
+		return prefix;
+	}
+	
+	int count = 2;
+	
+	out = prefix;
+	BOOL found = FALSE;
+	while(TRUE)
+	{
+		for(Node *n in parent.children)
 		{
-			return prefix;
-		}
-		
-		int count = 2;
-		
-		out = prefix;
-		BOOL found = FALSE;
-		while(TRUE)
-		{
-			for(Node *n in searchNode.children)
+			if([n.label compare:out] == NSOrderedSame)
 			{
-				if([n.label compare:out] == NSOrderedSame)
-				{
-					found = true;
-					break;
-				}
-			}
-			
-			if(found)
-			{
-				found = false;
-				out = [prefix stringByAppendingFormat:@" %i", count];
-				count++;
-			}
-			else
-			{
-				
+				found = true;
 				break;
 			}
-			
 		}
+		
+		if(found)
+		{
+			found = false;
+			out = [prefix stringByAppendingFormat:@" %i", count];
+			count++;
+		}
+		else
+		{
+			
+			break;
+		}
+		
 	}
+
 	
 	return out;
 }
@@ -676,13 +674,22 @@
 
 -(IBAction)handleCreateSearchClick:(id)sender
 {
-	Node *n = [[[Node alloc] initWithLabel:[self getNewNodeName:searchNode]] autorelease];
+	NSString *nodeName = [self getNewNodeName:searchNode withPrefix:@"untitled search"];
+	Node *n = [[[Node alloc] initWithLabel:nodeName] autorelease];
 	[self showSavedSearchSheet:n];
 }
 
 -(IBAction)handleCreateDeck:(id)sender
 {
-	NSLog(@"create deck");
+	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
+	Node *node = [[Node alloc] initWithLabel:nodeName];
+	
+	[deckNode.children addObject:node];
+	
+	[outlineView reloadItem:deckNode reloadChildren:TRUE];
+	[outlineView expandItem:deckNode];
+	
+	[outlineView selectOutlineViewItem:node];
 }
 
 -(IBAction)handleEditSearchClick:(id)sender
