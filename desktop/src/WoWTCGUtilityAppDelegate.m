@@ -56,6 +56,8 @@
 @synthesize searchKeys;
 @synthesize blocksWindow;
 
+#define CardDataType @"CardDataType"
+
 -(void)dealloc
 {
 	[blocksWindow release];
@@ -113,6 +115,9 @@
 {		
 	NSSize minSize = { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT };
 	[window setContentMinSize:minSize];
+	
+	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];
+	[outlineView registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];	
 	
 	[outlineView selectOutlineViewItem:cardsNode];
 	
@@ -270,6 +275,51 @@
 	NSString *fileName = [NSString stringWithFormat:@"%@.searches", appName];
 	
 	return [folder stringByAppendingPathComponent: fileName];    
+}
+
+/********************* Drag and Drop Delegate *******************/
+
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
+{
+	NSUInteger index = rowIndexes.firstIndex;
+	
+	//make sure this is correct data
+	Card *card = [filteredCards objectAtIndex:index];
+	
+    // Copy the row numbers to the pasteboard.
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
+    [pboard declareTypes:[NSArray arrayWithObject:CardDataType] owner:self];
+    [pboard setData:data forType:CardDataType];
+    return YES;
+}
+
+
+- (NSDragOperation)outlineView:(NSOutlineView *)outlineView 
+				  validateDrop:(id < NSDraggingInfo >)info proposedItem:(id)item proposedChildIndex:(NSInteger)index
+{
+	Node *parent = (Node *)item;
+	
+	//only allow to drag to deck node right now
+	if(parent == deckNode)
+	{
+		return NSDragOperationCopy;
+	}
+	
+    return NSDragOperationNone;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView 
+		 acceptDrop:(id < NSDraggingInfo >)info item:(id)item childIndex:(NSInteger)index
+{
+	Node *parent = (Node *)item;
+	
+	
+    NSPasteboard* pboard = [info draggingPasteboard];
+    NSData* data = [pboard dataForType:CardDataType];
+    Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSLog(@"%@", card.cardName);
+	
+	return TRUE;
 }
 
 /********************* general Card TableView APIs *******************/
@@ -681,15 +731,29 @@
 
 -(IBAction)handleCreateDeck:(id)sender
 {
+	[self createDeckWithCard:nil];
+}
+
+-(void)createDeckWithCard:(Card *)card
+{
+	
 	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
 	Node *node = [[Node alloc] initWithLabel:nodeName];
+	
+	
+	if(card != nil)
+	{
+		//might need to initialized children first
+		//want to add ID, not entire card
+		[node.children addObject:card];
+	}	
 	
 	[deckNode.children addObject:node];
 	
 	[outlineView reloadItem:deckNode reloadChildren:TRUE];
 	[outlineView expandItem:deckNode];
 	
-	[outlineView selectOutlineViewItem:node];
+	[outlineView selectOutlineViewItem:node];	
 }
 
 -(IBAction)handleEditSearchClick:(id)sender
