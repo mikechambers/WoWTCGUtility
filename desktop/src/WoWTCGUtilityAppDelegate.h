@@ -30,6 +30,9 @@
 #import "DeleteKeyDelegate.h"
 #import "PDFViewWindowController.h"
 
+#define SEARCH_DATA @"searches"
+#define DECK_DATA @"decks"
+
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1060
 	@interface WoWTCGUtilityAppDelegate : NSObject <DeleteKeyDelegate>
 #else
@@ -92,8 +95,9 @@
 
 -(void)initData;
 
--(void)saveSearchData;
--(NSString *) pathForDataFile;
+-(void)saveData:(NSString *)type;
+-(void)loadData:(NSString *)type;
+- (NSString *) pathForDataFile:(NSString *)type;
 
 -(void)resetCardData;
 -(void)refreshCardTableData;
@@ -104,7 +108,6 @@
 
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
--(void)loadSearchData;
 -(void)deleteNode:(Node *)node;
 -(void)updateOutlineViewSelection;
 -(void)updateTitle;

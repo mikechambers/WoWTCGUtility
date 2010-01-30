@@ -100,9 +100,10 @@
 	
 	self.deckNode = [[Node alloc] initWithLabel:@"DECKS"];
 	deckNode.children = [NSMutableArray arrayWithCapacity:0];
+	[self loadData:DECK_DATA];
 	
 	self.searchNode = [[Node alloc] initWithLabel:@"SMART DECKS"];
-	[self loadSearchData];
+	[self loadData:SEARCH_DATA];
 	
 	self.cardsNode = [[Node alloc] initWithLabel:@"CARDS"];
 	
@@ -232,36 +233,70 @@
 
 /***************** Data Persistence APIs ********************/
 
--(void)saveSearchData
+-(void)saveData:(NSString *)type
 {
-	NSString *path = [self pathForDataFile];
+	NSMutableArray *children;
+	
+	if([type compare:SEARCH_DATA] == NSOrderedSame)
+	{
+		children = searchNode.children;
+	}
+	else if([type compare:DECK_DATA] == NSOrderedSame)
+	{
+		children = deckNode.children;
+	}
+	else
+	{
+		NSLog(@"saveData : type not recognized : %@", type);
+		return;
+	}
+	
+	NSString *path = [self pathForDataFile:type];
 	
 	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
     
-	[rootObject setValue: searchNode.children forKey:@"searches"];
+	[rootObject setValue:children forKey:type];
 	[NSKeyedArchiver archiveRootObject: rootObject toFile: path];
 }
 
--(void)loadSearchData
+
+-(void)loadData:(NSString *)type
 {
-	NSString *path = [self pathForDataFile];
+	Node *rootNode;
+	
+	if([type compare:SEARCH_DATA] == NSOrderedSame)
+	{
+		rootNode = searchNode;
+	}
+	else if([type compare:DECK_DATA] == NSOrderedSame)
+	{
+		rootNode = deckNode;
+	}
+	else
+	{
+		NSLog(@"loadData : type not recognized : %@", type);
+		return;
+	}	
+	
+	NSString *path = [self pathForDataFile:type];
 	
 	NSFileManager *fMan = [NSFileManager defaultManager];
 	if(![fMan fileExistsAtPath:path])
 	{
-		searchNode.children = [NSMutableArray arrayWithCapacity:0];
+		rootNode.children = [NSMutableArray arrayWithCapacity:0];
 		return;
 	}
 	
 	NSDictionary * rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path]; 
 	
-	NSMutableArray *b = [rootObject valueForKey:@"searches"];
+	NSMutableArray *b = [rootObject valueForKey:type];
 	
-	searchNode.children = b;
+	rootNode.children = b;
 }
 
-- (NSString *) pathForDataFile
-{    
+- (NSString *) pathForDataFile:(NSString *)type
+{   
+	//todo : is there a better way to find this?
 	NSString *folder = [NSString stringWithFormat:@"~/Library/Application Support/%@/", appName];
 	folder = [folder stringByExpandingTildeInPath];
 	
@@ -272,7 +307,7 @@
 						 attributes: nil error:NULL];
 	}
     
-	NSString *fileName = [NSString stringWithFormat:@"%@.searches", appName];
+	NSString *fileName = [NSString stringWithFormat:type, appName];
 	
 	return [folder stringByAppendingPathComponent: fileName];    
 }
@@ -319,7 +354,6 @@
     NSData* data = [pboard dataForType:CardDataType];
     Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 	
-	//todo: check to see if parent is deck parent, or another node
 	
 	if(parent == deckNode)
 	{
@@ -329,6 +363,9 @@
 	{
 		[parent.children addObject:card];
 	}
+	
+	////todo: check to see if parent is deck parent, or another node
+	[self saveData:DECK_DATA];
 	
 	return TRUE;
 }
@@ -595,13 +632,25 @@
 //todo: move this to outline view class
 -(void)deleteNode:(Node *)node
 {
+	//todo: update this
 	Node *parent = [outlineView parentForItem:node];
 	
 	int index = [parent.children indexOfObject:node];
 	
 	[parent.children removeObject:node];
 	
-	[self saveSearchData];
+	NSString *type;
+	
+	if(parent == searchNode)
+	{
+		type = SEARCH_DATA;
+	}
+	else
+	{
+		type = DECK_DATA;
+	}
+	
+	[self saveData:type];
 	
 	[outlineView reloadItem:parent reloadChildren:TRUE];
 	
@@ -695,7 +744,7 @@
 	return ((Node *)item).label;
 }
 
-- (void)outlineView:(NSOutlineView *)outlineView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
+- (void)outlineView:(NSOutlineView *)ov setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
 	NSString *s = ((NSString *) object);
 	
@@ -704,9 +753,24 @@
 		return;
 	}
 	
-	((Node *)item).label = object;
+	Node *node = (Node *)item;
 	
-	[self saveSearchData];
+	node.label = s;
+	
+	Node *parent = [outlineView parentForItem:node];
+	
+	NSString *type;
+	
+	if(parent == searchNode)
+	{
+		type = SEARCH_DATA;
+	}
+	else
+	{
+		type = DECK_DATA;
+	}
+	
+	[self saveData:type];
 }
 
 /***************** outline view delegate APIs ********************/
@@ -921,7 +985,7 @@
 	
 	[self filterCardsWithPredicate:((NSPredicate *)predicateNode.data)];
 
-	[self saveSearchData];
+	[self saveData:SEARCH_DATA];
 }
 
 -(void)showSavedSearchSheet:(Node *)predicateNode
