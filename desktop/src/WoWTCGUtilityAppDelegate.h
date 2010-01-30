@@ -100,6 +100,8 @@
 -(void)redrawCardTable;
 -(void)selectCardTableRow:(int)index;
 
+-(void)createDeckWithCard:(Card *)card atIndex:(NSUInteger) index;
+
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
 -(void)loadSearchData;

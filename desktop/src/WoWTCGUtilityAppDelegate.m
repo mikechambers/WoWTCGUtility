@@ -294,13 +294,14 @@
 }
 
 
-- (NSDragOperation)outlineView:(NSOutlineView *)outlineView 
+- (NSDragOperation)outlineView:(NSOutlineView *)ov 
 				  validateDrop:(id < NSDraggingInfo >)info proposedItem:(id)item proposedChildIndex:(NSInteger)index
 {
 	Node *parent = (Node *)item;
 	
 	//only allow to drag to deck node right now
-	if(parent == deckNode)
+	if((parent == deckNode) ||
+	   ([outlineView parentForItem:parent] == deckNode))
 	{
 		return NSDragOperationCopy;
 	}
@@ -317,7 +318,17 @@
     NSPasteboard* pboard = [info draggingPasteboard];
     NSData* data = [pboard dataForType:CardDataType];
     Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSLog(@"%@", card.cardName);
+	
+	//todo: check to see if parent is deck parent, or another node
+	
+	if(parent == deckNode)
+	{
+		[self createDeckWithCard:card atIndex:index];
+	}
+	else
+	{
+		[parent.children addObject:card];
+	}
 	
 	return TRUE;
 }
@@ -731,15 +742,19 @@
 
 -(IBAction)handleCreateDeck:(id)sender
 {
-	[self createDeckWithCard:nil];
+	[self createDeckWithCard:nil atIndex:-1];
 }
 
--(void)createDeckWithCard:(Card *)card
+-(void)createDeckWithCard:(Card *)card atIndex:(NSUInteger) index
 {
 	
 	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
 	Node *node = [[Node alloc] initWithLabel:nodeName];
 	
+	if(index == -1)
+	{
+		index = [deckNode.children count];
+	}
 	
 	if(card != nil)
 	{
@@ -748,7 +763,7 @@
 		[node.children addObject:card];
 	}	
 	
-	[deckNode.children addObject:node];
+	[deckNode.children insertObject:node atIndex: index];
 	
 	[outlineView reloadItem:deckNode reloadChildren:TRUE];
 	[outlineView expandItem:deckNode];
