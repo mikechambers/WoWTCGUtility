@@ -106,6 +106,9 @@
 
 -(void)createDeckWithCard:(Card *)card atIndex:(NSUInteger) index;
 
+-(void)setCardsForDeck:(Node *)node;
+-(Card *)getCardForId:(int)cardId;
+
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
 -(void)deleteNode:(Node *)node;

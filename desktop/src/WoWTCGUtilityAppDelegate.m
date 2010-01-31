@@ -361,7 +361,7 @@
 	}
 	else
 	{
-		[parent.children addObject:card];
+		[parent.children addObject:[NSNumber numberWithInt:card.cardId]];
 	}
 	
 	////todo: check to see if parent is deck parent, or another node
@@ -527,22 +527,49 @@
 	
 	int index = [outlineView selectedRow];
 	
-	Node *n = [outlineView itemAtRow:index];
+	Node *node = [outlineView itemAtRow:index];
 	
-	if(n == cardsNode)
+	
+	Node *parent = [outlineView parentForItem:node];
+	if(node == cardsNode)
 	{
-		//self.filteredCards = [dataStore.cards mutableCopy];
 		[self resetCardData];
 		[self refreshCardTableData];
 	}
-	else if([outlineView parentForItem:n] == searchNode)
+	else if(parent == searchNode)
 	{
-		[self filterCardsWithPredicate:((NSPredicate *)n.data)];
+		[self filterCardsWithPredicate:((NSPredicate *)node.data)];
 	}
-	else if([outlineView parentForItem:n] == deckNode)
+	else if(parent == deckNode)
 	{
-		//deckNode
+		[self setCardsForDeck:node];
 	}
+}
+
+-(void)setCardsForDeck:(Node *)node
+{
+	NSArray *children = node.children;
+	
+	int count = [children count];
+	NSLog(@"setCardsForDeck : %i", count);
+	
+	NSMutableArray *out = [NSMutableArray arrayWithCapacity:count];
+	
+	Card *c;
+	for(NSNumber *cardId in children)
+	{
+		c = [self getCardForId:[cardId intValue]];
+		[out addObject:c];
+	}
+	
+	self.filteredCards = out;
+	[self refreshCardTableData];
+}
+
+-(Card *)getCardForId:(int)cardId
+{
+	Card *c = [dataStore.cards objectAtIndex:cardId - 1];
+	return c;
 }
 
 -(void)tableViewSelectionDidChange:(NSNotification *)notification
@@ -557,7 +584,7 @@
 	Card *c = nil;
 	if([filteredCards count] > 0)
 	{
-		c = [filteredCards objectAtIndex:index];;
+		c = [filteredCards objectAtIndex:index];
 	}
 	
 	cardView.card = c;
@@ -618,9 +645,6 @@
 
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate
 {
-	
-	//self.filteredCards = [dataStore.cards mutableCopy];
-	
 	[self resetCardData];
 	[filteredCards filterUsingPredicate:predicate];
 	[self refreshCardTableData];
@@ -791,9 +815,6 @@
 	return !(item == deckNode || item == searchNode);
 }
 
-
-
-
 /************ IBAction Handlers ****************/
 
 
@@ -814,6 +835,7 @@
 	
 	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
 	Node *node = [[Node alloc] initWithLabel:nodeName];
+	node.children = [NSMutableArray arrayWithCapacity:1];
 	
 	if(index == -1)
 	{
@@ -822,10 +844,9 @@
 	
 	if(card != nil)
 	{
-		//might need to initialized children first
-		//want to add ID, not entire card
-		[node.children addObject:card];
-	}	
+		[node.children addObject:[NSNumber numberWithInt: card.cardId]];
+	}
+	
 	
 	[deckNode.children insertObject:node atIndex: index];
 	
