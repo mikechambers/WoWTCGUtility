@@ -12,9 +12,9 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="1172"/>
-			<integer value="624"/>
 			<integer value="81"/>
+			<integer value="624"/>
+			<integer value="533"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -1512,7 +1512,7 @@
 															<reference key="NSBackgroundColor" ref="941977483"/>
 															<reference key="NSGridColor" ref="972274295"/>
 															<double key="NSRowHeight">17</double>
-															<int key="NSTvFlags">-683671552</int>
+															<int key="NSTvFlags">-549453824</int>
 															<reference key="NSDelegate"/>
 															<reference key="NSDataSource"/>
 															<string key="NSAutosaveName">cardTableData</string>
@@ -2217,16 +2217,9 @@
 																				<object class="WebPreferences" key="Preferences">
 																					<string key="Identifier"/>
 																					<dictionary class="NSMutableDictionary" key="Values">
-																						<boolean value="NO" key="WebKitAllowAnimatedImageLoopingPreferenceKey"/>
-																						<boolean value="NO" key="WebKitAllowAnimatedImagesPreferenceKey"/>
 																						<integer value="12" key="WebKitDefaultFixedFontSize"/>
 																						<integer value="12" key="WebKitDefaultFontSize"/>
-																						<boolean value="NO" key="WebKitJavaEnabled"/>
-																						<boolean value="NO" key="WebKitJavaScriptCanOpenWindowsAutomatically"/>
-																						<boolean value="NO" key="WebKitJavaScriptEnabled"/>
 																						<integer value="1" key="WebKitMinimumFontSize"/>
-																						<boolean value="NO" key="WebKitPluginsEnabled"/>
-																						<string key="WebKitStandardFont">Lucida Grande</string>
 																					</dictionary>
 																				</object>
 																				<bool key="UseBackForwardList">NO</bool>

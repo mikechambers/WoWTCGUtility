@@ -316,13 +316,26 @@
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
 {
-	NSUInteger index = rowIndexes.firstIndex;
+	//NSUInteger index = rowIndexes.firstIndex;
+	
+	NSMutableArray *out = [NSMutableArray arrayWithCapacity:[rowIndexes count]];
+	
+	Card *card;
+	NSUInteger currentIndex = [rowIndexes firstIndex];
+	while (currentIndex != NSNotFound)
+	{
+		card = [filteredCards objectAtIndex:currentIndex];
+		[out addObject:card];
+		currentIndex = [rowIndexes indexGreaterThanIndex: currentIndex];
+	}	
 	
 	//make sure this is correct data
-	Card *card = [filteredCards objectAtIndex:index];
+	//Card *card = [filteredCards objectAtIndex:index];
+	
+	//todo: copy an array to pasteboard
 	
     // Copy the row numbers to the pasteboard.
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:card];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:out];
     [pboard declareTypes:[NSArray arrayWithObject:CardDataType] owner:self];
     [pboard setData:data forType:CardDataType];
     return YES;
@@ -351,17 +364,31 @@
 	
 	
     NSPasteboard* pboard = [info draggingPasteboard];
+	
+	//todo: we need to have a new type for multiple cards.
     NSData* data = [pboard dataForType:CardDataType];
-    Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+	NSMutableArray *cards = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+	
+	//Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 	
 	
+	//make createDeckWithCard just create and add the node, and then we add the children
+	
+	Node *deck;
 	if(parent == deckNode)
 	{
-		[self createDeckWithCard:card atIndex:index];
+		deck = [self createDeck:index];
 	}
 	else
 	{
-		[parent.children addObject:[NSNumber numberWithInt:card.cardId]];
+		deck = parent;
+		//[parent.children addObject:[NSNumber numberWithInt:card.cardId]];
+	}
+	
+	for(Card *card in cards)
+	{
+		[deck.children addObject:[NSNumber numberWithInt:card.cardId]];
 	}
 	
 	////todo: check to see if parent is deck parent, or another node
@@ -551,7 +578,6 @@
 	NSArray *children = node.children;
 	
 	int count = [children count];
-	NSLog(@"setCardsForDeck : %i", count);
 	
 	NSMutableArray *out = [NSMutableArray arrayWithCapacity:count];
 	
@@ -827,12 +853,11 @@
 
 -(IBAction)handleCreateDeck:(id)sender
 {
-	[self createDeckWithCard:nil atIndex:-1];
+	[self createDeck:-1];
 }
 
--(void)createDeckWithCard:(Card *)card atIndex:(NSUInteger) index
+-(Node *)createDeck:(NSUInteger) index
 {
-	
 	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
 	Node *node = [[Node alloc] initWithLabel:nodeName];
 	node.children = [NSMutableArray arrayWithCapacity:1];
@@ -842,18 +867,22 @@
 		index = [deckNode.children count];
 	}
 	
+	/*
 	if(card != nil)
 	{
-		[node.children addObject:[NSNumber numberWithInt: card.cardId]];
+		[node.children addObject:[NSNumber NSNumber: card.cardId]];
 	}
 	
 	
+	*/
 	[deckNode.children insertObject:node atIndex: index];
 	
 	[outlineView reloadItem:deckNode reloadChildren:TRUE];
 	[outlineView expandItem:deckNode];
 	
-	[outlineView selectOutlineViewItem:node];	
+	//[outlineView selectOutlineViewItem:node];
+	
+	return node;
 }
 
 -(IBAction)handleEditSearchClick:(id)sender

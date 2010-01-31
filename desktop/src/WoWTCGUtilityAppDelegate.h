@@ -104,7 +104,7 @@
 -(void)redrawCardTable;
 -(void)selectCardTableRow:(int)index;
 
--(void)createDeckWithCard:(Card *)card atIndex:(NSUInteger) index;
+-(Node *)createDeck:(NSUInteger) index;
 
 -(void)setCardsForDeck:(Node *)node;
 -(Card *)getCardForId:(int)cardId;
