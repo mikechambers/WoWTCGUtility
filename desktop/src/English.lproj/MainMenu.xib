@@ -12,9 +12,9 @@
 			<string key="com.brandonwalkin.BWToolkit">1.2.2</string>
 		</dictionary>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
+			<integer value="533"/>
 			<integer value="81"/>
 			<integer value="624"/>
-			<integer value="533"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.WebKitIBPlugin</string>
@@ -5949,6 +5949,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 				<string key="533.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="534.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="535.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="536.CustomClassName">CardTableView</string>
 				<string key="536.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="537.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="538.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -6107,6 +6108,14 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">CardTableView</string>
+					<string key="superclassName">NSTableView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">CardTableView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">CardView</string>
 					<string key="superclassName">NSView</string>
 					<dictionary class="NSMutableDictionary" key="actions">
@@ -6213,7 +6222,7 @@ Z2h0IEFwcGxlLCBJbmMuLCAyMDEwAA</bytes>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addOutlineButton">NSButton</string>
-						<string key="cardTable">NSTableView</string>
+						<string key="cardTable">CardTableView</string>
 						<string key="cardView">CardView</string>
 						<string key="outlineView">DataOutlineView</string>
 						<string key="searchField">NSSearchField</string>

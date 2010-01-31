@@ -1050,10 +1050,15 @@
 	[searchSheet showSheet:[self window] withPredicateNode:predicateNode];
 }
 
-- ( void ) deleteKeyPressed: ( NSOutlineView * ) view onRow: ( int ) rowIndex
+- ( void )outlineView:( NSOutlineView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
 {
 	Node *node = ((Node *)[outlineView itemAtRow:rowIndex]);
 	[self deleteOutlineViewNode:node];
+}
+
+- ( void )tableView:( NSTableView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
+{
+	NSLog(@"- ( void )tableView:( NSTableView * ) view deleteKeyPressedonRow: ( int ) rowIndex");
 }
 
 /*********** menu delegate apis *********/

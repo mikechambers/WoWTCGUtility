@@ -27,19 +27,21 @@
 #import "SearchSheetController.h"
 #import "DataOutlineView.h"
 #import "PreferencesWindowController.h"
-#import "DeleteKeyDelegate.h"
+#import "NSOutlineViewDeleteKeyDelegate.h"
+#import "NSTableViewDeleteKeyDelegate.h"
 #import "PDFViewWindowController.h"
+#import "CardTableView.h"
 
 #define SEARCH_DATA @"searches"
 #define DECK_DATA @"decks"
 
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1060
-	@interface WoWTCGUtilityAppDelegate : NSObject <DeleteKeyDelegate>
+	@interface WoWTCGUtilityAppDelegate : NSObject <NSOutlineViewDeleteKeyDelegate, NSTableViewDeleteKeyDelegate>
 #else
-	@interface WoWTCGUtilityAppDelegate : NSObject <NSApplicationDelegate, DeleteKeyDelegate>
+	@interface WoWTCGUtilityAppDelegate : NSObject <NSApplicationDelegate, NSOutlineViewDeleteKeyDelegate, NSTableViewDeleteKeyDelegate>
 #endif
 {	
-	IBOutlet NSTableView *cardTable;
+	IBOutlet CardTableView *cardTable;
 	IBOutlet CardView *cardView;
 	IBOutlet NSSearchField *searchField;
 	IBOutlet DataOutlineView *outlineView;
@@ -64,7 +66,7 @@
 @property (retain) NSArray *searchKeys;
 @property (retain) PreferencesWindowController *preferencesWindow;
 @property (assign) IBOutlet NSWindow *window;
-@property (retain) IBOutlet NSTableView *cardTable;
+@property (retain) IBOutlet CardTableView *cardTable;
 @property (retain) IBOutlet CardView *cardView;
 @property (retain) IBOutlet NSSearchField *searchField;
 @property (retain) IBOutlet DataOutlineView *outlineView;

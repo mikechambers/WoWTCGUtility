@@ -22,7 +22,6 @@
 
 #import "DataOutlineView.h"
 #import "MenuTagConstants.h"
-#import "DeleteKeyDelegate.h"
 #import "NSOutlineView+DeleteKey.h"
 
 @implementation DataOutlineView

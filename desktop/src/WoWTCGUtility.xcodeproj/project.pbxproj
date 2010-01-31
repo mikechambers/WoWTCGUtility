@@ -66,6 +66,7 @@
 		47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B610FCDE1B00939599 /* CardWindow.m */; };
 		47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B910FCDF3B00939599 /* CardImageView.m */; };
 		47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EDD60A10FCE49600939599 /* CardWindow.xib */; };
+		47F8AFC61115ED320052C7E8 /* CardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F8AFC51115ED320052C7E8 /* CardTableView.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -100,7 +101,6 @@
 		470899AE10F7C0B6003A572F /* TopAnchorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopAnchorView.m; sourceTree = "<group>"; };
 		47089B0110F7DDA0003A572F /* CardURLScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardURLScheme.h; sourceTree = "<group>"; };
 		47089B0210F7DDA0003A572F /* CardURLScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardURLScheme.m; sourceTree = "<group>"; };
-		47411BA710EC58B1001183F2 /* DeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteKeyDelegate.h; sourceTree = "<group>"; };
 		47411C1210EC6652001183F2 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		474635F010EA8478006AAB60 /* MenuTagConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTagConstants.h; sourceTree = "<group>"; };
 		4746362410EA8D63006AAB60 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -188,6 +188,10 @@
 		47EDD5B810FCDF3B00939599 /* CardImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardImageView.h; sourceTree = "<group>"; };
 		47EDD5B910FCDF3B00939599 /* CardImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardImageView.m; sourceTree = "<group>"; };
 		47EDD60A10FCE49600939599 /* CardWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardWindow.xib; sourceTree = "<group>"; };
+		47F8AF071115E7CA0052C7E8 /* NSTableViewDeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTableViewDeleteKeyDelegate.h; sourceTree = "<group>"; };
+		47F8AF311115E8530052C7E8 /* NSOutlineViewDeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOutlineViewDeleteKeyDelegate.h; sourceTree = "<group>"; };
+		47F8AFC41115ED320052C7E8 /* CardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableView.h; sourceTree = "<group>"; };
+		47F8AFC51115ED320052C7E8 /* CardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableView.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WoWTCGUtility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* WoWTCG Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoWTCG Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -219,6 +223,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				47F8AF361115E8D50052C7E8 /* TableViewDelete */,
 				474D450C10F1A3C800E96225 /* EditorRowTemplates */,
 				474D10C511058B810044BA5E /* GTMDefines.h */,
 				474D10C611058B810044BA5E /* GTMRegex.h */,
@@ -252,8 +257,6 @@
 				475AF8BE10EB3B7E00F2C8A4 /* UserDefaultsConstants.h */,
 				470899AD10F7C0B6003A572F /* TopAnchorView.h */,
 				470899AE10F7C0B6003A572F /* TopAnchorView.m */,
-				475AF93C10EBD16100F2C8A4 /* NSOutlineView+DeleteKey.h */,
-				47411BA710EC58B1001183F2 /* DeleteKeyDelegate.h */,
 				478CB15510F0755A004AD24D /* SplitViewDelegate.h */,
 				478CB15610F0755A004AD24D /* SplitViewDelegate.m */,
 				47BE55F110F44FB60098716A /* HyperlinkNSTextField.h */,
@@ -268,6 +271,8 @@
 				474D0E871104F5E10044BA5E /* PowersWebView.m */,
 				47D7803F1108E0C900FD4E72 /* PDFViewWindowController.h */,
 				47D780401108E0C900FD4E72 /* PDFViewWindowController.m */,
+				47F8AFC41115ED320052C7E8 /* CardTableView.h */,
+				47F8AFC51115ED320052C7E8 /* CardTableView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -390,6 +395,16 @@
 				474D0E561104E6810044BA5E /* ProfessionRestrictionsPredicateRowEditor.m */,
 			);
 			name = EditorRowTemplates;
+			sourceTree = "<group>";
+		};
+		47F8AF361115E8D50052C7E8 /* TableViewDelete */ = {
+			isa = PBXGroup;
+			children = (
+				475AF93C10EBD16100F2C8A4 /* NSOutlineView+DeleteKey.h */,
+				47F8AF311115E8530052C7E8 /* NSOutlineViewDeleteKeyDelegate.h */,
+				47F8AF071115E7CA0052C7E8 /* NSTableViewDeleteKeyDelegate.h */,
+			);
+			name = TableViewDelete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,6 +540,7 @@
 				474D0E881104F5E10044BA5E /* PowersWebView.m in Sources */,
 				474D10C811058B810044BA5E /* GTMRegex.m in Sources */,
 				47D780411108E0C900FD4E72 /* PDFViewWindowController.m in Sources */,
+				47F8AFC61115ED320052C7E8 /* CardTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

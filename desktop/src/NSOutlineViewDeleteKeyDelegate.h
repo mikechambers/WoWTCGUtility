@@ -21,30 +21,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "NSOutlineViewDeleteKeyDelegate.h"
 
-@implementation NSOutlineView ( NSOutlineViewDeleteKeyDelegate )
-
-- (void)keyDown:(NSEvent *)event
-{
-	id obj = [self delegate];
-	unichar firstChar = [[event characters] characterAtIndex: 0];
-	
-	if ( ( firstChar == NSDeleteFunctionKey ||
-		  firstChar == NSDeleteCharFunctionKey ||
-		  firstChar == NSDeleteCharacter) &&
-		[obj respondsToSelector: @selector( outlineView:deleteKeyPressedOnRow: )] )
-	{
-		
-		int index = [self selectedRow];
-		
-		id <NSOutlineViewDeleteKeyDelegate> delegate = ( id <NSOutlineViewDeleteKeyDelegate> ) obj;
-		[delegate outlineView : self deleteKeyPressedOnRow: index];
-	}
-	else
-	{
-		[super keyDown:event];
-	}
-}
-
+@protocol NSOutlineViewDeleteKeyDelegate
+- ( void )outlineView:( NSOutlineView * ) view deleteKeyPressedOnRow: ( int ) rowIndex;
 @end
