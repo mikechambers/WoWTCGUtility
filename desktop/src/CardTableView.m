@@ -32,4 +32,10 @@
 	}
 }
 
+-(void)selectTableViewIndex:(int)index
+{
+	NSIndexSet *row = [NSIndexSet indexSetWithIndex:index];
+	[self selectRowIndexes:row byExtendingSelection:FALSE];
+}
+
 @end

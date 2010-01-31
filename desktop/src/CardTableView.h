@@ -13,4 +13,7 @@
 {
 }
 
+//todo: move this to a category for NSTableView
+-(void)selectTableViewIndex:(int)index;
+
 @end

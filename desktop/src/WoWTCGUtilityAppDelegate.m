@@ -357,21 +357,16 @@
     return NSDragOperationNone;
 }
 
-- (BOOL)outlineView:(NSOutlineView *)outlineView 
+- (BOOL)outlineView:(NSOutlineView *)ov 
 		 acceptDrop:(id < NSDraggingInfo >)info item:(id)item childIndex:(NSInteger)index
 {
 	Node *parent = (Node *)item;
 	
-	
     NSPasteboard* pboard = [info draggingPasteboard];
 	
-	//todo: we need to have a new type for multiple cards.
     NSData* data = [pboard dataForType:CardDataType];
     
 	NSMutableArray *cards = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-	
-	//Card *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-	
 	
 	//make createDeckWithCard just create and add the node, and then we add the children
 	
@@ -393,8 +388,12 @@
 	////todo: check to see if parent is deck parent, or another node
 	[self saveData:DECK_DATA];
 	
-	self.filteredCards = [self getCardsForIds:deck.children];
-	[self refreshCardTableData];	
+	
+	if([outlineView selectedNode] == deck)
+	{
+		self.filteredCards = [self getCardsForIds:deck.children];
+		[self refreshCardTableData];
+	}
 	
 	return TRUE;
 }
@@ -1082,6 +1081,8 @@
 	NSIndexSet *rowIndexes = [cardTable selectedRowIndexes];
 	
 	
+	int index = rowIndexes.firstIndex;
+	
 	NSMutableArray *children = node.children;
 	
 	[children removeObjectsAtIndexes:rowIndexes];
@@ -1090,6 +1091,33 @@
 
 	[self saveData:DECK_DATA];
 	[self refreshCardTableData];
+	
+
+	//note: In most cases, the OutlineView will automatically
+	//switch selection when we move an item. 
+	//However, in some cases it will not. The first two if
+	//statements below check for those.
+	
+	//if there are no more child nodes then set the selection
+	//to the main cards node
+	
+	
+	if(children.count == 0)
+	{
+		return;
+	}
+	
+	if(index == 0)
+	{
+		[cardTable selectTableViewIndex:0];
+	}
+	else
+	{
+		[cardTable selectTableViewIndex:index - 1];
+		//otherwise, the controll will set the selection. We then just
+		//need to update the cards
+		//[self updateOutlineViewSelection];
+	}	
 }
 
 /*********** menu delegate apis *********/
