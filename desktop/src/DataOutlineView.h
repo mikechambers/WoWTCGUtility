@@ -41,5 +41,6 @@
 -(void)selectOutlineViewItem:(Node *)node;
 -(void)updateMenuState:(NSMenu *)menu forItem:(Node *)node;
 -(void)setSelectedItemToEdit;
+-(Node *)selectedNode;
 
 @end

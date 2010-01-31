@@ -383,7 +383,6 @@
 	else
 	{
 		deck = parent;
-		//[parent.children addObject:[NSNumber numberWithInt:card.cardId]];
 	}
 	
 	for(Card *card in cards)
@@ -393,6 +392,9 @@
 	
 	////todo: check to see if parent is deck parent, or another node
 	[self saveData:DECK_DATA];
+	
+	self.filteredCards = [self getCardsForIds:deck.children];
+	[self refreshCardTableData];	
 	
 	return TRUE;
 }
@@ -575,19 +577,11 @@
 
 -(void)setCardsForDeck:(Node *)node
 {
-	NSArray *children = node.children;
 	
-	int count = [children count];
+	NSMutableArray *out = [self getCardsForIds:node.children];
 	
-	NSMutableArray *out = [NSMutableArray arrayWithCapacity:count];
-	
-	Card *c;
-	for(NSNumber *cardId in children)
-	{
-		c = [self getCardForId:[cardId intValue]];
-		[out addObject:c];
-	}
-	
+	//note : we are not making a copy of this, since we dont reference
+	//it / store it from anywhere else
 	self.filteredCards = out;
 	[self refreshCardTableData];
 }
@@ -596,6 +590,21 @@
 {
 	Card *c = [dataStore.cards objectAtIndex:cardId - 1];
 	return c;
+}
+
+-(NSMutableArray *)getCardsForIds:(NSArray *)cards
+{
+	int count = [cards count];
+	NSMutableArray *out = [NSMutableArray arrayWithCapacity:count];
+	
+	Card *c;
+	for(NSNumber *cardId in cards)
+	{
+		c = [self getCardForId:[cardId intValue]];
+		[out addObject:c];
+	}
+	
+	return out;
 }
 
 -(void)tableViewSelectionDidChange:(NSNotification *)notification
@@ -1058,7 +1067,29 @@
 
 - ( void )tableView:( NSTableView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
 {
-	NSLog(@"- ( void )tableView:( NSTableView * ) view deleteKeyPressedonRow: ( int ) rowIndex");
+	[self deleteSelectedCardsFromTableView];
+}
+
+-(void)deleteSelectedCardsFromTableView
+{
+	Node *node = [outlineView selectedNode];
+	
+	if([outlineView parentForItem:node] != deckNode)
+	{
+		return;
+	}
+	
+	NSIndexSet *rowIndexes = [cardTable selectedRowIndexes];
+	
+	
+	NSMutableArray *children = node.children;
+	
+	[children removeObjectsAtIndexes:rowIndexes];
+
+	self.filteredCards = [self getCardsForIds:node.children];
+
+	[self saveData:DECK_DATA];
+	[self refreshCardTableData];
 }
 
 /*********** menu delegate apis *********/

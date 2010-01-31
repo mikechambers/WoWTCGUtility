@@ -57,8 +57,14 @@
 
 - (void)menuNeedsUpdate:(NSMenu *)menu
 {
-	Node *node = [self itemAtRow:[self selectedRow]];
+	Node *node = [self selectedNode];
 	[self updateMenuState:menu forItem:node];
+}
+
+-(Node *)selectedNode
+{
+	Node *node = [self itemAtRow:[self selectedRow]];
+	return node;
 }
 
 -(void)updateMenuState:(NSMenu *)menu forItem:(Node *)node

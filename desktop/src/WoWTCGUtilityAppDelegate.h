@@ -110,6 +110,7 @@
 
 -(void)setCardsForDeck:(Node *)node;
 -(Card *)getCardForId:(int)cardId;
+-(NSMutableArray *)getCardsForIds:(NSArray *)cardIds;
 
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
@@ -118,5 +119,6 @@
 -(void)updateTitle;
 -(NSString *)getNewNodeName:(Node *)parent withPrefix:(NSString *)prefix;
 - (void)registerMyApp;
+-(void)deleteSelectedCardsFromTableView;
 
 @end
