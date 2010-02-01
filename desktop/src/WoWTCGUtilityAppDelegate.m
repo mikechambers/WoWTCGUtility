@@ -74,8 +74,9 @@
 	[super init];
 	
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *appDefaults = [NSDictionary
+    NSMutableDictionary *appDefaults = [NSMutableDictionary
 								 dictionaryWithObject:@"YES" forKey:RUN_DELETE_SEARCH_ALERT_KEY];
+	[appDefaults setObject:@"YES" forKey:RUN_DELETE_CARD_ALERT_KEY];
 	
     [defaults registerDefaults:appDefaults];	
 	
@@ -999,21 +1000,48 @@
 
 - ( void )tableViewDeleteKeyPressed:( NSTableView * ) view 
 {
-	[self deleteSelectedCardsFromTableView];
-}
-
--(void)deleteSelectedCardsFromTableView
-{
 	Node *node = [cardOutlineView selectedNode];
 	
 	if([cardOutlineView parentForItem:node] != cardOutlineView.deckNode)
 	{
 		return;
+	}	
+	
+	BOOL runAlert = [[NSUserDefaults standardUserDefaults] boolForKey:RUN_DELETE_CARD_ALERT_KEY];
+	
+	if(!runAlert)
+	{
+		[self deleteSelectedCardsFromTableView];
+		return;
 	}
 	
+	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:@"Are you sure you want to delete the selected cards from the Deck named \"%@\"?", node.label] 
+									 defaultButton:@"OK" 
+								   alternateButton:@"Cancel" 
+									   otherButton:nil 
+						 informativeTextWithFormat:@"This action cannot be undone."];
+	
+	alert.alertStyle = NSWarningAlertStyle;
+	[alert setShowsSuppressionButton:TRUE];
+	
+	NSInteger result = [alert runModal];
+	
+	if(result == NSAlertDefaultReturn)
+	{
+		[self deleteSelectedCardsFromTableView];
+	}
+	
+	if([[alert suppressionButton] state] == NSOnState)
+	{
+		[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:RUN_DELETE_CARD_ALERT_KEY];
+	}
+}
+
+-(void)deleteSelectedCardsFromTableView
+{	
 	NSIndexSet *rowIndexes = [cardTable selectedRowIndexes];
 	
-	
+	Node *node = [cardOutlineView selectedNode];
 	int index = rowIndexes.firstIndex;
 	
 	NSMutableArray *children = node.children;

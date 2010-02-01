@@ -21,3 +21,4 @@
  */
 
 #define RUN_DELETE_SEARCH_ALERT_KEY @"runDeleteSeachAlert"
+#define RUN_DELETE_CARD_ALERT_KEY @"runDeleteCardAlert"
