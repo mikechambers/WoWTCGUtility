@@ -960,6 +960,31 @@
 	[blocksWindow.window center];
 }
 
+
+-(IBAction)handleExportDeckMenu:(id)sender
+{
+}
+
+-(IBAction)handleExportSearchMenu:(id)sender
+{
+}
+
+//delegate method for Export menu
+- (void)menuWillOpen:(NSMenu *)menu
+{
+	[cardOutlineView updateMenuState:menu forItem:[cardOutlineView selectedNode]];
+	/*
+	Node *node = [cardOutlineView selectedNode];
+	Node *parent = [cardOutlineView parentForItem:node];
+	
+	NSMenuItem *deckExport = [menu itemWithTag:EXPORT_DECK_TAG];
+	NSMenuItem *searchExport = [menu itemWithTag:EXPORT_SEARCH_TAG];
+	
+	[deckExport setEnabled:(parent == cardOutlineView.deckNode)];
+	[searchExport setEnabled:(parent == cardOutlineView.searchNode)];
+	 */
+}
+
 /****************** Search Sheet APIs ***********/
 
 

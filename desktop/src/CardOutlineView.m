@@ -117,6 +117,8 @@
 	NSMenuItem *editSearchMenu = [menu itemWithTag:EDIT_SEARCH_TAG];
 	NSMenuItem *deleteSearchMenu = [menu itemWithTag:DELETE_SEARCH_TAG];
 	NSMenuItem *renameSearchMenu = [menu itemWithTag:RENAME_SEARCH_TAG];
+	NSMenuItem *exportSearchMenu = [menu itemWithTag:EXPORT_SEARCH_TAG];
+	[exportSearchMenu setEnabled:isSearchNode];
 	[editSearchMenu setEnabled:isSearchNode];
 	[deleteSearchMenu setEnabled:isSearchNode];
 	[renameSearchMenu setEnabled:isSearchNode];
@@ -125,6 +127,8 @@
 	NSMenuItem *editDeckMenu = [menu itemWithTag:EDIT_DECK_TAG];
 	NSMenuItem *deleteDeckMenu = [menu itemWithTag:DELETE_DECK_TAG];
 	NSMenuItem *renameDeckMenu = [menu itemWithTag:RENAME_DECK_TAG];
+	NSMenuItem *exportDeckMenu = [menu itemWithTag:EXPORT_DECK_TAG];
+	[exportDeckMenu setEnabled:isDeckNode];
 	[editDeckMenu setEnabled:isDeckNode];	
 	[deleteDeckMenu setEnabled:isDeckNode];
 	[renameDeckMenu setEnabled:isDeckNode];	

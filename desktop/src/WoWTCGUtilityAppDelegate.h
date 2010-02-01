@@ -87,7 +87,8 @@
 -(IBAction)handleQuickSearchMenu:(id)sender;
 -(IBAction)handleCoreSetPDFMenu:(id)sender;
 -(IBAction)handleCreateDeck:(id)sender;
-
+-(IBAction)handleExportDeckMenu:(id)sender;
+-(IBAction)handleExportSearchMenu:(id)sender;
 
 -(void)initData:(NSBundle *)bundle;
 
