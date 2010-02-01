@@ -315,24 +315,8 @@
 /********************* Drag and Drop Delegate *******************/
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
-{
-	//NSUInteger index = rowIndexes.firstIndex;
-	
-	NSMutableArray *out = [NSMutableArray arrayWithCapacity:[rowIndexes count]];
-	
-	Card *card;
-	NSUInteger currentIndex = [rowIndexes firstIndex];
-	while (currentIndex != NSNotFound)
-	{
-		card = [filteredCards objectAtIndex:currentIndex];
-		[out addObject:card];
-		currentIndex = [rowIndexes indexGreaterThanIndex: currentIndex];
-	}	
-	
-	//make sure this is correct data
-	//Card *card = [filteredCards objectAtIndex:index];
-	
-	//todo: copy an array to pasteboard
+{	
+	NSArray *out = [filteredCards objectsAtIndexes:rowIndexes];
 	
     // Copy the row numbers to the pasteboard.
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:out];
