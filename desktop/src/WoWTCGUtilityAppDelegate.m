@@ -31,6 +31,9 @@
 #define MIN_WINDOW_WIDTH 400
 #define MIN_WINDOW_HEIGHT 380
 
+#define DECK_EXTENSION @"deck"
+#define SEARCH_EXTENSION @"search"
+
 @implementation WoWTCGUtilityAppDelegate
 
 @synthesize window;
@@ -960,29 +963,86 @@
 	[blocksWindow.window center];
 }
 
+-(NSURL *)openExportPanel:(NSString *)extension
+{
+	Node *node = [cardOutlineView selectedNode];
+	
+	NSSavePanel *panel = [NSSavePanel savePanel];
+		
+	
+	if([extension compare:DECK_EXTENSION] == NSOrderedSame)
+	{
+		panel.title = @"Export Deck";
+	}
+	else if([extension compare:SEARCH_EXTENSION] == NSOrderedSame)
+	{
+		panel.title = @"Export Search";	
+	}
+	else
+	{
+		NSLog(@"openExportPanel : Extension not recognized : %@", extension);
+		return nil;
+	}
+
+	panel.allowedFileTypes = [NSArray arrayWithObject:extension];
+	
+	if([panel respondsToSelector:@selector(setNameFieldStringValue:)])
+	{
+		[panel setNameFieldStringValue:[NSString stringWithFormat:@"%@.%@", node.label, extension]];
+	}
+	
+	int result = [panel runModal];
+	
+	if(result = NSCancelButton)
+	{
+		return nil;
+	}
+	
+	NSURL *fileURL = [panel URL];
+	return fileURL;
+}
 
 -(IBAction)handleExportDeckMenu:(id)sender
 {
+	NSURL *fileURL = [self openExportPanel:DECK_EXTENSION];
+
+	if(!fileURL)
+	{
+		return;
+	}
+	
+	Node *node = [cardOutlineView selectedNode];
+	NSMutableArray *children = node.children;
+		
+	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
+    
+	[rootObject setValue:children forKey:DECK_EXTENSION];
+	[NSKeyedArchiver archiveRootObject: rootObject toFile: fileURL.path];	
+	
 }
 
 -(IBAction)handleExportSearchMenu:(id)sender
 {
+	NSURL *fileURL = [self openExportPanel:SEARCH_EXTENSION];
+	
+	if(!fileURL)
+	{
+		return;
+	}
+	
+	Node *node = [cardOutlineView selectedNode];
+	NSPredicate *predicate = (NSPredicate *)node.data;
+	
+	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
+    
+	[rootObject setValue:predicate forKey:SEARCH_EXTENSION];
+	[NSKeyedArchiver archiveRootObject: rootObject toFile: fileURL.path];	
 }
 
 //delegate method for Export menu
 - (void)menuWillOpen:(NSMenu *)menu
 {
 	[cardOutlineView updateMenuState:menu forItem:[cardOutlineView selectedNode]];
-	/*
-	Node *node = [cardOutlineView selectedNode];
-	Node *parent = [cardOutlineView parentForItem:node];
-	
-	NSMenuItem *deckExport = [menu itemWithTag:EXPORT_DECK_TAG];
-	NSMenuItem *searchExport = [menu itemWithTag:EXPORT_SEARCH_TAG];
-	
-	[deckExport setEnabled:(parent == cardOutlineView.deckNode)];
-	[searchExport setEnabled:(parent == cardOutlineView.searchNode)];
-	 */
 }
 
 /****************** Search Sheet APIs ***********/

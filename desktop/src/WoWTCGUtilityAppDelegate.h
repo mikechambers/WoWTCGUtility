@@ -90,6 +90,8 @@
 -(IBAction)handleExportDeckMenu:(id)sender;
 -(IBAction)handleExportSearchMenu:(id)sender;
 
+-(NSURL *)openExportPanel:(NSString *)extension;
+
 -(void)initData:(NSBundle *)bundle;
 
 -(void)saveData:(NSString *)type;
