@@ -913,7 +913,7 @@
 	[cardOutlineView setSelectedItemToEdit];
 }
 
--(IBAction)handlePreferencesMenuClick:(id)sender
+-(IBAction)handlePreferencesMenu:(id)sender
 {
 	if(!preferencesWindow)
 	{
@@ -985,7 +985,7 @@
 {
 	if(searchSheet == nil)
 	{
-		self.searchSheet = [[SearchSheetController alloc] init];
+		self.searchSheet = [[[SearchSheetController alloc] init] autorelease];
 		searchSheet.dataStore = dataStore;
 		searchSheet.delegate = self;
 	}

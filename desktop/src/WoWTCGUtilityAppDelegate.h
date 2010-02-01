@@ -81,7 +81,7 @@
 -(IBAction)handleDeleteNodeMenu:(id)sender;
 -(IBAction)handleAlwaysOnTopMenu:(id)sender;
 -(IBAction)handleRenameItemMenu:(id)sender;
--(IBAction)handlePreferencesMenuClick:(id)sender;
+-(IBAction)handlePreferencesMenu:(id)sender;
 -(IBAction)handleLogBugMenu:(id)sender;
 -(IBAction)handleSendFeedbackMenu:(id)sender;
 -(IBAction)handleQuickSearchMenu:(id)sender;
