@@ -46,5 +46,6 @@
 -(void)setSelectedItemToEdit;
 -(Node *)selectedNode;
 -(void)expandNodes;
+-(void)refreshNode:(Node *)node;
 
 @end

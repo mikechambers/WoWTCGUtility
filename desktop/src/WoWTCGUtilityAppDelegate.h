@@ -32,9 +32,6 @@
 #import "PDFViewWindowController.h"
 #import "CardTableView.h"
 
-#define SEARCH_DATA @"searches"
-#define DECK_DATA @"decks"
-
 #if __MAC_OS_X_VERSION_MIN_REQUIRED < 1060
 	@interface WoWTCGUtilityAppDelegate : NSObject <NSOutlineViewDeleteKeyDelegate, NSTableViewDeleteKeyDelegate>
 #else
@@ -89,10 +86,13 @@
 -(IBAction)handleCreateDeck:(id)sender;
 -(IBAction)handleExportDeckMenu:(id)sender;
 -(IBAction)handleExportSearchMenu:(id)sender;
+-(IBAction)handleImportDeckMenu:(id)sender;
+-(IBAction)handleImportSearchMenu:(id)sender;
 
 -(NSURL *)openExportPanel:(NSString *)extension;
+-(NSURL *)openImportPanel:(NSString *)extension;
 
--(void)initData:(NSBundle *)bundle;
+-(void)initData;
 
 -(void)saveData:(NSString *)type;
 -(void)loadData:(NSString *)type;
@@ -101,6 +101,9 @@
 -(void)resetCardData;
 -(void)refreshCardTableData;
 -(void)selectCardTableRow:(int)index;
+
+-(void)importNode:(NSURL *)fileURL forExtension:(NSString *)extension andParent:(Node *)parent;
+-(void)exportNode:(NSURL *)fileURL forExtension:(NSString *)extension;
 
 -(Node *)createDeck:(NSUInteger) index;
 

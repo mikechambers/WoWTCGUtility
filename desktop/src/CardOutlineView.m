@@ -97,6 +97,12 @@
 	return node;
 }
 
+-(void)refreshNode:(Node *)node
+{
+	[self reloadItem:node reloadChildren:TRUE];
+	[self expandItem:node];
+}
+
 -(void)updateMenuState:(NSMenu *)menu forItem:(Node *)node
 {
 	Node *parent = [self parentForItem:node];

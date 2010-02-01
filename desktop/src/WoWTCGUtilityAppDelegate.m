@@ -82,13 +82,10 @@
 	[appDefaults setObject:@"YES" forKey:RUN_DELETE_CARD_ALERT_KEY];
 	
     [defaults registerDefaults:appDefaults];	
+
+	self.appName = [[NSProcessInfo processInfo] processName];
 	
-	
-	NSBundle *bundle = [NSBundle mainBundle];
-	NSString *bundlePath = [bundle bundlePath];
-    self.appName = [[NSFileManager defaultManager] displayNameAtPath: bundlePath];	
-	
-	[self initData:bundle];
+	[self initData];
 		
 	[self resetCardData];
 		
@@ -104,11 +101,9 @@
 	
 	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];
 	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];	
-
-	//NSLog(@"awakeFromNib : %@", cardOutlineView.deckNode.children);
 	
-	[self loadData:DECK_DATA];
-	[self loadData:SEARCH_DATA];
+	[self loadData:DECK_EXTENSION];
+	[self loadData:SEARCH_EXTENSION];
 	[cardOutlineView expandNodes];
 }
 
@@ -191,12 +186,12 @@
 
 /**************  General App Lifecycle APIs *****************/
 
--(void)initData:(NSBundle *)bundle
+-(void)initData
 {	
-	NSString *path = [[bundle resourcePath] 
+	NSString *path = [[[NSBundle mainBundle] resourcePath] 
 					   stringByAppendingPathComponent:@"/assets/wow_tcg.data"];	
 	
-	NSDictionary * rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+	NSDictionary *rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 	
 	self.dataStore = [rootObject valueForKey:DATA_STORE_KEY];
 	
@@ -213,11 +208,11 @@
 {
 	NSMutableArray *children;
 	
-	if([type compare:SEARCH_DATA] == NSOrderedSame)
+	if([type compare:SEARCH_EXTENSION] == NSOrderedSame)
 	{
 		children = cardOutlineView.searchNode.children;
 	}
-	else if([type compare:DECK_DATA] == NSOrderedSame)
+	else if([type compare:DECK_EXTENSION] == NSOrderedSame)
 	{
 		children = cardOutlineView.deckNode.children;
 	}
@@ -240,11 +235,11 @@
 {
 	Node *rootNode;
 	
-	if([type compare:SEARCH_DATA] == NSOrderedSame)
+	if([type compare:SEARCH_EXTENSION] == NSOrderedSame)
 	{
 		rootNode = cardOutlineView.searchNode;
 	}
-	else if([type compare:DECK_DATA] == NSOrderedSame)
+	else if([type compare:DECK_EXTENSION] == NSOrderedSame)
 	{
 		rootNode = cardOutlineView.deckNode;
 	}
@@ -283,7 +278,22 @@
 						 attributes: nil error:NULL];
 	}
     
-	NSString *fileName = [NSString stringWithFormat:type, appName];
+	NSString *extension = @"";
+	
+	if([type compare:DECK_EXTENSION] == NSOrderedSame)
+	{
+		extension = @"decks";
+	}
+	else if([type compare:SEARCH_EXTENSION] == NSOrderedSame)
+	{
+		extension = @"searches";
+	}
+	else
+	{
+		NSLog(@"Warning : pathForDataFile : unrecognized extension : %@", type);
+	}
+	
+	NSString *fileName = [NSString stringWithFormat:extension, appName];
 	
 	return [folder stringByAppendingPathComponent: fileName];    
 }
@@ -343,7 +353,7 @@
 		[deck.children addObject:[NSNumber numberWithInt:card.cardId]];
 	}
 
-	[self saveData:DECK_DATA];
+	[self saveData:DECK_EXTENSION];
 	
 	
 	if([cardOutlineView selectedNode] == deck)
@@ -652,11 +662,11 @@
 	
 	if(parent == cardOutlineView.searchNode)
 	{
-		type = SEARCH_DATA;
+		type = SEARCH_EXTENSION;
 	}
 	else
 	{
-		type = DECK_DATA;
+		type = DECK_EXTENSION;
 	}
 	
 	[self saveData:type];
@@ -772,11 +782,11 @@
 	
 	if(parent == cardOutlineView.searchNode)
 	{
-		type = SEARCH_DATA;
+		type = SEARCH_EXTENSION;
 	}
 	else
 	{
-		type = DECK_DATA;
+		type = DECK_EXTENSION;
 	}
 	
 	[self saveData:type];
@@ -813,12 +823,13 @@
 -(IBAction)handleCreateDeck:(id)sender
 {
 	[self createDeck:-1];
+	[self saveData:DECK_EXTENSION];
 }
 
 -(Node *)createDeck:(NSUInteger) index
 {
 	NSString *nodeName = [self getNewNodeName:cardOutlineView.deckNode withPrefix:@"untitled deck"];
-	Node *node = [[Node alloc] initWithLabel:nodeName];
+	Node *node = [[[Node alloc] initWithLabel:nodeName] autorelease];
 	node.children = [NSMutableArray arrayWithCapacity:1];
 	
 	if(index == -1)
@@ -828,8 +839,7 @@
 
 	[cardOutlineView.deckNode.children insertObject:node atIndex: index];
 	
-	[cardOutlineView reloadItem:cardOutlineView.deckNode reloadChildren:TRUE];
-	[cardOutlineView expandItem:cardOutlineView.deckNode];
+	[cardOutlineView refreshNode:cardOutlineView.deckNode];
 	
 	return node;
 }
@@ -968,7 +978,7 @@
 	Node *node = [cardOutlineView selectedNode];
 	
 	NSSavePanel *panel = [NSSavePanel savePanel];
-		
+	panel.prompt = @"Export";
 	
 	if([extension compare:DECK_EXTENSION] == NSOrderedSame)
 	{
@@ -993,7 +1003,7 @@
 	
 	int result = [panel runModal];
 	
-	if(result = NSCancelButton)
+	if(result == NSCancelButton)
 	{
 		return nil;
 	}
@@ -1002,41 +1012,116 @@
 	return fileURL;
 }
 
--(IBAction)handleExportDeckMenu:(id)sender
+-(NSURL *)openImportPanel:(NSString *)extension
 {
-	NSURL *fileURL = [self openExportPanel:DECK_EXTENSION];
+	NSArray *types = [NSArray arrayWithObject:extension];
+	NSOpenPanel *panel = [NSOpenPanel openPanel];
+	//panel.allowedFileTypes = types;
+	panel.prompt = @"Import";
+	
+	if([extension compare:DECK_EXTENSION] == NSOrderedSame)
+	{
+		panel.title = @"Select Deck";
+	}
+	else if([extension compare:SEARCH_EXTENSION] == NSOrderedSame)
+	{
+		panel.title = @"Select Search";	
+	}
+	else
+	{
+		NSLog(@"openExportPanel : Extension not recognized : %@", extension);
+		return nil;
+	}	
+	
+	//int result = [panel runModal];
+	int result = [panel runModalForTypes:types];
+		
+	if(result == NSCancelButton)
+	{
+		return nil;
+	}
 
+	NSURL *fileURL = [panel URL];
+	return fileURL;
+}
+
+-(IBAction)handleImportDeckMenu:(id)sender
+{
+	NSURL *fileURL = [self openImportPanel:DECK_EXTENSION];
+	
+	[self importNode:fileURL forExtension:DECK_EXTENSION andParent:cardOutlineView.deckNode];
+}
+
+-(IBAction)handleImportSearchMenu:(id)sender
+{
+	NSURL *fileURL = [self openImportPanel:SEARCH_EXTENSION];
+	
+	[self importNode:fileURL forExtension:SEARCH_EXTENSION andParent:cardOutlineView.searchNode];
+}
+
+-(void)importNode:(NSURL *)fileURL forExtension:(NSString *)extension andParent:(Node *)parent
+{
+	if(!fileURL)
+	{
+		return;
+	}
+	
+	NSDictionary *rootObject;
+	Node *node = nil;
+	
+	@try
+	{
+		rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:fileURL.path];
+		node = [rootObject valueForKey:extension];
+	}
+	@catch (NSException *exception)
+	{
+	}
+		
+	if(node == nil)
+	{		
+		NSAlert *alert = [[NSAlert alloc] init];
+		[alert addButtonWithTitle:@"OK"];
+		[alert setMessageText:@"Could not import deck."];
+		[alert setInformativeText:@"Make sure you selected the correct deck file."];
+		[alert setAlertStyle:NSInformationalAlertStyle];		
+		[alert runModal];
+		[alert release];
+		return;
+	}
+	
+	[parent.children addObject:node];
+	[cardOutlineView refreshNode:parent];
+	
+	[self saveData:extension];
+}
+
+-(void)exportNode:(NSURL *)fileURL forExtension:(NSString *)extension
+{
 	if(!fileURL)
 	{
 		return;
 	}
 	
 	Node *node = [cardOutlineView selectedNode];
-	NSMutableArray *children = node.children;
-		
+	
 	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
     
-	[rootObject setValue:children forKey:DECK_EXTENSION];
-	[NSKeyedArchiver archiveRootObject: rootObject toFile: fileURL.path];	
-	
+	[rootObject setValue:node forKey:extension];
+	[NSKeyedArchiver archiveRootObject: rootObject toFile: fileURL.path];
+}
+
+-(IBAction)handleExportDeckMenu:(id)sender
+{
+	NSURL *fileURL = [self openExportPanel:DECK_EXTENSION];
+
+	[self exportNode:fileURL forExtension:DECK_EXTENSION];
 }
 
 -(IBAction)handleExportSearchMenu:(id)sender
 {
 	NSURL *fileURL = [self openExportPanel:SEARCH_EXTENSION];
-	
-	if(!fileURL)
-	{
-		return;
-	}
-	
-	Node *node = [cardOutlineView selectedNode];
-	NSPredicate *predicate = (NSPredicate *)node.data;
-	
-	NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];
-    
-	[rootObject setValue:predicate forKey:SEARCH_EXTENSION];
-	[NSKeyedArchiver archiveRootObject: rootObject toFile: fileURL.path];	
+	[self exportNode:fileURL forExtension:SEARCH_EXTENSION];
 }
 
 //delegate method for Export menu
@@ -1056,14 +1141,13 @@
 		[cardOutlineView.searchNode.children addObject:predicateNode];
 	}
 	
-	[cardOutlineView reloadItem:cardOutlineView.searchNode reloadChildren:TRUE];
-	[cardOutlineView expandItem:cardOutlineView.searchNode];
+	[cardOutlineView refreshNode:cardOutlineView.searchNode];
 	
 	[cardOutlineView selectOutlineViewItem:predicateNode];
 	
 	[self filterCardsWithPredicate:((NSPredicate *)predicateNode.data)];
 
-	[self saveData:SEARCH_DATA];
+	[self saveData:SEARCH_EXTENSION];
 }
 
 -(void)showSavedSearchSheet:(Node *)predicateNode
@@ -1135,7 +1219,7 @@
 
 	self.filteredCards = [self getCardsForIds:node.children];
 
-	[self saveData:DECK_DATA];
+	[self saveData:DECK_EXTENSION];
 	[self refreshCardTableData];
 	
 
