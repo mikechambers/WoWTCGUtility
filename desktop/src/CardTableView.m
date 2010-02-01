@@ -38,4 +38,11 @@
 	[self selectRowIndexes:row byExtendingSelection:FALSE];
 }
 
+-(void)redraw
+{
+	//need to do this or somethings the grid is drawn wrong
+	[self setNeedsDisplay:TRUE];
+	[self noteNumberOfRowsChanged];
+}
+
 @end

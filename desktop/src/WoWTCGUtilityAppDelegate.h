@@ -89,7 +89,7 @@
 -(IBAction)handleCreateDeck:(id)sender;
 
 
--(void)initData;
+-(void)initData:(NSBundle *)bundle;
 
 -(void)saveData:(NSString *)type;
 -(void)loadData:(NSString *)type;
@@ -97,7 +97,6 @@
 
 -(void)resetCardData;
 -(void)refreshCardTableData;
--(void)redrawCardTable;
 -(void)selectCardTableRow:(int)index;
 
 -(Node *)createDeck:(NSUInteger) index;
@@ -114,5 +113,6 @@
 -(NSString *)getNewNodeName:(Node *)parent withPrefix:(NSString *)prefix;
 - (void)registerMyApp;
 -(void)deleteSelectedCardsFromTableView;
+-(void)reloadData;
 
 @end

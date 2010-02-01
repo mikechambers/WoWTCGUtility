@@ -79,10 +79,12 @@
 	
     [defaults registerDefaults:appDefaults];	
 	
-	NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+	
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSString *bundlePath = [bundle bundlePath];
     self.appName = [[NSFileManager defaultManager] displayNameAtPath: bundlePath];	
 	
-	[self initData];
+	[self initData:bundle];
 		
 	[self resetCardData];
 		
@@ -113,7 +115,7 @@
 - (void)getUrl:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
 {
 	NSString *urlStr = [[[event paramDescriptorForKeyword:keyDirectObject] stringValue] stringByReplacingOccurrencesOfString:URL_SCHEME withString:@""];
-	// Now you can parse the URL and perform whatever action is needed
+	// Now we can parse the URL and perform whatever action is needed
 	
 	NSURL *url = [NSURL URLWithString:urlStr];	
 	
@@ -127,8 +129,7 @@
 	NSString *identifier = [tokens objectAtIndex:0];
 	NSString *name = [tokens objectAtIndex:1];
 	NSString *value = [tokens objectAtIndex:2];
-	
-	//make case insensitive
+
 	if([identifier compare:CARD_IDENTIFIER options:NSCaseInsensitiveSearch] != NSOrderedSame)
 	{
 		return;
@@ -139,20 +140,16 @@
 		return;
 	}
 	
-	//refreshTableViewDataWithSelectedIndex
-	
 	if(filteredCards != dataStore.cards)
 	{
-		//refresh data view
-		
 		//reset card data to all cards
 		[self resetCardData];
 		
 		//reload the data in the card table
-		[cardTable reloadData];
+		[self reloadData];
 		
 		//tell the cardtable to redraw itself
-		[self redrawCardTable];
+		[cardTable redraw];
 	}
 	
 	//need to loop to find since 10.5 doesnt support blocks and [NSArray indexOfObjectPassingTest];
@@ -187,9 +184,9 @@
 
 /**************  General App Lifecycle APIs *****************/
 
--(void)initData
+-(void)initData:(NSBundle *)bundle
 {	
-	NSString *path = [[[NSBundle mainBundle] resourcePath] 
+	NSString *path = [[bundle resourcePath] 
 					   stringByAppendingPathComponent:@"/assets/wow_tcg.data"];	
 	
 	NSDictionary * rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
@@ -356,7 +353,6 @@
 
 /********************* general Card TableView APIs *******************/
 
-//-(void)updateTableViewRowSelection:(int)index
 -(void)selectCardTableRow:(int)index
 {
 	int previousRow = cardTable.selectedRow;
@@ -380,8 +376,8 @@
 
 -(void)refreshCardTableData
 {
-	[cardTable reloadData];
-	[self redrawCardTable];
+	[self reloadData];
+	[cardTable redraw];
 	
 	if(filteredCards.count == 0)
 	{
@@ -392,11 +388,9 @@
 	[self selectCardTableRow:0];
 }
 
--(void)redrawCardTable
+-(void)reloadData
 {
-	//need to do this or somethings the grid is drawn wrong
-	[cardTable setNeedsDisplay:TRUE];
-	[cardTable noteNumberOfRowsChanged];
+	[cardTable reloadData];
 	[self updateTitle];
 }
 
