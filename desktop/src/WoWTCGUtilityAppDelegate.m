@@ -54,7 +54,7 @@
 @synthesize searchKeys;
 @synthesize blocksWindow;
 
-#define CardDataType @"CardDataType"
+#define CARDS_DATA_TYPE @"CARDS_DATA_TYPE"
 
 -(void)dealloc
 {
@@ -115,8 +115,8 @@
 	NSSize minSize = { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT };
 	[window setContentMinSize:minSize];
 	
-	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];
-	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];	
+	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];
+	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];	
 	
 	[cardOutlineView selectOutlineViewItem:cardsNode];
 	
@@ -318,8 +318,8 @@
 	
     // Copy the row numbers to the pasteboard.
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:out];
-    [pboard declareTypes:[NSArray arrayWithObject:CardDataType] owner:self];
-    [pboard setData:data forType:CardDataType];
+    [pboard declareTypes:[NSArray arrayWithObject:CARDS_DATA_TYPE] owner:self];
+    [pboard setData:data forType:CARDS_DATA_TYPE];
     return YES;
 }
 
@@ -346,7 +346,7 @@
 	
     NSPasteboard* pboard = [info draggingPasteboard];
 	
-    NSData* data = [pboard dataForType:CardDataType];
+    NSData* data = [pboard dataForType:CARDS_DATA_TYPE];
     
 	NSMutableArray *cards = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 	
