@@ -19,12 +19,10 @@
 	if ( ( firstChar == NSDeleteFunctionKey ||
 		  firstChar == NSDeleteCharFunctionKey ||
 		  firstChar == NSDeleteCharacter) &&
-		[obj respondsToSelector: @selector( tableView:deleteKeyPressedOnRow: )] )
-	{
-		int index = [self selectedRow];
-		
+		[obj respondsToSelector: @selector( tableViewDeleteKeyPressed: )] )
+	{		
 		id <NSTableViewDeleteKeyDelegate> delegate = ( id <NSTableViewDeleteKeyDelegate> ) obj;
-		[delegate tableView:self deleteKeyPressedOnRow: index];
+		[delegate tableViewDeleteKeyPressed:self];
 	}
 	else
 	{

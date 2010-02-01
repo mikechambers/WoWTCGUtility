@@ -845,8 +845,9 @@
 	[self showSavedSearchSheet:node];
 }
 
--(void)deleteOutlineViewNode:(Node *)node
+-(void)deleteSelectedOutlineViewNode
 {
+	Node *node = [cardOutlineView selectedNode];
 	Node *parent = [cardOutlineView parentForItem:node];
 	if(parent != cardOutlineView.deckNode && parent != cardOutlineView.searchNode)
 	{
@@ -885,10 +886,8 @@
 }
 
 -(IBAction)handleDeleteNodeMenu:(id)sender
-{
-	Node *node = [cardOutlineView selectedNode];
-	
-	[self deleteOutlineViewNode:node];
+{	
+	[self deleteSelectedOutlineViewNode];
 }
 
 -(IBAction)handleAlwaysOnTopMenu:(id)sender
@@ -993,13 +992,12 @@
 	[searchSheet showSheet:[self window] withPredicateNode:predicateNode];
 }
 
-- ( void )outlineView:( NSOutlineView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
+- ( void )outlineViewDeleteKeyPressed:( NSOutlineView * ) view 
 {
-	Node *node = ((Node *)[cardOutlineView itemAtRow:rowIndex]);
-	[self deleteOutlineViewNode:node];
+	[self deleteSelectedOutlineViewNode];
 }
 
-- ( void )tableView:( NSTableView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
+- ( void )tableViewDeleteKeyPressed:( NSTableView * ) view 
 {
 	[self deleteSelectedCardsFromTableView];
 }

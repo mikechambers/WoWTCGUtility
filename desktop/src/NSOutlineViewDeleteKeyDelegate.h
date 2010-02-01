@@ -23,5 +23,5 @@
 #import <Cocoa/Cocoa.h>
 
 @protocol NSOutlineViewDeleteKeyDelegate
-- ( void )outlineView:( NSOutlineView * ) view deleteKeyPressedOnRow: ( int ) rowIndex;
+- ( void )outlineViewDeleteKeyPressed:( NSOutlineView * ) view;
 @end

@@ -23,5 +23,5 @@
 #import <Cocoa/Cocoa.h>
 
 @protocol NSTableViewDeleteKeyDelegate
-- ( void )tableView:( NSTableView * ) view deleteKeyPressedOnRow: ( int ) rowIndex;
+- ( void )tableViewDeleteKeyPressed:( NSTableView * ) view;
 @end

@@ -33,13 +33,10 @@
 	if ( ( firstChar == NSDeleteFunctionKey ||
 		  firstChar == NSDeleteCharFunctionKey ||
 		  firstChar == NSDeleteCharacter) &&
-		[obj respondsToSelector: @selector( outlineView:deleteKeyPressedOnRow: )] )
+		[obj respondsToSelector: @selector( outlineViewDeleteKeyPressed: )] )
 	{
-		
-		int index = [self selectedRow];
-		
 		id <NSOutlineViewDeleteKeyDelegate> delegate = ( id <NSOutlineViewDeleteKeyDelegate> ) obj;
-		[delegate outlineView : self deleteKeyPressedOnRow: index];
+		[delegate outlineViewDeleteKeyPressed : self];
 	}
 	else
 	{

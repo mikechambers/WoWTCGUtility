@@ -107,7 +107,7 @@
 
 -(void)showSavedSearchSheet:(Node *)predicateNode;
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate;
--(void)deleteNode:(Node *)node;
+-(void)deleteSelectedOutlineViewNode;
 -(void)updateOutlineViewSelection;
 -(void)updateTitle;
 -(NSString *)getNewNodeName:(Node *)parent withPrefix:(NSString *)prefix;
