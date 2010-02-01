@@ -23,8 +23,11 @@
 #import <Cocoa/Cocoa.h>
 #import "Node.h"
 
+#define CARD_NODE_INDEX 0
+#define SEARCH_NODE_INDEX 1
+#define DECK_NODE_INDEX 2
 
-@interface DataOutlineView : NSOutlineView
+@interface CardOutlineView : NSOutlineView
 {
 	Node *searchNode;
 	Node *deckNode;

@@ -60,13 +60,13 @@
 		47D7803D1108DE7C00FD4E72 /* PDFViewWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47D7803C1108DE7C00FD4E72 /* PDFViewWindow.xib */; };
 		47D780411108E0C900FD4E72 /* PDFViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D780401108E0C900FD4E72 /* PDFViewWindowController.m */; };
 		47D7804F1108E19900FD4E72 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D7804E1108E19900FD4E72 /* Quartz.framework */; };
-		47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1991910E925A000F0F708 /* DataOutlineView.m */; };
 		47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */; };
 		47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E19D0410E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m */; };
 		47EDD5B710FCDE1B00939599 /* CardWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B610FCDE1B00939599 /* CardWindow.m */; };
 		47EDD5BA10FCDF3B00939599 /* CardImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EDD5B910FCDF3B00939599 /* CardImageView.m */; };
 		47EDD60B10FCE49600939599 /* CardWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EDD60A10FCE49600939599 /* CardWindow.xib */; };
 		47F8AFC61115ED320052C7E8 /* CardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F8AFC51115ED320052C7E8 /* CardTableView.m */; };
+		47F8B14D111683DC0052C7E8 /* CardOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F8B14B111683DC0052C7E8 /* CardOutlineView.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -177,8 +177,6 @@
 		47D7803F1108E0C900FD4E72 /* PDFViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewWindowController.h; sourceTree = "<group>"; };
 		47D780401108E0C900FD4E72 /* PDFViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewWindowController.m; sourceTree = "<group>"; };
 		47D7804E1108E19900FD4E72 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		47E1991810E925A000F0F708 /* DataOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataOutlineView.h; sourceTree = "<group>"; };
-		47E1991910E925A000F0F708 /* DataOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataOutlineView.m; sourceTree = "<group>"; };
 		47E19CCE10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
 		47E19CCF10E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayPredicateEditorRowTemplate.m; sourceTree = "<group>"; };
 		47E19D0310E97C9900F0F708 /* RarityPredicateEditorRowTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RarityPredicateEditorRowTemplate.h; sourceTree = "<group>"; };
@@ -192,6 +190,8 @@
 		47F8AF311115E8530052C7E8 /* NSOutlineViewDeleteKeyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOutlineViewDeleteKeyDelegate.h; sourceTree = "<group>"; };
 		47F8AFC41115ED320052C7E8 /* CardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableView.h; sourceTree = "<group>"; };
 		47F8AFC51115ED320052C7E8 /* CardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableView.m; sourceTree = "<group>"; };
+		47F8B14B111683DC0052C7E8 /* CardOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardOutlineView.m; sourceTree = "<group>"; };
+		47F8B14C111683DC0052C7E8 /* CardOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardOutlineView.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* WoWTCGUtility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WoWTCGUtility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* WoWTCG Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoWTCG Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -227,6 +227,8 @@
 				474D450C10F1A3C800E96225 /* EditorRowTemplates */,
 				474D10C511058B810044BA5E /* GTMDefines.h */,
 				474D10C611058B810044BA5E /* GTMRegex.h */,
+				47F8B14B111683DC0052C7E8 /* CardOutlineView.m */,
+				47F8B14C111683DC0052C7E8 /* CardOutlineView.h */,
 				474D10C711058B810044BA5E /* GTMRegex.m */,
 				256AC3D80F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* WoWTCGUtilityAppDelegate.m */,
@@ -249,8 +251,6 @@
 				47CCB09110E842E600B2F018 /* Node.m */,
 				47CCB22310E86B8700B2F018 /* SearchSheetController.h */,
 				47CCB22410E86B8700B2F018 /* SearchSheetController.m */,
-				47E1991810E925A000F0F708 /* DataOutlineView.h */,
-				47E1991910E925A000F0F708 /* DataOutlineView.m */,
 				474635F010EA8478006AAB60 /* MenuTagConstants.h */,
 				475AEEA210EB2ABB00F2C8A4 /* PreferencesWindowController.h */,
 				475AEEA310EB2ABB00F2C8A4 /* PreferencesWindowController.m */,
@@ -513,7 +513,6 @@
 				4753A0F610E53FC300EE2083 /* CardView.m in Sources */,
 				47CCB09210E842E600B2F018 /* Node.m in Sources */,
 				47CCB22510E86B8700B2F018 /* SearchSheetController.m in Sources */,
-				47E1991A10E925A000F0F708 /* DataOutlineView.m in Sources */,
 				47E19CD010E977BF00F0F708 /* ArrayPredicateEditorRowTemplate.m in Sources */,
 				47E19D0510E97C9900F0F708 /* RarityPredicateEditorRowTemplate.m in Sources */,
 				475AEEA410EB2ABB00F2C8A4 /* PreferencesWindowController.m in Sources */,
@@ -541,6 +540,7 @@
 				474D10C811058B810044BA5E /* GTMRegex.m in Sources */,
 				47D780411108E0C900FD4E72 /* PDFViewWindowController.m in Sources */,
 				47F8AFC61115ED320052C7E8 /* CardTableView.m in Sources */,
+				47F8B14D111683DC0052C7E8 /* CardOutlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

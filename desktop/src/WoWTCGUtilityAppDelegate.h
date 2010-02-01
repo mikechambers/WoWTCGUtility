@@ -25,7 +25,7 @@
 #import "CardView.h"
 #import "Node.h"
 #import "SearchSheetController.h"
-#import "DataOutlineView.h"
+#import "CardOutlineView.h"
 #import "PreferencesWindowController.h"
 #import "NSOutlineViewDeleteKeyDelegate.h"
 #import "NSTableViewDeleteKeyDelegate.h"
@@ -44,15 +44,12 @@
 	IBOutlet CardTableView *cardTable;
 	IBOutlet CardView *cardView;
 	IBOutlet NSSearchField *searchField;
-	IBOutlet DataOutlineView *cardOutlineView;
+	IBOutlet CardOutlineView *cardOutlineView;
 	NSString *appName;
 	
 	NSMutableArray *filteredCards;
 	NSInteger iPreviousRowCount;
 	
-	Node *deckNode;
-	Node *searchNode;
-	Node *cardsNode;
 	SearchSheetController *searchSheet;
     NSWindow *window;
 	WoWTCGDataStore *dataStore;	
@@ -69,7 +66,7 @@
 @property (retain) IBOutlet CardTableView *cardTable;
 @property (retain) IBOutlet CardView *cardView;
 @property (retain) IBOutlet NSSearchField *searchField;
-@property (retain) IBOutlet DataOutlineView *cardOutlineView;
+@property (retain) IBOutlet CardOutlineView *cardOutlineView;
 @property (retain) IBOutlet NSButton *addOutlineButton;
 @property (retain) NSString *appName;
 @property (retain) PDFViewWindowController *blocksWindow;
@@ -77,9 +74,6 @@
 @property (retain) NSMutableArray *filteredCards;
 @property (retain) WoWTCGDataStore *dataStore;
 @property (retain) SearchSheetController *searchSheet;
-@property (retain) Node *deckNode;
-@property (retain) Node *searchNode;
-@property (retain) Node *cardsNode;
 
 -(IBAction)handleSearch:(NSSearchField *)searchField;
 -(IBAction)handleEditSearchClick:(id)sender;

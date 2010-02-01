@@ -20,16 +20,43 @@
  THE SOFTWARE.
  */
 
-#import "DataOutlineView.h"
+#import "CardOutlineView.h"
 #import "MenuTagConstants.h"
 #import "NSOutlineView+DeleteKey.h"
 
-@implementation DataOutlineView
+@implementation CardOutlineView
 
 @synthesize contextMenu;
 @synthesize searchNode;
 @synthesize deckNode;
 @synthesize cardsNode;
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+	if(![super initWithCoder:decoder])
+	{
+		return nil;
+	}
+	
+	self.deckNode = [[[Node alloc] initWithLabel:@"DECKS"] autorelease];
+	deckNode.children = [NSMutableArray arrayWithCapacity:0];
+	
+	self.searchNode = [[[Node alloc] initWithLabel:@"SMART DECKS"] autorelease];
+
+	self.cardsNode = [[[Node alloc] initWithLabel:@"CARDS"] autorelease];	
+	
+	return self;
+}
+
+-(void)awakeFromNib
+{		
+	[self selectOutlineViewItem:cardsNode];
+	
+	[self selectRowIndexes:[NSIndexSet indexSetWithIndex:CARD_NODE_INDEX] byExtendingSelection:NO];
+	
+	[self expandItem:searchNode];
+	[self expandItem:deckNode];
+}
 
 -(void)dealloc
 {

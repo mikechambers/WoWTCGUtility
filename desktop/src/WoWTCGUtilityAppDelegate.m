@@ -28,10 +28,6 @@
 #import "UserDefaultsConstants.h"
 #import "CardURLScheme.h"
 
-#define CARD_NODE_INDEX 0
-#define SEARCH_NODE_INDEX 1
-#define DECK_NODE_INDEX 2
-
 #define MIN_WINDOW_WIDTH 400
 #define MIN_WINDOW_HEIGHT 380
 
@@ -44,11 +40,8 @@
 @synthesize searchField;
 @synthesize filteredCards;
 @synthesize cardOutlineView;
-@synthesize deckNode;
-@synthesize searchNode;
 @synthesize addOutlineButton;
 @synthesize searchSheet;
-@synthesize cardsNode;
 @synthesize preferencesWindow;
 @synthesize appName;
 @synthesize searchKeys;
@@ -62,11 +55,8 @@
 	[searchKeys release];
 	[appName release];
 	[preferencesWindow release];
-	[cardsNode release];
 	[searchSheet release];
 	[addOutlineButton release];
-	[searchNode release];
-	[deckNode release];
 	[cardOutlineView release];
 	[filteredCards release];
 	[searchField release];
@@ -95,16 +85,7 @@
 	[self initData];
 		
 	[self resetCardData];
-	
-	self.deckNode = [[[Node alloc] initWithLabel:@"DECKS"] autorelease];
-	deckNode.children = [NSMutableArray arrayWithCapacity:0];
-	[self loadData:DECK_DATA];
-	
-	self.searchNode = [[[Node alloc] initWithLabel:@"SMART DECKS"] autorelease];
-	[self loadData:SEARCH_DATA];
-	
-	self.cardsNode = [[[Node alloc] initWithLabel:@"CARDS"] autorelease];
-	
+		
 	[self registerMyApp];
 	
 	return self;
@@ -118,15 +99,8 @@
 	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];
 	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];	
 	
-	[cardOutlineView selectOutlineViewItem:cardsNode];
-	
-	cardOutlineView.searchNode = searchNode;
-	cardOutlineView.deckNode = deckNode;
-	cardOutlineView.cardsNode = cardsNode;
-	[cardOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:CARD_NODE_INDEX] byExtendingSelection:NO];
-	
-	[cardOutlineView expandItem:searchNode];
-	[cardOutlineView expandItem:deckNode];
+	[self loadData:DECK_DATA];
+	[self loadData:SEARCH_DATA];
 }
 
 /**************** custom URL scheme handler apis *****************/
@@ -237,11 +211,11 @@
 	
 	if([type compare:SEARCH_DATA] == NSOrderedSame)
 	{
-		children = searchNode.children;
+		children = cardOutlineView.searchNode.children;
 	}
 	else if([type compare:DECK_DATA] == NSOrderedSame)
 	{
-		children = deckNode.children;
+		children = cardOutlineView.deckNode.children;
 	}
 	else
 	{
@@ -264,11 +238,11 @@
 	
 	if([type compare:SEARCH_DATA] == NSOrderedSame)
 	{
-		rootNode = searchNode;
+		rootNode = cardOutlineView.searchNode;
 	}
 	else if([type compare:DECK_DATA] == NSOrderedSame)
 	{
-		rootNode = deckNode;
+		rootNode = cardOutlineView.deckNode;
 	}
 	else
 	{
@@ -330,8 +304,8 @@
 	Node *parent = (Node *)item;
 	
 	//only allow to drag to deck node right now
-	if((parent == deckNode) ||
-	   ([cardOutlineView parentForItem:parent] == deckNode))
+	if((parent == cardOutlineView.deckNode) ||
+	   ([cardOutlineView parentForItem:parent] == cardOutlineView.deckNode))
 	{
 		return NSDragOperationCopy;
 	}
@@ -353,7 +327,7 @@
 	//make createDeckWithCard just create and add the node, and then we add the children
 	
 	Node *deck;
-	if(parent == deckNode)
+	if(parent == cardOutlineView.deckNode)
 	{
 		deck = [self createDeck:index];
 	}
@@ -541,16 +515,16 @@
 	
 	
 	Node *parent = [cardOutlineView parentForItem:node];
-	if(node == cardsNode)
+	if(node == cardOutlineView.cardsNode)
 	{
 		[self resetCardData];
 		[self refreshCardTableData];
 	}
-	else if(parent == searchNode)
+	else if(parent == cardOutlineView.searchNode)
 	{
 		[self filterCardsWithPredicate:((NSPredicate *)node.data)];
 	}
-	else if(parent == deckNode)
+	else if(parent == cardOutlineView.deckNode)
 	{
 		[self setCardsForDeck:node];
 	}
@@ -656,7 +630,7 @@
 	
 	NSPredicate *searchPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:predicates];
 	[self filterCardsWithPredicate:searchPredicate];
-	[cardOutlineView selectOutlineViewItem:cardsNode];
+	[cardOutlineView selectOutlineViewItem:cardOutlineView.cardsNode];
 }
 
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate
@@ -681,7 +655,7 @@
 	
 	NSString *type;
 	
-	if(parent == searchNode)
+	if(parent == cardOutlineView.searchNode)
 	{
 		type = SEARCH_DATA;
 	}
@@ -704,7 +678,7 @@
 	//to the main cards node
 	if(parent.children.count == 0)
 	{
-		[cardOutlineView selectOutlineViewItem:cardsNode];
+		[cardOutlineView selectOutlineViewItem:cardOutlineView.cardsNode];
 	}
 	else if(index == 0)
 	{
@@ -726,7 +700,7 @@
 	
 	//used in case item == nil //i.e. root
 	int out = 3;
-	if(item == searchNode || item == deckNode)
+	if(item == cardOutlineView.searchNode || item == cardOutlineView.deckNode)
 	{
 		out = [((Node*)item).children count];
 	}
@@ -736,7 +710,7 @@
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
 {
-	if(item == deckNode || item == searchNode)
+	if(item == cardOutlineView.deckNode || item == cardOutlineView.searchNode)
 	{
 		return TRUE;
 	}
@@ -755,17 +729,17 @@
 		{
 			case CARD_NODE_INDEX:
 			{
-				out = cardsNode;
+				out = cardOutlineView.cardsNode;
 				break;
 			}
 			case SEARCH_NODE_INDEX:
 			{
-				out = searchNode;
+				out = cardOutlineView.searchNode;
 				break;
 			}
 			case DECK_NODE_INDEX:
 			{
-				out = deckNode;
+				out = cardOutlineView.deckNode;
 				break;
 			}
 		}
@@ -801,7 +775,7 @@
 	
 	NSString *type;
 	
-	if(parent == searchNode)
+	if(parent == cardOutlineView.searchNode)
 	{
 		type = SEARCH_DATA;
 	}
@@ -818,7 +792,7 @@
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item
 {
 	BOOL out = FALSE;
-	if(item == deckNode || item == searchNode || item == cardsNode)
+	if(item == cardOutlineView.deckNode || item == cardOutlineView.searchNode || item == cardOutlineView.cardsNode)
 	{
 		out = TRUE;
 	}
@@ -828,7 +802,7 @@
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item
 {
-	return !(item == deckNode || item == searchNode);
+	return !(item == cardOutlineView.deckNode || item == cardOutlineView.searchNode);
 }
 
 /************ IBAction Handlers ****************/
@@ -836,7 +810,7 @@
 
 -(IBAction)handleCreateSearchClick:(id)sender
 {
-	NSString *nodeName = [self getNewNodeName:searchNode withPrefix:@"untitled search"];
+	NSString *nodeName = [self getNewNodeName:cardOutlineView.searchNode withPrefix:@"untitled search"];
 	Node *n = [[[Node alloc] initWithLabel:nodeName] autorelease];
 	[self showSavedSearchSheet:n];
 }
@@ -848,13 +822,13 @@
 
 -(Node *)createDeck:(NSUInteger) index
 {
-	NSString *nodeName = [self getNewNodeName:deckNode withPrefix:@"untitled deck"];
+	NSString *nodeName = [self getNewNodeName:cardOutlineView.deckNode withPrefix:@"untitled deck"];
 	Node *node = [[Node alloc] initWithLabel:nodeName];
 	node.children = [NSMutableArray arrayWithCapacity:1];
 	
 	if(index == -1)
 	{
-		index = [deckNode.children count];
+		index = [cardOutlineView.deckNode.children count];
 	}
 	
 	/*
@@ -865,10 +839,10 @@
 	
 	
 	*/
-	[deckNode.children insertObject:node atIndex: index];
+	[cardOutlineView.deckNode.children insertObject:node atIndex: index];
 	
-	[cardOutlineView reloadItem:deckNode reloadChildren:TRUE];
-	[cardOutlineView expandItem:deckNode];
+	[cardOutlineView reloadItem:cardOutlineView.deckNode reloadChildren:TRUE];
+	[cardOutlineView expandItem:cardOutlineView.deckNode];
 	
 	return node;
 }
@@ -878,7 +852,7 @@
 	int selectedIndex = [cardOutlineView selectedRow];
 	Node *node = ((Node *)[cardOutlineView itemAtRow:selectedIndex]);
 	
-	if([cardOutlineView parentForItem:node] != searchNode)
+	if([cardOutlineView parentForItem:node] != cardOutlineView.searchNode)
 	{
 		//we should never get here
 		
@@ -892,7 +866,7 @@
 -(void)deleteOutlineViewNode:(Node *)node
 {
 	Node *parent = [cardOutlineView parentForItem:node];
-	if(parent != deckNode && parent != searchNode)
+	if(parent != cardOutlineView.deckNode && parent != cardOutlineView.searchNode)
 	{
 		return;
 	}
@@ -905,7 +879,7 @@
 		return;
 	}
 	
-	NSString *type = (parent == deckNode)?@"Deck":@"Search";
+	NSString *type = (parent == cardOutlineView.deckNode)?@"Deck":@"Search";
 	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:@"Are you sure you want to delete the %@ named \"%@\"?", type, node.label] 
 									 defaultButton:@"OK" 
 								   alternateButton:@"Cancel" 
@@ -1013,11 +987,11 @@
 {
 	if([cardOutlineView rowForItem:predicateNode] == -1)
 	{
-		[searchNode.children addObject:predicateNode];
+		[cardOutlineView.searchNode.children addObject:predicateNode];
 	}
 	
-	[cardOutlineView reloadItem:searchNode reloadChildren:TRUE];
-	[cardOutlineView expandItem:searchNode];
+	[cardOutlineView reloadItem:cardOutlineView.searchNode reloadChildren:TRUE];
+	[cardOutlineView expandItem:cardOutlineView.searchNode];
 	
 	[cardOutlineView selectOutlineViewItem:predicateNode];
 	
@@ -1053,7 +1027,7 @@
 {
 	Node *node = [cardOutlineView selectedNode];
 	
-	if([cardOutlineView parentForItem:node] != deckNode)
+	if([cardOutlineView parentForItem:node] != cardOutlineView.deckNode)
 	{
 		return;
 	}
