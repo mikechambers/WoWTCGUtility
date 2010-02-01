@@ -45,5 +45,6 @@
 -(void)updateMenuState:(NSMenu *)menu forItem:(Node *)node;
 -(void)setSelectedItemToEdit;
 -(Node *)selectedNode;
+-(void)expandNodes;
 
 @end

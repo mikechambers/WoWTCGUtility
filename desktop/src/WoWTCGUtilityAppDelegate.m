@@ -94,15 +94,18 @@
 }
 
 -(void)awakeFromNib
-{		
+{	
 	NSSize minSize = { MIN_WINDOW_WIDTH, MIN_WINDOW_HEIGHT };
 	[window setContentMinSize:minSize];
 	
 	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];
 	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CARDS_DATA_TYPE] ];	
+
+	//NSLog(@"awakeFromNib : %@", cardOutlineView.deckNode.children);
 	
 	[self loadData:DECK_DATA];
 	[self loadData:SEARCH_DATA];
+	[cardOutlineView expandNodes];
 }
 
 /**************** custom URL scheme handler apis *****************/
@@ -574,7 +577,6 @@
 
 -(IBAction)handleSearch:(NSSearchField *)sField
 {
-	NSLog(@"handleSearch");
 	NSString *searchString = [sField stringValue];
 	
 	if([searchString length] == 0)
@@ -819,15 +821,7 @@
 	{
 		index = [cardOutlineView.deckNode.children count];
 	}
-	
-	/*
-	if(card != nil)
-	{
-		[node.children addObject:[NSNumber NSNumber: card.cardId]];
-	}
-	
-	
-	*/
+
 	[cardOutlineView.deckNode.children insertObject:node atIndex: index];
 	
 	[cardOutlineView reloadItem:cardOutlineView.deckNode reloadChildren:TRUE];
@@ -838,8 +832,7 @@
 
 -(IBAction)handleEditSearchClick:(id)sender
 {
-	int selectedIndex = [cardOutlineView selectedRow];
-	Node *node = ((Node *)[cardOutlineView itemAtRow:selectedIndex]);
+	Node *node = [cardOutlineView selectedNode];
 	
 	if([cardOutlineView parentForItem:node] != cardOutlineView.searchNode)
 	{
@@ -893,10 +886,9 @@
 
 -(IBAction)handleDeleteNodeMenu:(id)sender
 {
-	int selectedIndex = [cardOutlineView selectedRow];
-	Node *node = ((Node *)[cardOutlineView itemAtRow:selectedIndex]);
+	Node *node = [cardOutlineView selectedNode];
+	
 	[self deleteOutlineViewNode:node];
-
 }
 
 -(IBAction)handleAlwaysOnTopMenu:(id)sender

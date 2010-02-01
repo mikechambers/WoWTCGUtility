@@ -53,7 +53,10 @@
 	[self selectOutlineViewItem:cardsNode];
 	
 	[self selectRowIndexes:[NSIndexSet indexSetWithIndex:CARD_NODE_INDEX] byExtendingSelection:NO];
-	
+}
+
+-(void)expandNodes
+{
 	[self expandItem:searchNode];
 	[self expandItem:deckNode];
 }
