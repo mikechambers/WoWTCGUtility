@@ -321,8 +321,6 @@
     
 	NSMutableArray *cards = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 	
-	//make createDeckWithCard just create and add the node, and then we add the children
-	
 	Node *deck;
 	if(parent == cardOutlineView.deckNode)
 	{
@@ -337,8 +335,7 @@
 	{
 		[deck.children addObject:[NSNumber numberWithInt:card.cardId]];
 	}
-	
-	////todo: check to see if parent is deck parent, or another node
+
 	[self saveData:DECK_DATA];
 	
 	
@@ -402,7 +399,7 @@
 	NSString *title;
 	if(index == -1)
 	{
-		title = @"WoW TCG Utility";
+		title = [self appName];
 	}
 	else
 	{
@@ -418,10 +415,8 @@
 
 -(NSString *)getNewNodeName:(Node *)parent withPrefix:(NSString *)prefix
 {
-	//NSString *prefix;
 	NSString *out;
 		
-	//prefix = @"untitled search";
 	int len = parent.children.count;
 	
 	if(len == 0)
