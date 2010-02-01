@@ -85,7 +85,7 @@
 	
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *appDefaults = [NSDictionary
-								 dictionaryWithObject:@"YES" forKey:RUN_DELETE_ALERT_KEY];
+								 dictionaryWithObject:@"YES" forKey:RUN_DELETE_SEARCH_ALERT_KEY];
 	
     [defaults registerDefaults:appDefaults];	
 	
@@ -897,7 +897,7 @@
 		return;
 	}
 	
-	BOOL runAlert = [[NSUserDefaults standardUserDefaults] boolForKey:RUN_DELETE_ALERT_KEY];
+	BOOL runAlert = [[NSUserDefaults standardUserDefaults] boolForKey:RUN_DELETE_SEARCH_ALERT_KEY];
 	
 	if(!runAlert)
 	{
@@ -924,7 +924,7 @@
 	
 	if([[alert suppressionButton] state] == NSOnState)
 	{
-		[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:RUN_DELETE_ALERT_KEY];
+		[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:RUN_DELETE_SEARCH_ALERT_KEY];
 	}
 }
 

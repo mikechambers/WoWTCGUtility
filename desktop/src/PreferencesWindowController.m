@@ -42,7 +42,7 @@
 
 -(IBAction)handleResetDialogsClick:(id)sender
 {	
-	[[NSUserDefaults standardUserDefaults] removeObjectForKey:RUN_DELETE_ALERT_KEY];
+	[[NSUserDefaults standardUserDefaults] removeObjectForKey:RUN_DELETE_SEARCH_ALERT_KEY];
 }
 
 @end

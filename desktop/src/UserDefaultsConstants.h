@@ -20,4 +20,4 @@
  THE SOFTWARE.
  */
 
-#define RUN_DELETE_ALERT_KEY @"runDeleteAlert"
+#define RUN_DELETE_SEARCH_ALERT_KEY @"runDeleteSeachAlert"
