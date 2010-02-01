@@ -96,14 +96,14 @@
 		
 	[self resetCardData];
 	
-	self.deckNode = [[Node alloc] initWithLabel:@"DECKS"];
+	self.deckNode = [[[Node alloc] initWithLabel:@"DECKS"] autorelease];
 	deckNode.children = [NSMutableArray arrayWithCapacity:0];
 	[self loadData:DECK_DATA];
 	
-	self.searchNode = [[Node alloc] initWithLabel:@"SMART DECKS"];
+	self.searchNode = [[[Node alloc] initWithLabel:@"SMART DECKS"] autorelease];
 	[self loadData:SEARCH_DATA];
 	
-	self.cardsNode = [[Node alloc] initWithLabel:@"CARDS"];
+	self.cardsNode = [[[Node alloc] initWithLabel:@"CARDS"] autorelease];
 	
 	[self registerMyApp];
 	
