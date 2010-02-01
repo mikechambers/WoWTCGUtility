@@ -35,8 +35,6 @@
 #define MIN_WINDOW_WIDTH 400
 #define MIN_WINDOW_HEIGHT 380
 
-#define BASE_RULES_SEARCH_URL @"http://entertainment.upperdeck.com/wow/community/search/SearchResults.aspx?s=122&q="
-
 @implementation WoWTCGUtilityAppDelegate
 
 @synthesize window;
@@ -45,7 +43,7 @@
 @synthesize cardView;
 @synthesize searchField;
 @synthesize filteredCards;
-@synthesize outlineView;
+@synthesize cardOutlineView;
 @synthesize deckNode;
 @synthesize searchNode;
 @synthesize addOutlineButton;
@@ -69,7 +67,7 @@
 	[addOutlineButton release];
 	[searchNode release];
 	[deckNode release];
-	[outlineView release];
+	[cardOutlineView release];
 	[filteredCards release];
 	[searchField release];
 	[dataStore release];
@@ -118,17 +116,17 @@
 	[window setContentMinSize:minSize];
 	
 	[cardTable registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];
-	[outlineView registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];	
+	[cardOutlineView registerForDraggedTypes: [NSArray arrayWithObject:CardDataType] ];	
 	
-	[outlineView selectOutlineViewItem:cardsNode];
+	[cardOutlineView selectOutlineViewItem:cardsNode];
 	
-	outlineView.searchNode = searchNode;
-	outlineView.deckNode = deckNode;
-	outlineView.cardsNode = cardsNode;
-	[outlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:CARD_NODE_INDEX] byExtendingSelection:NO];
+	cardOutlineView.searchNode = searchNode;
+	cardOutlineView.deckNode = deckNode;
+	cardOutlineView.cardsNode = cardsNode;
+	[cardOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:CARD_NODE_INDEX] byExtendingSelection:NO];
 	
-	[outlineView expandItem:searchNode];
-	[outlineView expandItem:deckNode];
+	[cardOutlineView expandItem:searchNode];
+	[cardOutlineView expandItem:deckNode];
 }
 
 /**************** custom URL scheme handler apis *****************/
@@ -333,7 +331,7 @@
 	
 	//only allow to drag to deck node right now
 	if((parent == deckNode) ||
-	   ([outlineView parentForItem:parent] == deckNode))
+	   ([cardOutlineView parentForItem:parent] == deckNode))
 	{
 		return NSDragOperationCopy;
 	}
@@ -373,7 +371,7 @@
 	[self saveData:DECK_DATA];
 	
 	
-	if([outlineView selectedNode] == deck)
+	if([cardOutlineView selectedNode] == deck)
 	{
 		self.filteredCards = [self getCardsForIds:deck.children];
 		[self refreshCardTableData];
@@ -430,7 +428,7 @@
 
 -(void)updateTitle
 {
-	int index = [outlineView selectedRow];
+	int index = [cardOutlineView selectedRow];
 	
 	
 	NSString *title;
@@ -440,7 +438,7 @@
 	}
 	else
 	{
-		Node *node = [outlineView itemAtRow:index];
+		Node *node = [cardOutlineView itemAtRow:index];
 	
 		title = [NSString stringWithFormat:@"%@ : %@ (%i of %i Cards)", appName, node.label, 
 				self.filteredCards.count, 
@@ -537,12 +535,12 @@
 -(void)updateOutlineViewSelection
 {
 	
-	int index = [outlineView selectedRow];
+	int index = [cardOutlineView selectedRow];
 	
-	Node *node = [outlineView itemAtRow:index];
+	Node *node = [cardOutlineView itemAtRow:index];
 	
 	
-	Node *parent = [outlineView parentForItem:node];
+	Node *parent = [cardOutlineView parentForItem:node];
 	if(node == cardsNode)
 	{
 		[self resetCardData];
@@ -658,7 +656,7 @@
 	
 	NSPredicate *searchPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:predicates];
 	[self filterCardsWithPredicate:searchPredicate];
-	[outlineView selectOutlineViewItem:cardsNode];
+	[cardOutlineView selectOutlineViewItem:cardsNode];
 }
 
 -(void)filterCardsWithPredicate:(NSPredicate *)predicate
@@ -675,7 +673,7 @@
 -(void)deleteNode:(Node *)node
 {
 	//todo: update this
-	Node *parent = [outlineView parentForItem:node];
+	Node *parent = [cardOutlineView parentForItem:node];
 	
 	int index = [parent.children indexOfObject:node];
 	
@@ -694,7 +692,7 @@
 	
 	[self saveData:type];
 	
-	[outlineView reloadItem:parent reloadChildren:TRUE];
+	[cardOutlineView reloadItem:parent reloadChildren:TRUE];
 	
 	
 	//note: In most cases, the OutlineView will automatically
@@ -706,11 +704,11 @@
 	//to the main cards node
 	if(parent.children.count == 0)
 	{
-		[outlineView selectOutlineViewItem:cardsNode];
+		[cardOutlineView selectOutlineViewItem:cardsNode];
 	}
 	else if(index == 0)
 	{
-		[outlineView selectOutlineViewItem:[parent.children objectAtIndex:0]];
+		[cardOutlineView selectOutlineViewItem:[parent.children objectAtIndex:0]];
 	}
 	else
 	{
@@ -799,7 +797,7 @@
 	
 	node.label = s;
 	
-	Node *parent = [outlineView parentForItem:node];
+	Node *parent = [cardOutlineView parentForItem:node];
 	
 	NSString *type;
 	
@@ -869,20 +867,18 @@
 	*/
 	[deckNode.children insertObject:node atIndex: index];
 	
-	[outlineView reloadItem:deckNode reloadChildren:TRUE];
-	[outlineView expandItem:deckNode];
-	
-	//[outlineView selectOutlineViewItem:node];
+	[cardOutlineView reloadItem:deckNode reloadChildren:TRUE];
+	[cardOutlineView expandItem:deckNode];
 	
 	return node;
 }
 
 -(IBAction)handleEditSearchClick:(id)sender
 {
-	int selectedIndex = [outlineView selectedRow];
-	Node *node = ((Node *)[outlineView itemAtRow:selectedIndex]);
+	int selectedIndex = [cardOutlineView selectedRow];
+	Node *node = ((Node *)[cardOutlineView itemAtRow:selectedIndex]);
 	
-	if([outlineView parentForItem:node] != searchNode)
+	if([cardOutlineView parentForItem:node] != searchNode)
 	{
 		//we should never get here
 		
@@ -895,7 +891,7 @@
 
 -(void)deleteOutlineViewNode:(Node *)node
 {
-	Node *parent = [outlineView parentForItem:node];
+	Node *parent = [cardOutlineView parentForItem:node];
 	if(parent != deckNode && parent != searchNode)
 	{
 		return;
@@ -934,8 +930,8 @@
 
 -(IBAction)handleDeleteNodeMenu:(id)sender
 {
-	int selectedIndex = [outlineView selectedRow];
-	Node *node = ((Node *)[outlineView itemAtRow:selectedIndex]);
+	int selectedIndex = [cardOutlineView selectedRow];
+	Node *node = ((Node *)[cardOutlineView itemAtRow:selectedIndex]);
 	[self deleteOutlineViewNode:node];
 
 }
@@ -959,7 +955,7 @@
 
 -(IBAction)handleRenameItemMenu:(id)sender
 {
-	[outlineView setSelectedItemToEdit];
+	[cardOutlineView setSelectedItemToEdit];
 }
 
 -(IBAction)handlePreferencesMenuClick:(id)sender
@@ -1015,15 +1011,15 @@
 //delegate listener for SearchSheet
 - (void)predicateNodeWasCreated:(Node *)predicateNode
 {
-	if([outlineView rowForItem:predicateNode] == -1)
+	if([cardOutlineView rowForItem:predicateNode] == -1)
 	{
 		[searchNode.children addObject:predicateNode];
 	}
 	
-	[outlineView reloadItem:searchNode reloadChildren:TRUE];
-	[outlineView expandItem:searchNode];
+	[cardOutlineView reloadItem:searchNode reloadChildren:TRUE];
+	[cardOutlineView expandItem:searchNode];
 	
-	[outlineView selectOutlineViewItem:predicateNode];
+	[cardOutlineView selectOutlineViewItem:predicateNode];
 	
 	[self filterCardsWithPredicate:((NSPredicate *)predicateNode.data)];
 
@@ -1044,7 +1040,7 @@
 
 - ( void )outlineView:( NSOutlineView * ) view deleteKeyPressedOnRow: ( int ) rowIndex
 {
-	Node *node = ((Node *)[outlineView itemAtRow:rowIndex]);
+	Node *node = ((Node *)[cardOutlineView itemAtRow:rowIndex]);
 	[self deleteOutlineViewNode:node];
 }
 
@@ -1055,9 +1051,9 @@
 
 -(void)deleteSelectedCardsFromTableView
 {
-	Node *node = [outlineView selectedNode];
+	Node *node = [cardOutlineView selectedNode];
 	
-	if([outlineView parentForItem:node] != deckNode)
+	if([cardOutlineView parentForItem:node] != deckNode)
 	{
 		return;
 	}
@@ -1108,7 +1104,7 @@
 
 - (void)menuNeedsUpdate:(NSMenu *)menu
 {
-	[outlineView menuNeedsUpdate:menu];
+	[cardOutlineView menuNeedsUpdate:menu];
 }
 
 

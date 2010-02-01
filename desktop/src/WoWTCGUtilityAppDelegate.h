@@ -44,7 +44,7 @@
 	IBOutlet CardTableView *cardTable;
 	IBOutlet CardView *cardView;
 	IBOutlet NSSearchField *searchField;
-	IBOutlet DataOutlineView *outlineView;
+	IBOutlet DataOutlineView *cardOutlineView;
 	NSString *appName;
 	
 	NSMutableArray *filteredCards;
@@ -69,7 +69,7 @@
 @property (retain) IBOutlet CardTableView *cardTable;
 @property (retain) IBOutlet CardView *cardView;
 @property (retain) IBOutlet NSSearchField *searchField;
-@property (retain) IBOutlet DataOutlineView *outlineView;
+@property (retain) IBOutlet DataOutlineView *cardOutlineView;
 @property (retain) IBOutlet NSButton *addOutlineButton;
 @property (retain) NSString *appName;
 @property (retain) PDFViewWindowController *blocksWindow;
