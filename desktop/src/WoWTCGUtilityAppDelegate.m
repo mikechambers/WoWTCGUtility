@@ -204,7 +204,7 @@
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
-	NSLog(@"openFile : %@", filename);
+	[self importNode:[NSURL fileURLWithPath:filename]];
 	
 	return TRUE;
 }
@@ -1056,17 +1056,17 @@
 {
 	NSURL *fileURL = [self openImportPanel:DECK_EXTENSION];
 	
-	[self importNode:fileURL forExtension:DECK_EXTENSION andParent:cardOutlineView.deckNode];
+	[self importNode:fileURL];
 }
 
 -(IBAction)handleImportSearchMenu:(id)sender
 {
 	NSURL *fileURL = [self openImportPanel:SEARCH_EXTENSION];
 	
-	[self importNode:fileURL forExtension:SEARCH_EXTENSION andParent:cardOutlineView.searchNode];
+	[self importNode:fileURL];
 }
 
--(void)importNode:(NSURL *)fileURL forExtension:(NSString *)extension andParent:(Node *)parent
+-(void)importNode:(NSURL *)fileURL
 {
 	if(!fileURL)
 	{
@@ -1075,16 +1075,32 @@
 	
 	NSDictionary *rootObject;
 	Node *node = nil;
-	
+	Node *parent;
+	NSString *extension;
 	@try
 	{
 		rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:fileURL.path];
-		node = [rootObject valueForKey:extension];
+		
+		//figure out which type of node we are importing
+		node = [rootObject valueForKey:DECK_EXTENSION];
+		
+		
+		if(node != nil)
+		{
+			parent  = cardOutlineView.deckNode;
+			extension = DECK_EXTENSION;
+		}
+		else
+		{
+			node = [rootObject valueForKey:SEARCH_EXTENSION];
+			parent = cardOutlineView.searchNode;
+			extension = SEARCH_EXTENSION;
+		}		
 	}
 	@catch (NSException *exception)
 	{
 	}
-		
+
 	if(node == nil)
 	{		
 		NSAlert *alert = [[NSAlert alloc] init];

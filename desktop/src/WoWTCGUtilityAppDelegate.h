@@ -102,7 +102,7 @@
 -(void)refreshCardTableData;
 -(void)selectCardTableRow:(int)index;
 
--(void)importNode:(NSURL *)fileURL forExtension:(NSString *)extension andParent:(Node *)parent;
+-(void)importNode:(NSURL *)fileURL;
 -(void)exportNode:(NSURL *)fileURL forExtension:(NSString *)extension;
 
 -(Node *)createDeck:(NSUInteger) index;
