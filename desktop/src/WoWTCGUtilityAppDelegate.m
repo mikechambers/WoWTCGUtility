@@ -194,7 +194,6 @@
 	NSDictionary *rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 	
 	self.dataStore = [rootObject valueForKey:DATA_STORE_KEY];
-	
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication*)sender
