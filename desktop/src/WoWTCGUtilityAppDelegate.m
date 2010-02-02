@@ -202,6 +202,13 @@
     return YES;
 }
 
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+{
+	NSLog(@"openFile : %@", filename);
+	
+	return TRUE;
+}
+
 /***************** Data Persistence APIs ********************/
 
 -(void)saveData:(NSString *)type
