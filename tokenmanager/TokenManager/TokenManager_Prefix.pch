@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TokenManager' target in the 'TokenManager' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

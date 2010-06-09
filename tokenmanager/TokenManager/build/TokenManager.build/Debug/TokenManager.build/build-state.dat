@@ -1,0 +1,377 @@
+TTokenManager
+v7
+r0
+t297788206.658298
+cCheck dependencies
+cProcessInfoPlistFile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Info.plist TokenManager-Info.plist
+cCopyStringsFile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib
+cCpResource build/Debug/TokenManager.app/Contents/Resources/assets assets
+cCompileXIB /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib
+cProcessPCH /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch.gch TokenManager_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/main.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManagerAppDelegate.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowController.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindow.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowView.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager normal x86_64
+cTouch /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004B99A23900000000000000EE
+t1268359737
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h
+c000000004B448B6700000000000017ED
+t1262783335
+s6125
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/InfoPlist.strings
+c000000004B509C33000000000000002D
+t1263574067
+s45
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib
+c000000004B50C365000000000002DFD8
+t1263584101
+s188376
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.h
+c000000004B50AAEE000000000000012C
+t1263577838
+s300
+i<Cocoa/Cocoa.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m
+c000000004B50AC130000000000000262
+t1263578131
+s610
+i"TokenContentView.h"
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.h
+c000000004B50C344000000000000019E
+t1263584068
+s414
+i<Cocoa/Cocoa.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m
+c000000004B50C33E0000000000000308
+t1263584062
+s776
+i"TokenManagerAppDelegate.h"
+i"TokenWindowController.h"
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager_Prefix.pch
+c000000004B509C33000000000000009B
+t1263574067
+s155
+i<Cocoa/Cocoa.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.h
+c000000004B50AD06000000000000011D
+t1263578374
+s285
+i<Cocoa/Cocoa.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m
+c000000004B50B8AE0000000000000915
+t1263581358
+s2325
+i"TokenWindow.h"
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib
+c000000004B50C1C900000000000069D8
+t1263583689
+s27096
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.h
+c000000004B50C3030000000000000251
+t1263584003
+s593
+i<Cocoa/Cocoa.h>
+i"TokenWindowView.h"
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m
+c000000004B50B99500000000000004E9
+t1263581589
+s1257
+i"TokenWindowController.h"
+i<AppKit/AppKit.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.h
+c000000004B50B1F90000000000000125
+t1263579641
+s293
+i<Cocoa/Cocoa.h>
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m
+c000000004B50B9730000000000000258
+t1263581555
+s600
+i"TokenWindowView.h"
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/assets
+c000000004B50A2C40000000000000066
+t1263575748
+s102
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app
+t1276095406
+s102
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Info.plist
+t1276095401
+s901
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager
+t1276095406
+s25808
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/PkgInfo
+t1276095401
+s8
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1263574155
+s92
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/MainMenu.nib
+t1263584103
+s36402
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/TokenWindow.nib
+t1263584050
+s2215
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/assets
+t1263576460
+s102
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenContentView.o
+t1263578132
+s17176
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManager.LinkFileList
+c000000004B50B2E600000000000002D9
+t1263579878
+s729
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManagerAppDelegate.o
+t1276095405
+s26184
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindow.o
+t1276095405
+s20908
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowController.o
+t1276095405
+s27124
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowView.o
+t1276095405
+s17684
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/main.o
+t1276095405
+s5024
+
+N/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m
+c000000004B509C3300000000000000FF
+t1263574067
+s255
+i<Cocoa/Cocoa.h>
+
+N/var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-btwhvumlfrphiddotdhpaefwlnad/TokenManager_Prefix.pch.gch
+t1263574158
+s54212368
+
+N/var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch.gch
+t1276095405
+s54265616
+
+NTokenManager-Info.plist
+c000000004B509C3300000000000003EA
+t1263574067
+s1002
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies297788201#297788201#0(0"0(0#1#0"32088628383449192#0"0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenContentView.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s285270931.913555
+e285270932.218262
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenContentView.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m285270931#285270932#0(0"0(0#0#74"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m4300885448#1761"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-btwhvumlfrphiddotdhpaefwlnad/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenContentView.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenContentView.o0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManagerAppDelegate.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788205.511006
+e297788205.831010
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManagerAppDelegate.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m297788205#297788205#0(0"0(0#0#81"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m4300911832#1775"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManagerAppDelegate.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManagerAppDelegate.o0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindow.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788205.512541
+e297788205.831179
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindow.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m297788205#297788205#0(0"0(0#0#69"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m4300911832#1751"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindow.o0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowController.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788205.511761
+e297788205.842338
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowController.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m297788205#297788205#0(0"0(0#0#79"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m4300911832#1771"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowController.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowController.o0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowView.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788205.513259
+e297788205.831324
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowView.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m297788205#297788205#0(0"0(0#0#73"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m4300911832#1759"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindowView.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenWindowView.o0#
+
+CCompileC build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/main.o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788205.509959
+e297788205.830765
+r1
+xCompileC
+xbuild/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/main.o
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m297788205#297788205#0(0"0(0#0#62"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m4300911832#1737"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -include /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/main.m -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib
+s285276903.649826
+e285276904.013853
+r1
+xCompileXIB
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib285276903#285276904#0(0"0(0#0#82"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib4300885448#383"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/MainMenu.nib /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/MainMenu.xib0#
+
+CCompileXIB /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib
+s285276850.354856
+e285276850.526501
+r1
+xCompileXIB
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib
+lSLF07#2@26"CompileXIB TokenWindow.xib285276850#285276850#0(0"0(0#0#71"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib4300885448#361"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/TokenWindow.nib /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenWindow.xib0#
+
+CCopyStringsFile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s285266955.872815
+e285266955.956153
+r1
+xCopyStringsFile
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings285266955#285266955#0(0"0(0#0#87"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/English.lproj/InfoPlist.strings4300885448#404"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/TokenManager.app/Contents/Resources/assets assets
+s285269260.976761
+e285269260.993405
+r1
+xCpResource
+xbuild/Debug/TokenManager.app/Contents/Resources/assets
+xassets
+lSLF07#2@11"Copy assets285269260#285269260#0(0"0(0#0#62"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/assets4300885448#378"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/assets /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Resources0#
+
+CLd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager normal x86_64
+s297788205.842398
+e297788206.655100
+r1
+xLd
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager
+xnormal
+xx86_64
+lSLF07#2@117"Link /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager297788205#297788206#0(0"0(0#0#0"4300911832#652"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -filelist /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/Objects-normal/x86_64/TokenManager.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/MacOS/TokenManager0#
+
+CProcessInfoPlistFile /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Info.plist TokenManager-Info.plist
+s297788201.925755
+e297788201.950995
+r1
+xProcessInfoPlistFile
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Info.plist
+xTokenManager-Info.plist
+lSLF07#2@31"Process TokenManager-Info.plist297788201#297788201#0(0"0(0#0#79"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager-Info.plist31525614006435952#376"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    builtin-infoPlistUtility TokenManager-Info.plist -genpkginfo /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-btwhvumlfrphiddotdhpaefwlnad/TokenManager_Prefix.pch.gch TokenManager_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s285266956.244136
+e285266958.743262
+r1
+xProcessPCH
+x/var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-btwhvumlfrphiddotdhpaefwlnad/TokenManager_Prefix.pch.gch
+xTokenManager_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@34"Precompile TokenManager_Prefix.pch285266956#285266958#0(0"0(0#0#79"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager_Prefix.pch4300885448#1621"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager_Prefix.pch -o /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-btwhvumlfrphiddotdhpaefwlnad/TokenManager_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch.gch TokenManager_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s297788201.951518
+e297788205.509745
+r1
+xProcessPCH
+x/var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch.gch
+xTokenManager_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@34"Precompile TokenManager_Prefix.pch297788201#297788205#0(0"0(0#0#79"/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager_Prefix.pch4300911832#1621"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-generated-files.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-own-target-headers.hmap -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-all-target-headers.hmap -iquote /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/TokenManager-project-headers.hmap -F/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/include -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources/x86_64 -I/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/TokenManager.build/Debug/TokenManager.build/DerivedSources -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/TokenManager_Prefix.pch -o /var/folders/7O/7OyTbXpXH+OPxSXuA0BECE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TokenManager_Prefix-hhyareyumbptujgjfdpdyyveboph/TokenManager_Prefix.pch.gch0#
+
+CTouch /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app
+s297788206.655206
+e297788206.658098
+r1
+xTouch
+x/Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app
+lSLF07#2@90"Touch /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app297788206#297788206#0(0"0(0#0#0"4300911832#170"    cd /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager    /usr/bin/touch -c /Users/mesh/src/WoWTCGUtility/tokenmanager/TokenManager/build/Debug/TokenManager.app0#
+
