@@ -125,6 +125,10 @@
 	[replaceDict setObject:@"<b>Ferocity</b>" forKey:@"Ferocity" ];
 	[replaceDict setObject:@"<b>Elusive</b>" forKey:@"Elusive" ];
 	[replaceDict setObject:@"<b>Totem</b>" forKey:@"Totem" ];
+	[replaceDict setObject:@"<b>Air:</b>" forKey:@"Air:" ];
+	[replaceDict setObject:@"<b>Earth:</b>" forKey:@"Earth:" ];
+	[replaceDict setObject:@"<b>Fire:</b>" forKey:@"Fire:" ];
+	[replaceDict setObject:@"<b>Water:</b>" forKey:@"Water:" ];
 	[replaceDict setObject:@"<b>Stealth</b>" forKey:@"Stealth" ];
 	[replaceDict setObject:@"<b>Untargetable</b>" forKey:@"Untargetable" ];
 	[replaceDict setObject:@"<b>Thrown</b>" forKey:@"Thrown" ];
