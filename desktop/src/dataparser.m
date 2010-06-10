@@ -42,10 +42,17 @@ int main (int argc, const char * argv[]) {
 		return 0;
 	}
 	
-	NSError *error;
+	NSError *error = nil;
 	
 	NSString *data = [NSString stringWithContentsOfFile:inputPath
 											   encoding:NSUTF8StringEncoding error:&error];
+	
+	if(error)
+	{
+		NSLog(@"Error Loading CSV File : %@", [error localizedDescription]);
+		[pool drain];
+		return 1;
+	}
 	
 	WoWTCGDataParser *parser = [[WoWTCGDataParser alloc] init];
 	
