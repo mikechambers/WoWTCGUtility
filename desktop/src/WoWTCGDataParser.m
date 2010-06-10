@@ -185,7 +185,10 @@
 	NSMutableDictionary *seriesKey = [NSMutableDictionary dictionaryWithCapacity:SERIES_COUNT];
 	NSMutableDictionary *typesKey = [NSMutableDictionary dictionaryWithCapacity:TYPES_COUNT];
 	NSMutableDictionary *damageTypesKey = [NSMutableDictionary dictionaryWithCapacity:0];
-	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:3];
+	
+	//this controls the number of reputations that can be added. Have to increment if new factions are added.
+	//should refactor this. (aldor, scryer, argent crusade, neurubian)
+	NSMutableDictionary *reputationRestrictionTypesKey = [NSMutableDictionary dictionaryWithCapacity:4];
 	NSMutableDictionary *racesKey = [NSMutableDictionary dictionaryWithCapacity:2];
 	NSMutableDictionary *talentsKey = [NSMutableDictionary dictionaryWithCapacity:10];
 	NSMutableDictionary *professionsKey = [NSMutableDictionary dictionaryWithCapacity:10];
