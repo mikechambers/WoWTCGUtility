@@ -83,6 +83,8 @@
 	[image setAllowsCutCopyPaste:TRUE];
 	image.enableClick = TRUE;
 	
+	[[nameField cell] setBackgroundStyle:NSBackgroundStyleRaised];
+	
 	if(!card)
 	{
 		image.card = nil;
