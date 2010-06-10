@@ -25,10 +25,12 @@
 #import "CardURLScheme.h"
 
 
-#define CARD_DECK_FORUMS_TAG 0
-#define RULES_FORUMS_TAG 1
+#define OLD_CARD_DECK_FORUMS_TAG 0
+#define OLD_RULES_FORUMS_TAG 1
 #define WOWTCGDB_TAG 2
 #define TCGPLAYER_TAG 3
+#define CARD_DECK_FORUMS_TAG 4
+#define STRATEGY_FORUMS_TAG 5
 
 @implementation CardView
 
@@ -173,11 +175,23 @@
 	{
 		case CARD_DECK_FORUMS_TAG:
 		{
+			urlFormat = @"http://cryptozoic.finddiscussion.com/search.forum?search_where=f4&search_keywords=";
+			dataValue = card.cardName;
+			break;
+		}
+		case STRATEGY_FORUMS_TAG:
+		{
+			urlFormat = @"http://cryptozoic.finddiscussion.com/search.forum?search_where=f8&search_keywords=";
+			dataValue = card.cardName;
+			break;
+		}
+		case OLD_CARD_DECK_FORUMS_TAG:
+		{
 			urlFormat = @"http://entertainment.upperdeck.com/wow/community/search/SearchResults.aspx?s=129&q=";
 			dataValue = card.cardName;
 			break;
 		}
-		case RULES_FORUMS_TAG:
+		case OLD_RULES_FORUMS_TAG:
 		{
 			urlFormat = @"http://entertainment.upperdeck.com/wow/community/search/SearchResults.aspx?s=122&q=";
 			dataValue = card.cardName;
