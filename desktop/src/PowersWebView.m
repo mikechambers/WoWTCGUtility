@@ -118,6 +118,7 @@
 	NSMutableString *out = [data mutableCopy];
 
 	NSMutableDictionary *replaceDict = [NSMutableDictionary dictionaryWithCapacity:10];
+	[replaceDict setObject:@"</p><p>" forKey:@"<br>" ];
 	[replaceDict setObject:@"</p><p>" forKey:@"\n" ];
 	[replaceDict setObject:@"<b>Ongoing</b>" forKey:@"Ongoing" ];
 	[replaceDict setObject:@"<b>Protector</b>" forKey:@"Protector" ];
